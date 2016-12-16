@@ -11,9 +11,8 @@
     "grails-plugin-deploy": "npm run grails-plugin-package && gulp grails-plugin-deploy",
     "grails-plugin-release": "npm run grails-plugin-package -- --release && gulp grails-plugin-deploy --release",
     "start": "npm run run-server",
-    "esdoc": "esdoc -c esdoc.json",
-    "build-less": "lessc --relative-urls src/www/resources/less/jcatalog-bootstrap-bundle.less src/www/resources/css/main.css",
-    "run-server": "nodemon --watch src/app src/www/devServer --exec babel-node --presets es2015,stage-0",
+    "esdoc": "esdoc -c esdoc.json",   
+    "run-server": "nodemon --watch src/app src/www/devServer --ignore src/www/tmp --exec babel-node --presets es2015,stage-0 ",
     "watch-less": "nodemon --watch src/www/resources/less/ --ext less --exec npm run build-less"
   },
   "author": {

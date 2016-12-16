@@ -1,6 +1,5 @@
 {
   "pathToCustomization": "d:/work/node-oc-ui/tmp",  
-  "mainLessFile": "main.less",
   "mainCssFile": "main.css",
   "port": "3042"
 }
