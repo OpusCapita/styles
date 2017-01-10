@@ -64,7 +64,7 @@ const directoryWatcher = (directory, callback) => {
   }).on('all', callback);
 }
 
-const direrctoryWatchLogger = function(event, path, tmpPath) {
+const direrctoryWatchHandler = function(event, path, tmpPath) {
   if (event === 'change' || event === 'add') {
     fs.copy(path, tmpPath, function(err) {
       if (err) {
@@ -92,7 +92,7 @@ const temporaryResourcesDirectory = path.join(tmpDir, 'resources');
 // Watcher for custom directory, ignores .dotfiles???
 // eslint-disable-next-line no-unused-vars
 const originalResourcesDirectoryWatcher = directoryWatcher(originalResourcesDirectory, (event, path) => {
-  direrctoryWatchLogger(event, path, path.replace(originalResourcesDirectory, temporaryResourcesDirectory));
+  direrctoryWatchHandler(event, path, path.replace(originalResourcesDirectory, temporaryResourcesDirectory));
 })
 
 // let recompileLessTimer;
@@ -114,7 +114,7 @@ if (config.pathToCustomization) {
   // Watcher for custom directory, ignores .dotfiles
   // eslint-disable-next-line no-unused-vars
   const customDirWatcher = directoryWatcher(config.pathToCustomization, (event, path) => {
-    direrctoryWatchLogger(event, path, path.replace(config.pathToCustomization, tmpCustomDir));
+    direrctoryWatchHandler(event, path, path.replace(config.pathToCustomization, tmpCustomDir));
   });
 
   // Watcher for tmp directory with customization. Run less recompiling.
@@ -132,11 +132,10 @@ let recompileLessTimer;
 // Watcher for standard less files. Run less recompiling.???
 // eslint-disable-next-line no-unused-vars
 const temporaryResourcesDirectoryWatcher = directoryWatcher(path.join(tmpDir, '**/*.less'), (event, path) => {
-  if (path.match(/\.less$/)) {
-    // run less recompiling if less file was changed.
-    clearTimeout(recompileLessTimer);
-    recompileLessTimer = setTimeout(lessRecompile, 1000);
-  }
+  console.log(`(event:${event}): ${path} is changed, recompiling less files`);
+  // run less recompiling if less file was changed.
+  clearTimeout(recompileLessTimer);
+  recompileLessTimer = setTimeout(lessRecompile, 1000);
 });
 
 const app = express();
