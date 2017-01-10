@@ -1,10 +1,8 @@
 .idea
 node_modules/
-build/
-esdoc/
-apidoc/
-lib/
 coverage/
 test-reports/
 *.iml
 *.log
+yarn.lock
+config.json

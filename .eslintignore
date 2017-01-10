@@ -1,6 +1,1 @@
-/src/client/demo/**
-/src/server/demo/**
-/webpack.*.config.js
-/gulpfile.babel.js
-/test/**
 /src/www/resources/bootstrap.min.js
