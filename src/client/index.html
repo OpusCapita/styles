@@ -1,19 +1,52 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>CDN Demo</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="main.css" rel="stylesheet">
-    </head>
-    <body>
-    <div class="container">
-      <h1>Resources</h1>
-      <p>
-        <a href="main.css">main.css</a>
-        <span class="text-muted"><small>*recompiling on the fly</small></span>
-      </p>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CDN Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="main.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+<header class="navbar navbar-default navbar-main-menu" id="top">
+  <div class="container">
+    <div class="navbar-header">
+      <button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#bs-navbar"
+              data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">
+        <img src="../img/jc-logo-rgb.svg" alt="App Logo">
+      </a>
     </div>
-    </body>
+    <nav class="collapse navbar-collapse" id="bs-navbar">
+      <ul class="nav navbar-nav">
+        <li><a href="demo/html/css.html">CSS</a></li>
+        <li><a href="demo/html/components.html">Components</a></li>
+        <li><a href="demo/html/javascript.html">JavaScript</a></li>
+        <li><a href="demo/html/font-awesome-icons.html">Font Awesome Icons</a></li>
+        <li><a href="demo/html/font-awesome-examples.html">Font Awesome Examples</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <h1>Opus Capita Resources</h1>
+  Node app that serves Opus Capita resources: less, css, fonts, images.
+  <br/>
+  <br/>
+
+  <p>
+    The main styles are contained in <a href="main.css">main.css</a>
+    <span class="text-muted"><small>*recompiling on the fly</small></span>
+  </p>
+  <p>
+    <a href="less/variables.less">variables.less</a>
+  </p>
+</div>
+</body>
 </html>

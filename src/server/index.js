@@ -62,7 +62,7 @@ const directoryWatcher = (directory, callback) => {
     alwaysStat: true,
     awaitWriteFinish: true
   }).on('all', callback);
-}
+};
 
 const direrctoryWatchHandler = function(event, path, tmpPath) {
   if (event === 'change' || event === 'add') {
@@ -93,7 +93,7 @@ const temporaryResourcesDirectory = path.join(tmpDir, 'resources');
 // eslint-disable-next-line no-unused-vars
 const originalResourcesDirectoryWatcher = directoryWatcher(originalResourcesDirectory, (event, path) => {
   direrctoryWatchHandler(event, path, path.replace(originalResourcesDirectory, temporaryResourcesDirectory));
-})
+});
 
 // let recompileLessTimer;
 // Watcher for standard less files. Run less recompiling.???
@@ -148,14 +148,14 @@ app.get('/', (req, res) => {
 app.get(`/${mainCssFile}`, (req, res) => {
   res.sendFile(pathToCss, function(err) {
     if (err) {
-      console.log(`path to css '${pathToCss}'`)
       console.log(err);
       res.status(err.status).send(`'${pathToCss}' is not found`).end();
     }
   });
 });
 
-app.use(express.static(temporaryResourcesDirectory));
+app.use('/', express.static(temporaryResourcesDirectory));
+app.use('/demo', express.static(path.join(__dirname, '../client/demo')));
 
 const port = 3000;
 const host = 'localhost';
