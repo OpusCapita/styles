@@ -110,11 +110,12 @@ if (config.pathToCustomization) {
   console.log(`path to customization '${config.pathToCustomization}'`);
 
   const tmpCustomDir = path.join(tmpDir, 'customization');
+  const customDir = path.join(config.pathToCustomization);
 
   // Watcher for custom directory, ignores .dotfiles
   // eslint-disable-next-line no-unused-vars
   const customDirWatcher = directoryWatcher(config.pathToCustomization, (event, path) => {
-    direrctoryWatchHandler(event, path, path.replace(config.pathToCustomization, tmpCustomDir));
+    direrctoryWatchHandler(event, path, path.replace(customDir, tmpCustomDir));
   });
 
   // Watcher for tmp directory with customization. Run less recompiling.

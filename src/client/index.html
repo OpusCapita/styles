@@ -6,7 +6,7 @@
   <title>CDN Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="main.css" rel="stylesheet">
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="demo/favicon.ico">
 </head>
 <body>
 <header class="navbar navbar-default navbar-main-menu" id="top">
@@ -47,6 +47,15 @@
   <p>
     <a href="less/variables.less">variables.less</a>
   </p>
+
+  <h4>How to add customization area</h4>
+  For customization please do following steps:
+  <ol>
+    <li>Rename file <em>config.json.sample</em> to <em>config.json</em> in root app directory;</li>
+    <li>Set path to customization area as value for <em>pathToCustomization</em> key in <em>config.json</em>;</li>
+    <li>Customization area must contain <em>less</em> directory and <em>main.less</em> file in it;</li>
+    <li>Other resources should be imported in <em>main.less</em> file.</li>
+  </ol>
 </div>
 </body>
 </html>
