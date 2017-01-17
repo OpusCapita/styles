@@ -29,8 +29,7 @@ const pathToLess = path.join(tmpDir, mainLessFile);
 try {
   // create main.less file
   fs.outputFileSync(pathToLess, '@import "resources/less/main.less"; ' +
-    '@import (optional) "customization/less/main.less"; ' +
-    '@import (optional) "customization/less/custom.less";');
+    '@import (optional) "customization/less/main.less";');
   console.log("The main.less was saved!");
 } catch (err) {
   console.log(err);
@@ -158,7 +157,7 @@ app.get(`/${mainCssFile}`, (req, res) => {
 app.use('/', express.static(temporaryResourcesDirectory));
 app.use('/demo', express.static(path.join(__dirname, '../client/demo')));
 
-const port = 3000;
+const port = process.env.PORT || 3042;
 const host = 'localhost';
 app.listen(port, host, (err) => {
   if (err) {
