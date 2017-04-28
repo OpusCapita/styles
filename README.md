@@ -8,15 +8,30 @@ Provides less, css, fonts, images.
 Download and install Node.js from the [Node.js download page] (https://nodejs.org/en/download/)
 Read the [Getting started page](https://docs.npmjs.com/getting-started/installing-node) for information about installing Node.js more.
 
-#### Run service
+#### Goals
 
-Workflow/goals:
-```bash
-*npm i*             -- install dependencies
-*npm start          -- starts server
+Install dependencies
 ```
-This will start the server on [http://localhost:3042/] (http://localhost:3042/) and should reload automatically when you make changes.
-If you want to change port run `set PORT=1234` before `npm start`.  
+npm i
+```
+
+Start server
+```
+npm start
+```
+
+Srver will be available by the following url [http://localhost:3042/] (http://localhost:3042/). It is automatically reloaded  when you make changes in sources.
+
+If you want to change port run the following command(s) in console
+- on Windows
+```
+set PORT=1234
+npm start 
+```
+- on Linux
+```
+PORT=1234 npm start
+```
 
 ### Source code info
 
