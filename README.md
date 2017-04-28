@@ -5,7 +5,7 @@ Provides less, css, fonts, images.
 ### Development
 
 #### Getting started
-Download and install Node.js from the [Node.js download page] (https://nodejs.org/en/download/)
+Download and install Node.js from the [Node.js download page](https://nodejs.org/en/download/)
 Read the [Getting started page](https://docs.npmjs.com/getting-started/installing-node) for information about installing Node.js more.
 
 #### Goals
@@ -20,7 +20,8 @@ Start server
 npm start
 ```
 
-Srver will be available by the following url [http://localhost:3042/] (http://localhost:3042/). It is automatically reloaded  when you make changes in sources.
+Server will be available by the following url [http://localhost:3042/](http://localhost:3042/). It is automatically reloaded when you make changes in sources.
+Compiled styles can be found in [main.css](http://localhost:3042/main.css) 
 
 If you want to change port run the following command(s) in console
 - on Windows
@@ -60,7 +61,7 @@ PORT=1234 npm start
  
 #### What is the less
 Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themeable and extendable.
-Read more information about less on [the official documentation] (http://lesscss.org/features/#features-overview-feature). 
+Read more information about less on [the official documentation](http://lesscss.org/features/#features-overview-feature). 
 
 #### About less structure inside less folder
  
@@ -77,7 +78,7 @@ less/
   mixins.less
 ```
 where:
-* `core` - Copy of less files form [http://getbootstrap.com/] (http://getbootstrap.com/) as it is.
+* `core` - Copy of less files form [http://getbootstrap.com/](http://getbootstrap.com/) as it is.
 * `jcatalog-bootstrap-extentions` - Additional UI components or extensions which we are using in our apps (datepecker, fileupload, font-awesome, etc.).
 * `jcatalog-ui` - Overwrite (modify) some standard bootstrap components and states (for example use another fonts, hover states)
 * `jqgrid` - jqgrid on bootstrap.
