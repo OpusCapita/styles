@@ -2,12 +2,13 @@
 
 Provides less, css, fonts, images.
 
-## Getting started
+### Development
+
+#### Getting started
 Download and install Node.js from the [Node.js download page] (https://nodejs.org/en/download/)
 Read the [Getting started page](https://docs.npmjs.com/getting-started/installing-node) for information about installing Node.js more.
 
-
-## Development
+#### Run service
 
 Workflow/goals:
 ```bash
@@ -17,20 +18,21 @@ Workflow/goals:
 This will start the server on [http://localhost:3042/] (http://localhost:3042/) and should reload automatically when you make changes.
 If you want to change port run `set PORT=1234` before `npm start`.  
 
-### What's included
- The Project structure something like this:
+### Source code info
+
+#### Folder structure
  
  ```
  src/
- ??? client/
- ?   ??? demo/
- ?   ??? resources/
- ?        ??? fonts/
- ?        ??? img/
- ?        ??? less/
- ?   ??? index.html
- ??? server/
-     ??? index.js
+  client/
+    demo/
+      resources/
+      fonts/
+      img/
+      less/
+      index.html
+  server/
+    index.js
  config.json.sample
  ```
  
@@ -41,31 +43,31 @@ If you want to change port run `set PORT=1234` before `npm start`.
  * `config.json.sample` - Sample of config to set path to customization area
  
  
-### What is the less
+#### What is the less
 Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themeable and extendable.
 Read more information about less on [the official documentation] (http://lesscss.org/features/#features-overview-feature). 
 
-### About less structure inside less folder
- Inside less folder you can find something like this:
+#### About less structure inside less folder
  
- ```
- less/
- ??? core/   
- ??? jcatalog-bootstrap-extentions/
- ??? jcatalog-ui/
- ??? jqgrid/
- ??? jquery-ui/
- ??? opc/
- ??? main.less
- ??? variables.less
- ??? mixins.less
- ```
-* `core/` - Copy of less files form [http://getbootstrap.com/] (http://getbootstrap.com/) as it is.
-* `jcatalog-bootstrap-extentions/` - Additional UI components or extensions which we are using in our apps (datepecker, fileupload, font-awesome, etc.).
-* `jcatalog-ui/` - Overwrite (modify) some standard bootstrap components and states (for example use another fonts, hover states)
-* `jqgrid/` - jqgrid on bootstrap.
-* `jquery-ui/` - jQuery-ui on bootstrap.
-* `opc/` - Specific styles for OPC only 
+```
+less/
+  core/   
+  jcatalog-bootstrap-extentions/
+  jcatalog-ui/
+  jqgrid/
+  jquery-ui/
+  opc/
+  main.less
+  variables.less
+  mixins.less
+```
+where:
+* `core` - Copy of less files form [http://getbootstrap.com/] (http://getbootstrap.com/) as it is.
+* `jcatalog-bootstrap-extentions` - Additional UI components or extensions which we are using in our apps (datepecker, fileupload, font-awesome, etc.).
+* `jcatalog-ui` - Overwrite (modify) some standard bootstrap components and states (for example use another fonts, hover states)
+* `jqgrid` - jqgrid on bootstrap.
+* `jquery-ui` - jQuery-ui on bootstrap.
+* `opc` - Specific styles for OPC only 
 * `main.less` - The main less file that import another
 * `variables.less` - The main file with variables that are used inside other less files.  
 * `mixins.less` - The main file with mixins that are used inside other less files.  
