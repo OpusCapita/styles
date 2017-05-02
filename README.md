@@ -2,6 +2,9 @@
 
 Provides less, css, fonts, images.
 
+## Demo
+Online demo available here: https://opuscapita.github.io/node-oc-ui
+
 ### Development
 
 #### Getting started

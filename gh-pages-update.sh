@@ -11,3 +11,11 @@ sed -i -e "s/src=\"..\//src=\"resources\//g" .gh-pages-tmp/*.html &&
 sed -i -e "s/src=\"..\/..\/img\//src=\"..\/..\/resources\/img\//g" .gh-pages-tmp/demo/html/*.html 
 sed -i -e "s/href=\"..\/..\/\"/href=\"..\/..\/index.html\"/g" .gh-pages-tmp/demo/html/*.html 
 
+git checkout gh-pages &&
+git ls-files | grep -v -e "\(^\.gitignore$\|^\.gitattributes$\|^\.gh-pages-tmp$\)" | xargs rm -rf &&
+mv .gh-pages-tmp/* . &&
+rm -rf .gh-pages-tmp &&
+git add . &&
+git commit -m "Update gh-pages" &&
+git push --force origin gh-pages &&
+git checkout master
