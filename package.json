@@ -1,9 +1,14 @@
 {
   "name": "OC-UI",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpusCapita UI resources",
   "scripts": {
-    "start": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0"
+    "start": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0",
+    "npm-build": "rimraf build && babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir build/server && mkdir  \"build/client\" && cp -R src/client build",
+    "npm-publish": "npm run npm-build && npm-publish",
+    "publish-snapshot": "npm run npm-publish",
+    "publish-release": "npm run npm-publish -- --release",
+    "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css"
   },
   "author": {
     "name": "Sergey Tamkov",
@@ -11,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://buildserver.jcatalog.com/git/node-oc-ui.git"
+    "url": "https://github.com/OpusCapita/node-oc-ui.git"
   },
   "license": "UNLICENSED",
   "readme": "README.md",
@@ -26,7 +31,7 @@
     "babel-cli": "6.18.0",
     "babel-core": "6.20.0",
     "babel-eslint": "7.1.1",
-    "babel-loader": "6.2.10",
+    "babel-plugin-lodash": "3.2.11",
     "babel-preset-es2015": "6.18.0",
     "babel-preset-stage-0": "6.16.0",
     "eslint": "3.12.2",
