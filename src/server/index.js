@@ -175,6 +175,9 @@ app.get(`/${mainCssFile}`, (req, res) => {
   });
 });
 
+if (config.pathToCustomization) {
+  app.use('/', express.static(path.join(tmpDir, 'customization')));
+}
 app.use('/', express.static(temporaryResourcesDirectory));
 app.use('/demo', express.static(path.join(__dirname, '../client/demo')));
 
