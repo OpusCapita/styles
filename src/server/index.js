@@ -28,29 +28,50 @@ const pathToLess = path.join(tmpDir, mainLessFile);
 
 try {
   // create main.less file
-  fs.outputFileSync(pathToLess, '@import "resources/less/main.less"; ' +
-    '@import (optional) "customization/less/main.less";');
+  // fs.outputFileSync(pathToLess, '@import "resources/less/main.less"; ' +
+  //   '@import (optional) "customization/less/main.less";');
+  fs.outputFileSync(pathToLess, `
+@import "${tmpDir}/resources/less/main.less";
+@import (optional) "${tmpDir}/customization/less/main.less";`);
   console.log("The main.less was saved!");
 } catch (err) {
   console.log(err);
 }
 
 const lessRecompile = function() {
-  console.log(`start less file '${pathToLess}' recompiling into '${pathToCss}' file...`);
+  console.log(`start less file '${pathToLess}' recompiling into \n'${pathToCss}' file...`);
 
-  let lesscExec = exec(`lessc --relative-urls ${pathToLess} ${pathToCss}`);
+  // let lesscExec = exec(`lessc --relative-urls ${pathToLess} ${pathToCss}`);
 
-  lesscExec.stdout.on('data', (data) => {
-    console.log(`stdout\n'${data}'`);
+  fs.readFile(pathToLess, 'utf8', function (err, lessText) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log(`\n---\n${lessText}\n----\n`);
+    require('less').render(`@import "${tmpDir}/main.less";`, {relativeUrls: false, rootpath: 'fake'}, function (e, output) {
+      if (e) {
+        return console.log(e);
+      }
+      fs.writeFile(pathToCss, output.css, function (err) {
+        if (err) {
+          return console.log("Error writing file: " + err);
+        }
+      });
+      // });console.log(output.css);
+    });
   });
 
-  lesscExec.stderr.on('data', (data) => {
-    console.log(`stderr\n'${data}'`);
-  });
-
-  lesscExec.on('close', (code) => {
-    console.log(`'${pathToCss}' is recompiled`);
-  });
+  // lesscExec.stdout.on('data', (data) => {
+  //   console.log(`stdout\n'${data}'`);
+  // });
+  //
+  // lesscExec.stderr.on('data', (data) => {
+  //   console.log(`stderr\n'${data}'`);
+  // });
+  //
+  // lesscExec.on('close', (code) => {
+  //   console.log(`'${pathToCss}' is recompiled`);
+  // });
 };
 
 const directoryWatcher = (directory, callback) => {
@@ -132,7 +153,7 @@ let recompileLessTimer;
 // Watcher for standard less files. Run less recompiling.???
 // eslint-disable-next-line no-unused-vars
 const temporaryResourcesDirectoryWatcher = directoryWatcher(path.join(tmpDir, '**/*.less'), (event, path) => {
-  console.log(`(event:${event}): ${path} is changed, recompiling less files`);
+  // console.log(`(event:${event}): ${path} is changed, recompiling less files`);
   // run less recompiling if less file was changed.
   clearTimeout(recompileLessTimer);
   recompileLessTimer = setTimeout(lessRecompile, 1000);
