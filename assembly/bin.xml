@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+  <id>${system.info}</id>
+
+  <baseDirectory>${project.artifactId}</baseDirectory>
+
+  <formats>
+    <format>zip</format>
+  </formats>
+
+  <fileSets>
+    <fileSet>
+      <directory>.</directory>
+      <outputDirectory>.</outputDirectory>
+      <excludes>
+        <exclude>src/client/demo/**</exclude>
+        <exclude>src/client/demo.js</exclude>
+        <exclude>test/**</exclude>
+        <exclude>target/**</exclude>
+        <exclude>.idea/**</exclude>
+        <exclude>assembly/**</exclude>
+        <exclude>.babelrc</exclude>
+        <exclude>.editorconfig</exclude>
+        <exclude>.eslintrc</exclude>
+        <exclude>.jscsrc</exclude>
+        <exclude>pom.xml</exclude>
+        <exclude>webpack.development.config.js</exclude>
+      </excludes>
+    </fileSet>
+  </fileSets>
+</assembly>
