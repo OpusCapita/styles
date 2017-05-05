@@ -129,8 +129,6 @@ node {
             println "[INFO] SKIP RELEASE..."
           }
 
-          build job: 'sim-jenkinsfile-windows', wait: false, parameters: [string(name: 'scmRevision', value: scmRevision), string(name: 'scmChanges', value: scmChanges), string(name: 'scmChangesAuthor', value: scmChangesAuthor),]
-
           stage('Yarn install and update dependencies (yarn)') {
             yarn()
           }
