@@ -60,6 +60,11 @@ def npmGitbook() {
   sh "npm run gitbook"
 }
 
+// Generate Git documentation
+def npmGitDemo() {
+  sh "npm run git-demo-update"
+}
+
 // Clean repo before deploy to maven
 def npmPrune() {
   sh "npm prune --production"
@@ -133,18 +138,22 @@ node {
             yarn()
           }
 
-          
           // STAGE 2: Run Build
+          stage('Run updated git demo (npm)') {
+            npmGitDemo()
+          }
+          
+          // STAGE 3: Run Build
           stage('Run build (npm)') {
             npmBuild()
           }
 
-          // STAGE 3: Clean dependencies before deploy
+          // STAGE 4: Clean dependencies before deploy
           stage('Prune dependencies (npm)') {
             npmPrune()
           }
 
-          // STAGE 4: Clean dependencies before deploy
+          // STAGE 5: Clean dependencies before deploy
           stage('Deploy artifact (maven)') {
             mavenDeploy()
           }

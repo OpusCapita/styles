@@ -8,7 +8,8 @@
     "npm-publish": "npm run npm-build && npm-publish",
     "publish-snapshot": "npm run npm-publish",
     "publish-release": "npm run npm-publish -- --release",
-    "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css"
+    "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css",
+    "git-demo-update": "gh-pages-update.sh"
   },
   "author": {
     "name": "Sergey Tamkov",
