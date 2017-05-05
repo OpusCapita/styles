@@ -1,4 +1,4 @@
-#!/bin/sh  a href="../../
+#!/bin/sh 
 
 rm -rf .gh-pages-tmp build  &&
 mkdir .gh-pages-tmp &&
