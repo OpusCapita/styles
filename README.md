@@ -23,7 +23,7 @@ Start server
 npm start
 ```
 
-Server will be available by the following url [http://localhost:3042/](http://localhost:3042/). It is automatically reloaded when you make changes in sources.
+Server will be available by the following url http://localhost:3042/. It is automatically reloaded when you make changes in sources.
 Compiled styles can be found in [main.css](http://localhost:3042/main.css) 
 
 If you want to change port run the following command(s) in console
