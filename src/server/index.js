@@ -85,8 +85,6 @@ const directoryWatcher = (directory, callback) => {
 };
 
 const direrctoryWatchHandler = function(event, path, tmpPath) {
-  console.log('--- PATH:', path);
-  console.log('--- tmpPath:', tmpPath);
   if (event === 'change' || event === 'add') {
     fs.copy(path, tmpPath, function(err) {
       if (err) {

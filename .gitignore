@@ -2,6 +2,7 @@
 node_modules/
 build/
 dist/
+src/client/main.css
 *.iml
 *.log
 config.json

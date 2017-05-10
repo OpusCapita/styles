@@ -1,6 +1,6 @@
 {
-  "name": "OC-UI",
-  "version": "1.0.1",
+  "name": "opuscapita-bootstrap-ui",
+  "version": "1.0.0-beta.0",
   "description": "OpusCapita UI resources",
   "scripts": {
     "start": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0",
@@ -9,8 +9,7 @@
     "npm-publish": "npm run npm-build && npm-publish",
     "publish-release": "npm run npm-publish -- --release",
     "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css",
-    "git-demo-update": "gh-pages-update.sh",
-    "pkg": "npm run npm-build && pkg build/server/index.js --targets linux,macos,windows --out-dir bin"
+    "git-demo-update": "gh-pages-update.sh"
   },
   "author": {
     "name": "Sergey Tamkov",
@@ -19,6 +18,7 @@
   "files": [
     "dist"
   ],
+  "main": "dist/main.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/OpusCapita/node-oc-ui.git"
@@ -44,7 +44,6 @@
     "eslint": "3.12.2",
     "eslint-config-opuscapita": "1.0.3",
     "eslint-plugin-react": "6.8.0",
-    "nodemon": "1.11.0",
-    "pkg": "3.0.3"
+    "nodemon": "1.11.0"
   }
 }
