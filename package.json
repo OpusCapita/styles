@@ -1,20 +1,24 @@
 {
   "name": "OC-UI",
-  "version": "1.0.1",
+  "version": "1.0.1-beta.0",
   "description": "OpusCapita UI resources",
   "scripts": {
     "start": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0",
     "npm-build": "rimraf build && babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir build/server && mkdir  \"build/client\" && cp -R src/client build",
+    "npm-client-build": "rimraf dist && npm run build-less && cp -R src/client dist && sh demo-resources-path.sh",
     "npm-publish": "npm run npm-build && npm-publish",
-    "publish-snapshot": "npm run npm-publish",
     "publish-release": "npm run npm-publish -- --release",
     "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css",
-    "git-demo-update": "gh-pages-update.sh"
+    "git-demo-update": "gh-pages-update.sh",
+    "pkg": "npm run npm-build && pkg build/server/index.js --targets linux,macos,windows --out-dir bin"
   },
   "author": {
     "name": "Sergey Tamkov",
     "email": "sergey.tamkov@jcatalog.com"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/OpusCapita/node-oc-ui.git"
@@ -40,6 +44,7 @@
     "eslint": "3.12.2",
     "eslint-config-opuscapita": "1.0.3",
     "eslint-plugin-react": "6.8.0",
-    "nodemon": "1.11.0"
+    "nodemon": "1.11.0",
+    "pkg": "3.0.3"
   }
 }

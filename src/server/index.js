@@ -85,10 +85,12 @@ const directoryWatcher = (directory, callback) => {
 };
 
 const direrctoryWatchHandler = function(event, path, tmpPath) {
+  console.log('--- PATH:', path);
+  console.log('--- tmpPath:', tmpPath);
   if (event === 'change' || event === 'add') {
     fs.copy(path, tmpPath, function(err) {
       if (err) {
-        console.error(err)
+        console.error(err);
       }
     });
   }
@@ -107,6 +109,7 @@ const direrctoryWatchHandler = function(event, path, tmpPath) {
 };
 
 const originalResourcesDirectory = path.join(__dirname, '../client/resources');
+console.log("RESOURCES:", originalResourcesDirectory);
 const temporaryResourcesDirectory = path.join(tmpDir, 'resources');
 
 // Watcher for custom directory, ignores .dotfiles???
