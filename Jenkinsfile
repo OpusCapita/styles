@@ -1,7 +1,7 @@
 // Add the predetermined variables: path to release script and mail recipient list.
 def releaseScriptPath = '/opt/work/jenkins/jobs/release-tools-update/workspace/releaseDVCSApp.groovy'
 // Sending mail notifications
-def mailRecepientList = 'jcatalog-build@list.scand, jcatalog-build-proc@list.scand'
+def mailRecepientList = 'jcatalog-build@list.scand, jcatalog-build-core@list.scand'
 
 def BUILD_SUCCESS = hudson.model.Result.SUCCESS
 def BUILD_FAILURE = hudson.model.Result.FAILURE
@@ -17,7 +17,7 @@ def sendEmail(mailRecepientList, buildStatus, scmChanges, scmChangesAuthor) {
 $scmChanges $scmChangesAuthor \n
 ${currentBuild.rawBuild.getLog(15).join('\n')}
 """,
-    from: 'jenkins-proc@jcloud.scand',
+    from: 'jenkins-core@jcloud.scand',
     subject: """Build $buildStatus: ${env.JOB_NAME} #${env.BUILD_NUMBER}""",
     to: '' + mailRecepientList + ''
 }
