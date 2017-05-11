@@ -13,6 +13,7 @@ sed -i -e "s/href=\"..\/..\/\"/href=\"..\/..\/index.html\"/g" .gh-pages-tmp/demo
 
 git checkout gh-pages &&
 git ls-files | grep -v -e "\(^\.gitignore$\|^\.gitattributes$\|^\.gh-pages-tmp$\)" | xargs rm -rf &&
+find . -type d -empty -delete &&
 mv .gh-pages-tmp/* . &&
 rm -rf .gh-pages-tmp &&
 git add . &&
