@@ -18,7 +18,7 @@ git ls-files | grep -v -e "\(^\.gitignore$\|^\.gitattributes$\|^\.gh-pages-tmp$\
 find . -type d -empty -delete &&
 mv .gh-pages-tmp/* . &&
 rm -rf .gh-pages-tmp &&
-git add . &&
+git add -A . &&
 git commit -m "Update gh-pages" &&
 git push --force origin gh-pages &&
 git checkout master
