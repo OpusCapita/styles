@@ -62,7 +62,7 @@ def npmGitbook() {
 
 // Generate Git documentation
 def npmGitDemo() {
-  sh "sh gh-pages-update"
+  sh "sh gh-pages-update.sh"
 }
 
 // Clean repo before deploy to maven
