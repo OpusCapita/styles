@@ -139,9 +139,9 @@ node {
           }
 
           // STAGE 2: Run Build
-          // stage('Run updated git demo (npm)') {
-          //   npmGitDemo()
-          // }
+          stage('Run updated git demo (npm)') {
+            npmGitDemo()
+          }
 
           // STAGE 3: Run Build
           stage('Run build (npm)') {
