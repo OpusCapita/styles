@@ -62,7 +62,7 @@ def npmGitbook() {
 
 // Generate Git documentation
 def npmGitDemo() {
-  sh "sh gh-pages-update.sh"
+  sh "sh gh-pages-update"
 }
 
 // Clean repo before deploy to maven
@@ -94,6 +94,9 @@ node {
       def ticket = env.TICKET_NUMBER
       def pluginReleaseVersion = env.PLUGIN_RELEASE_VERSION
       def nextCsVersion = env.NEXT_CS_VERSION
+      // Set git user info
+      sh 'git config user.email "jenkins-core@scand.com"'
+      sh 'git config user.name "jenkins-core"'
       // Set working enviroment.
       def groovyHome = tool name: 'Groovy-2.1.0'
       def nodeHome = tool name: 'NodeJS 6.9.4'
