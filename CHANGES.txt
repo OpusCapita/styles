@@ -1,4 +1,37 @@
 
+Release 1.0.1-beta.0 Mon May 15 2017 14:01:07 GMT+0300 (+03)
+=======================================================
+
+ - Update version (Kirill Volkovich <volkovich@scand.com>, Mon May 15 14:00:40 2017 +0300)
+ - Update version (Kirill Volkovich <volkovich@scand.com>, Mon May 15 13:59:56 2017 +0300)
+ - Merge branch 'master' of opuscapita.github.com:OpusCapita/node-oc-ui (2d7c206 7f4e173, Kirill Volkovich <volkovich@scand.com>)
+ - Fix demo-resource-path.sh (Kirill Volkovich <volkovich@scand.com>, Mon May 15 13:54:48 2017 +0300)
+ - Update gh-pages-update.sh (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Thu May 11 17:09:37 2017 +0300)
+ - Merge branch 'master' of opuscapita.github.com:OpusCapita/node-oc-ui (f97cf8c 0e09dfc, Kirill Volkovich <volkovich@scand.com>)
+ - Temporary disabled "Run updated git demo (npm)" Jenkinfile stage (Kirill Volkovich <volkovich@scand.com>, Thu May 11 12:24:46 2017 +0300)
+ - Merge branch 'master' of github.com:OpusCapita/node-oc-ui (5626aba 4810a2a, Sergey Tamkov <tamkov@scand.com>)
+ - Fixed Jenkinsfile mails. (Sergey Tamkov <tamkov@scand.com>, Thu May 11 12:13:19 2017 +0300)
+ - Fix gh-pages-update.sh for git older than v2.0 (Kirill Volkovich <volkovich@scand.com>, Thu May 11 12:12:49 2017 +0300)
+ - Fixed gh-pages-update.sh (Kirill Volkovich <volkovich@scand.com>, Thu May 11 12:03:33 2017 +0300)
+ - Fixed Jenkinsfile (Kirill Volkovich <volkovich@scand.com>, Thu May 11 11:33:38 2017 +0300)
+ - Added fake git user info to Jenkinsfile
+    
+    Empty ident name (for <jenkins@jenkinscore.(none)>) not allowed (Kirill Volkovich <volkovich@scand.com>, Thu May 11 11:30:39 2017 +0300)
+ - Fixed gh-pages-update.sh (Kirill Volkovich <volkovich@scand.com>, Thu May 11 11:21:45 2017 +0300)
+ - Fixed gh-pages-update.sh (Kirill Volkovich <volkovich@scand.com>, Thu May 11 10:59:06 2017 +0300)
+ - Fixed gh-pages update goal in Jenkinsfile (Kirill Volkovich <volkovich@scand.com>, Thu May 11 10:53:17 2017 +0300)
+ - Added demo-resources-path.sh (Kirill Volkovich <volkovich@scand.com>, Thu May 11 10:47:16 2017 +0300)
+ - Reverted Jenkinsfile gh-pages update goal (Kirill Volkovich <volkovich@scand.com>, Thu May 11 10:45:50 2017 +0300)
+ - 1.0.0 (Kirill Volkovich <volkovich@scand.com>, Wed May 10 18:08:23 2017 +0300)
+ - Fix flags paths (Kirill Volkovich <volkovich@scand.com>, Wed May 10 18:07:52 2017 +0300)
+ - Merge branch 'master' of opuscapita.github.com:OpusCapita/node-oc-ui (a2b9c13 520a29e, Kirill Volkovich <volkovich@scand.com>)
+ - Temporary commented demo generation Jenkinsfile goal (Kirill Volkovich <volkovich@scand.com>, Wed May 10 17:18:07 2017 +0300)
+ - Merge pull request #3 from kvolkovich-sc/patch-1
+    
+    Update README.md (ce60e2e d23d4a9, Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>)
+ - Changed package name. Removed unused 'pkg' (Kirill Volkovich <volkovich@scand.com>, Wed May 10 17:08:11 2017 +0300)
+ - Update README.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Wed May 10 14:21:24 2017 +0300)
+
 Release 1.0.0 Mon May 15 2017 13:59:18 GMT+0300 (+03)
 =======================================================
 
