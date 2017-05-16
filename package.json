@@ -6,7 +6,6 @@
     "start": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0",
     "npm-build": "rimraf build && babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir build/server && mkdir  \"build/client\" && cp -R src/client build",
     "npm-client-build": "rimraf dist && lessc --relative-urls src/client/resources/less/main.less src/client/main.css && cp -R src/client dist && sh demo-resources-path.sh",
-    "npm-publish": "npm run npm-build && npm-publish",
     "publish-release": "npm run npm-client-build && npm-publish --release",
     "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css"
   },
