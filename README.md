@@ -37,6 +37,26 @@ npm start
 PORT=1234 npm start
 ```
 
+### Using as npm package
+The easiest way to use compiled css+images+fonts+guide(html) is to install it from NPM and include it in your own React build process.
+
+**Add the dependency to your project**
+
+```bash
+yarn add opuscapita-bootstrap-ui
+
+# or with npm
+npm install opuscapita-bootstrap-ui --save
+```
+
+**You can import styles with all needed resources as part of react application**
+
+```react.js
+import OCUI from 'opuscapita-bootstrap-ui';
+```
+Ready to use!
+
+
 ### Source code info
 
 #### Folder structure
