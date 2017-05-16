@@ -34,7 +34,7 @@ npm start
 ```
 - on Linux
 ```
-PORT=1234 npm start
+export PORT=1234 npm start
 ```
 
 ### Using as npm package
