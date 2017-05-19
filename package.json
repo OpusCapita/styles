@@ -7,7 +7,12 @@
     "npm-build": "rimraf build && babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir build/server && mkdir  \"build/client\" && cp -R src/client build",
     "npm-client-build": "rimraf dist && lessc --relative-urls src/client/resources/less/main.less src/client/main.css && cp -R src/client dist && sh demo-resources-path.sh",
     "publish-release": "npm run npm-client-build && npm-publish --release",
-    "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css"
+    "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css",
+    "grails-plugin-build": "rimraf dist && lessc --relative-urls src/client/resources/less/main.less src/client/main.css && cp -R src/client dist && sh grails-resources-path.sh",
+    "grails-plugin-package": "npm run grails-plugin-build && grails-plugin-package",
+    "grails-plugin-install": "npm run grails-plugin-package && grails-plugin-install",
+    "grails-plugin-deploy": "npm run grails-plugin-package && grails-plugin-deploy",
+    "grails-plugin-deploy-release": "npm run grails-plugin-package -- --release && grails-plugin-deploy --release"
   },
   "author": {
     "name": "Sergey Tamkov",
@@ -44,5 +49,19 @@
     "eslint-plugin-react": "6.8.0",
     "nodemon": "1.11.0",
     "opuscapita-npm-scripts": "^1.0.6"
+  },
+  "grails": {
+    "groupId": "com.jcatalog.grailsplugins",
+    "buildDir": "dist",
+    "resources": {
+      "opuscapita-bootstrap-ui": {
+        "files": {
+          "main.css": "css/main.css"
+        }
+      }
+    },
+    "standaloneFiles": {
+      "resources": "web-app"
+    }
   }
 }
