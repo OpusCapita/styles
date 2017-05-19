@@ -126,7 +126,9 @@ node {
       }
 
       // Commit with user who started job
-      withEnv(['HGUSER=' + user + ' <' + user_id + '@scand.com>']) {
+     withEnv(['GIT_AUTHOR_NAME=' + user + '',
+              'GIT_AUTHOR_EMAIL=' + user_id + '@scand.com>',
+              'HGUSER=' + user + ' <' + user_id + '@scand.com>']) {
         try {
           // STAGE 1: Run Release script if necessary to do release
           if (ticket && pluginReleaseVersion && nextCsVersion) {
