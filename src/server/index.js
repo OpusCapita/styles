@@ -5,7 +5,7 @@ const express = require('express');
 const cors = require('cors');
 const chokidar = require('chokidar');
 const fs = require('fs-extra');
-const exec = require('child_process').exec;
+/* const exec = require('child_process').exec;*/
 const rimraf = require('rimraf');
 
 let config = {};
@@ -43,16 +43,19 @@ const lessRecompile = function() {
 
   // let lesscExec = exec(`lessc --relative-urls ${pathToLess} ${pathToCss}`);
 
-  fs.readFile(pathToLess, 'utf8', function (err, lessText) {
+  // eslint-disable-next-line consistent-return
+  fs.readFile(pathToLess, 'utf8', function(err, lessText) {
     if (err) {
       return console.log(err);
     }
     console.log(`\n---\n${lessText}\n----\n`);
-    require('less').render(`@import "${tmpDir}/main.less";`, {relativeUrls: false, rootpath: 'fake'}, function (e, output) {
+    // eslint-disable-next-line max-len, consistent-return
+    require('less').render(`@import "${tmpDir}/main.less";`, { relativeUrls: false, rootpath: 'fake' }, function(e, output) {
       if (e) {
         return console.log(e);
       }
-      fs.writeFile(pathToCss, output.css, function (err) {
+      // eslint-disable-next-line consistent-return
+      fs.writeFile(pathToCss, output.css, function(err) {
         if (err) {
           return console.log("Error writing file: " + err);
         }
