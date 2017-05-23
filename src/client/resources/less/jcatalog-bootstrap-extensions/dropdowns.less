@@ -8,3 +8,24 @@
   overflow: auto;
 }
 
+
+// Component alignment
+//
+// modified component alignment for small screen sizes.
+@media (max-width: @grid-float-breakpoint-max) {
+  .navbar-right {
+    .dropdown-menu-left-xs {
+      .dropdown-menu-left();
+    }
+  }
+  // Necessary for overrides of the default right aligned menu.
+  .navbar-no-collapse.navbar-nav.navbar-right>li ul.dropdown-menu.dropdown-menu-left-xs,
+  .dropdown-menu-left-xs {
+    .dropdown-menu-left();
+  }
+
+  // Necessary for overrides of the default left aligned menu.
+  .dropdown-menu-right-xs {
+    .dropdown-menu-right();
+  }
+}

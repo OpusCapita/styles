@@ -1,54 +1,74 @@
-.class-groups {
-	margin-bottom: 2em;
-}
 
-.class-groups a.item {
+.categories-block {
+  .group {
+	max-width: 485px;
+	margin-bottom: 20px;
+  }
+
+  .group a,
+  .group h4 a {
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+  }
+
+  h4 a:hover {
+	text-decoration: none;
+  }
+
+  .group-inner {
 	overflow: hidden;
 	position: relative;
+	margin: 0 15px;
+  }
 
-	display: block;
+  .group-item {
+	border: 1px solid #eee;
+	height: 160px;
+	padding: 10px 12px;
+  }
 
-	box-sizing: border-box;
-	margin-bottom: 1em;
+  .img-wrapper {
+	position: absolute;
+	right: -15px;
+	top: 43px;
+	z-index: -1;
+  }
+
+  .img-wrapper .img-responsive {
+	max-height: 160px;
+	max-width: 160px;
+  }
+
+  .bottom-sticked {
+	position: absolute;
+	bottom: 10px;
+	left: 12px;
+  }
+
+  .group-item a {
+	background-color: rgba(255, 255, 255, .65);
+	max-width: 270px;
+	float: left;
+	clear: both;
+  }
 }
 
-.class-groups a.item:hover {
-	text-decoration: none;
-}
+  @media (min-width: 768px) {
+	.categories-block .group-item a {
+	  max-width: 170px;
+	}
+  }
 
-.class-groups.col-height-md-100 > div {	height: 100px; }
-.class-groups.col-height-md-150 > div {	height: 150px; }
-.class-groups.col-height-md-200 > div {	height: 200px; }
-.class-groups.col-height-md-250 > div {	height: 250px; }
-.class-groups.col-height-md-300 > div {	height: 300px; }
-.class-groups.col-height-md-350 > div {	height: 350px; }
-.class-groups.col-height-md-400 > div {	height: 400px; }
-.class-groups.col-height-md-450 > div {	height: 450px; }
-.class-groups.col-height-md-500 > div {	height: 500px; }
-.class-groups.col-height-md-550 > div {	height: 550px; }
-.class-groups.col-height-md-600 > div {	height: 600px; }
+  @media (min-width: 992px) {
+	.categories-block .group-item a {
+	  max-width: 270px;
+	}
+  }
 
-.class-groups a.item.no-img {
-	height: auto;
-	overflow: auto;
-}
-
-.class-groups a.item.no-img h3 {
-	position: relative;
-	background: transparent;
-	text-shadow: none;
-	padding: .5em 0;
-}
-
-
-.class-groups a.item h3 small {
-	color: @gray-dark;
-	text-decoration: none;
-}
-
-.class-groups a.item:hover h3 small {
-	text-decoration: none;
-}
-
-.class-groups a.item:hover h3 {
-}
+  @media (min-width: 1200px) {
+	.categories-block .group-item a {
+	  max-width: 170px;
+	}
+  }

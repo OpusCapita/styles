@@ -1,4 +1,4 @@
-#shoppingForm .top-action-panel {
+#shoppingForm  {
   position: relative;
 
   .progress {
@@ -20,7 +20,6 @@
     top: 1px;
     position: relative;
   }
-
 }
 
 .shopping-cart {
@@ -53,10 +52,6 @@
     padding-left: 1em;
     padding-right: 1em;
     white-space: nowrap;
-  }
-
-  table.price input.form-control {
-    width: 6.5em;
   }
 
   .price-discount {
@@ -103,6 +98,7 @@
       font-weight: normal;
       width: 25%;
       white-space: nowrap;
+      color:inherit;
     }
 
     span {
@@ -131,6 +127,7 @@
   }
 }
 
+
 @media screen and (max-width: 767px) {
   .shopping-cart .message-holder {
     margin-top: -11px;
@@ -139,69 +136,69 @@
 
 .percentage-value {
   position: relative;
-}
 
-.percentage-value:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  display: block;
-  height: 4px;
-  top: 50%;
-  margin-top: -2px;
-  background: #6BB;
-}
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: block;
+    height: 4px;
+    top: 50%;
+    margin-top: -2px;
+    background: #6BB;
+  }
 
-.percentage-value .value {
-  position: absolute;
-  display: block;
-  height: 4px;
-  top: 50%;
-  margin-top: -2px;
-  background: #034;
-}
+  .value {
+    position: absolute;
+    display: block;
+    height: 4px;
+    top: 50%;
+    margin-top: -2px;
+    background: #034;
+  }
 
-.percentage-value .value.danger {
-  background: #d2322d;
-  width: 100%;
-}
+  .value.danger {
+    background: #d2322d;
+    width: 100%;
+  }
 
-.percentage-value .badge.expense {
-  position: relative;
-  background: #034;
-  font-size: 1.6em;
-  padding: .5em .5em;
-}
+  .badge.expense {
+    position: relative;
+    background: #034;
+    font-size: 1.6em;
+    padding: .5em .5em;
+  }
 
-.percentage-value .badge.expense.danger {
-  background: #d2322d;
-}
+  .badge.expense.danger {
+    background: #d2322d;
+  }
 
-.percentage-value .badge.expense span {
-  color: #6bb;
-  font-size: .6em;
-}
+  .badge.expense span {
+    color: #6bb;
+    font-size: .6em;
+  }
 
-.percentage-value .badge.expense.danger span {
-  color: #ff9f9c;
-}
+  .badge.expense.danger span {
+    color: #ff9f9c;
+  }
 
-.percentage-value .badge.total {
-  position: absolute;
-  background: #6bb;
-  font-size: 1.6em;
-  color: #fff;
-  right: 0;
-  padding: .5em .5em;
-}
+  .badge.total {
+    position: absolute;
+    background: #6bb;
+    font-size: 1.6em;
+    color: #fff;
+    right: 0;
+    padding: .5em .5em;
+  }
 
-.percentage-value .badge small {
-  font-size: .6em;
-  display: block;
-  margin: .2em 0 .4em;
-}
+  .badge small {
+    font-size: .6em;
+    display: block;
+    margin: .2em 0 .4em;
+  }
 
-.percentage-value .badge.total span {
-  font-size: .6em;
+  .badge.total span {
+    font-size: .6em;
+  }
 }
