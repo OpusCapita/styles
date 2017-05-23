@@ -174,7 +174,7 @@ app.get(`/${mainCssFile}`, (req, res) => {
   res.sendFile(pathToCss, function(err) {
     if (err) {
       console.log(err);
-      res.status(err.status).send(`'${pathToCss}' is not found`).end();
+      res.status(err.status).end();
     }
   });
 });
