@@ -1,6 +1,6 @@
 {
   "name": "opuscapita-bootstrap-ui",
-  "version": "1.0.2-beta.0",
+  "version": "1.0.2-beta.1",
   "description": "OpusCapita UI resources",
   "scripts": {
     "start": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0",
