@@ -57,6 +57,37 @@ import OCUI from 'opuscapita-bootstrap-ui';
 ```
 Ready to use!
 
+**You can share sources via node express server**
+
+```server.js
+app.use('/opuscapita-bootstrap-ui', express.static('node_modules/opuscapita-bootstrap-ui/dist'));
+```
+*in this case demo will be able in node app by url http://localhost:3000/opuscapita-bootstrap-ui/index.html*
+
+or redirect to running separate resource service
+```server.js
+app.get('/opuscapita-bootstrap-ui/main.css', function(req, res) {
+  res.redirect('http://localhost:3042/main.css');
+});
+```
+and than use it in html like
+```index.html
+<link rel="stylesheet" type="text/css" href="opuscapita-bootstrap-ui/main.css">
+```
+
+### Using as grails plugin
+add dependency in BuildConfig.groovy
+```
+runtime('com.jcatalog.grailsplugins:opuscapita-bootstrap-ui:1.0.2-beta.1')
+```
+add dependency for existing resources
+```
+dependsOn ('opuscapita-bootstrap-ui')
+```
+or include module in *.gsp files
+```
+<r:require modules="opuscapita-bootstrap-ui"/>
+```
 
 ### Source code info
 
