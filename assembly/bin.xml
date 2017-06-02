@@ -10,22 +10,20 @@
 
   <fileSets>
     <fileSet>
-      <directory>.</directory>
-      <outputDirectory>.</outputDirectory>
-      <excludes>
-        <exclude>src/client/demo/**</exclude>
-        <exclude>src/client/demo.js</exclude>
-        <exclude>test/**</exclude>
-        <exclude>target/**</exclude>
-        <exclude>.idea/**</exclude>
-        <exclude>assembly/**</exclude>
-        <exclude>.babelrc</exclude>
-        <exclude>.editorconfig</exclude>
-        <exclude>.eslintrc</exclude>
-        <exclude>.jscsrc</exclude>
-        <exclude>pom.xml</exclude>
-        <exclude>webpack.development.config.js</exclude>
-      </excludes>
+      <directory>dist/application</directory>
+      <outputDirectory>./application</outputDirectory>
+    </fileSet>
+    <fileSet>
+      <directory>node_modules</directory>
+      <outputDirectory>./node_modules</outputDirectory>
     </fileSet>
   </fileSets>
+
+  <files>
+    <file>
+      <source>config.json.sample</source>
+      <outputDirectory>.</outputDirectory>
+      <filtered>false</filtered>
+    </file>
+  </files>
 </assembly>

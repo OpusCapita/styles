@@ -46,8 +46,8 @@ def npmTestServer() {
 }
 
 // Build app
-def npmBuild() {
-  sh "npm run npm-build"
+def applicationBuild() {
+  sh "npm run application-build"
 }
 
 // Documentation deploy
@@ -149,8 +149,8 @@ node {
           // }
 
           // STAGE 3: Run Build
-          stage('Run build (npm)') {
-            npmBuild()
+          stage('Run application build (npm)') {
+            applicationBuild()
           }
 
           // STAGE 4: Clean dependencies before deploy

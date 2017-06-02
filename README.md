@@ -38,6 +38,16 @@ export PORT=1234
 npm start
 ```
 
+Lint sources
+```bash
+npm run lint
+```
+
+or run lint with fixing possible problems
+```
+npm run lint -- --fix
+```
+
 ### Using as npm package
 The easiest way to use compiled css+images+fonts+guide(html) is to install it from NPM and include it in your own React build process.
 

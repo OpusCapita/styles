@@ -2,6 +2,7 @@
 node_modules/
 build/
 dist/
+target/
 src/client/main.css
 *.iml
 config.json
