@@ -139,7 +139,7 @@ node {
             println "[INFO] SKIP RELEASE..."
           }
 
-          stage('Yarn install and update dependencies (yarn)') {
+          stage('Install/update dependencies (yarn)') {
             yarn()
           }
 
