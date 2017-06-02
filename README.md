@@ -3,7 +3,7 @@
 Provides less, css, fonts, images.
 
 ## Demo
-Online demo available here: https://opuscapita.github.io/node-oc-ui
+Online demo available here: https://opuscapita.github.io/opuscapita-ui
 
 ### Development
 
@@ -24,17 +24,17 @@ npm start
 ```
 
 Server will be available by the following url http://localhost:3042/. It is automatically reloaded when you make changes in sources.
-Compiled styles can be found in [main.css](http://localhost:3042/main.css) 
+Compiled styles can be found in [main.css](http://localhost:3042/main.css)
 
 If you want to change port run the following command(s) in console
 - on Windows
 ```
 set PORT=1234
-npm start 
+npm start
 ```
 - on Linux
 ```
-export PORT=1234 
+export PORT=1234
 npm start
 ```
 
@@ -45,51 +45,51 @@ The easiest way to use compiled css+images+fonts+guide(html) is to install it fr
 
 ```bash
 # using yarn
-yarn add opuscapita-bootstrap-ui
+yarn add @opuscapita/opuscapita-ui
 
 # or with npm
-npm install opuscapita-bootstrap-ui --save
+npm install @opuscapita/opuscapita-ui --save
 ```
 
 Let's say you have _index.html_ as entry point of your application then you add link to css file like this:
 ```html
-<link rel="stylesheet" type="text/css" href="opuscapita-bootstrap-ui/main.css">
+<link rel="stylesheet" type="text/css" href="opuscapita-ui/main.css">
 ```
 
-Then on server side, depedning on mode that you use e.g. production (appication) or demo start (app or module development mode) you can use OpusCapita UI diferently (we use _express_ server as an example):
+Then on server side, depending on mode that you use e.g. production (application) or demo start (app or module development mode) you can use OpusCapita UI differently (we use _express_ server as an example):
 ```javascript
-if (<devlopment/demo mode>) {
-  // demo or development mode where locally installed library 'opuscapita-bootstrap-ui' files are used
-  // 'opuscapita-bootstrap-ui' library holds all required the files in 'dist' folder
-  app.use('/opuscapita-bootstrap-ui', express.static('node_modules/opuscapita-bootstrap-ui/dist'));
+if (<development/demo mode>) {
+  // demo or development mode where locally installed library '@opuscapita/opuscapita-ui' files are used
+  // '@opuscapita/opuscapita-ui' library holds all required the files in 'dist' folder
+  app.use('/opuscapita-ui', express.static('node_modules/@opuscapita/opuscapita-ui/dist'));
 } else {
   // production mode, here we redirect to externally started oc-ui service and its css exposed via http
-  app.get('/opuscapita-bootstrap-ui/main.css', function(req, res) {
-    res.redirect('http://[oc-ui server url]/main.css');
+  app.get('/opuscapita-ui/main.css', function(req, res) {
+    res.redirect('http://[opuscapita-ui server url]/main.css');
   });
 }
 ```
 
-*Note:* In this case your you map local module resources (~= development mode) you will be able to access style guide also by url _http://[your app host and port]/opuscapita-bootstrap-ui/index.html_
+*Note:* In this case your you map local module resources (~= development mode) you will be able to access style guide also by url _http://[your app host and port]/opuscapita-ui/index.html_
 
 ### Using as grails plugin
 add dependency in BuildConfig.groovy
 ```
-runtime('com.jcatalog.grailsplugins:opuscapita-bootstrap-ui:1.0.2-beta.1')
+runtime('com.jcatalog.grailsplugins:opuscapita-ui:1.0.2-beta.1')
 ```
 add dependency for existing resources
 ```
-dependsOn ('opuscapita-bootstrap-ui')
+dependsOn ('opuscapita-ui')
 ```
 or include module in *.gsp files
 ```
-<r:require modules="opuscapita-bootstrap-ui"/>
+<r:require modules="opuscapita-ui"/>
 ```
 
 ### Source code info
 
 #### Folder structure
- 
+
  ```
  src/
   client/
@@ -103,20 +103,20 @@ or include module in *.gsp files
     index.js
  config.json.sample
  ```
- 
+
  * `src/server/index.js` - Main server file that provide resources and demo pages, handle changes in `src/server/resources` and customization area, recompile less to css.
  * `src/client/index.html` - Start page of the application [http://localhost:3042/] (http://localhost:3042/)
  * `src/client/demo/` - Contain demo pages with examples and some additional resources for displaying it.
  * `src/client/resources/` - Contain fonts, images and standard less files with current UI styles.
  * `config.json.sample` - Sample of config to set path to customization area
- 
- 
+
+
 #### What is the less
 Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themeable and extendable.
-Read more information about less on [the official documentation](http://lesscss.org/features/#features-overview-feature). 
+Read more information about less on [the official documentation](http://lesscss.org/features/#features-overview-feature).
 
 #### About less structure inside less folder
- 
+
 ```
 less/
   core/   
@@ -135,7 +135,7 @@ where:
 * `jcatalog-ui` - Overwrite (modify) some standard bootstrap components and states (for example use another fonts, hover states)
 * `jqgrid` - jqgrid on bootstrap.
 * `jquery-ui` - jQuery-ui on bootstrap.
-* `opc` - Specific styles for OPC only 
+* `opc` - Specific styles for OPC only
 * `main.less` - The main less file that import another
 * `variables.less` - The main file with variables that are used inside other less files.  
 * `mixins.less` - The main file with mixins that are used inside other less files.  
@@ -147,4 +147,3 @@ where:
  * Set path to customization area as value for `pathToCustomization` key in `config.json`;
  * Customization area must contain `less` directory and `main.less` file in it;
  * Other resources should be imported in `main.less` file.
-

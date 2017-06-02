@@ -11,8 +11,8 @@
   </parent>
 
   <groupId>com.jcatalog.node</groupId>
-  <artifactId>node-oc-ui</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <artifactId>opuscapita-ui</artifactId>
+  <version>1.0.2-beta.2-SNAPSHOT</version>
 
   <name>node-oc-ui</name>
 
