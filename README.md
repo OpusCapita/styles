@@ -41,39 +41,36 @@ npm start
 ### Using as npm package
 The easiest way to use compiled css+images+fonts+guide(html) is to install it from NPM and include it in your own React build process.
 
-**Add the dependency to your project**
+#### Add the dependency to your node application or module
 
 ```bash
+# using yarn
 yarn add opuscapita-bootstrap-ui
 
 # or with npm
 npm install opuscapita-bootstrap-ui --save
 ```
 
-**You can import styles with all needed resources as part of react application**
-
-```react.js
-import OCUI from 'opuscapita-bootstrap-ui';
-```
-Ready to use!
-
-**You can share sources via node express server**
-
-```server.js
-app.use('/opuscapita-bootstrap-ui', express.static('node_modules/opuscapita-bootstrap-ui/dist'));
-```
-*in this case demo will be able in node app by url http://localhost:3000/opuscapita-bootstrap-ui/index.html*
-
-or redirect to running separate resource service
-```server.js
-app.get('/opuscapita-bootstrap-ui/main.css', function(req, res) {
-  res.redirect('http://localhost:3042/main.css');
-});
-```
-and than use it in html like
-```index.html
+Let's say you have _index.html_ as entry point of your application then you add link to css file like this:
+```html
 <link rel="stylesheet" type="text/css" href="opuscapita-bootstrap-ui/main.css">
 ```
+
+Then on server side, depedning on mode that you use e.g. production (appication) or demo start (app or module development mode) you can use OpusCapita UI diferently (we use _express_ server as an example):
+```javascript
+if (<devlopment/demo mode>) {
+  // demo or development mode where locally installed library 'opuscapita-bootstrap-ui' files are used
+  // 'opuscapita-bootstrap-ui' library holds all required the files in 'dist' folder
+  app.use('/opuscapita-bootstrap-ui', express.static('node_modules/opuscapita-bootstrap-ui/dist'));
+} else {
+  // production mode, here we redirect to externally started oc-ui service and its css exposed via http
+  app.get('/opuscapita-bootstrap-ui/main.css', function(req, res) {
+    res.redirect('http://[oc-ui server url]/main.css');
+  });
+}
+```
+
+*Note:* In this case your you map local module resources (~= development mode) you will be able to access style guide also by url _http://[your app host and port]/opuscapita-bootstrap-ui/index.html_
 
 ### Using as grails plugin
 add dependency in BuildConfig.groovy
