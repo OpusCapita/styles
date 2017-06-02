@@ -4,5 +4,11 @@ build/
 dist/
 src/client/main.css
 *.iml
-*.log
 config.json
+
+# Logs
+logs
+*.log
+
+# Locks
+yarn.lock
