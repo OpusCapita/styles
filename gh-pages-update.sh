@@ -3,8 +3,8 @@
 rm -rf .gh-pages-tmp build &&
 mkdir .gh-pages-tmp &&
 npm run build-less &&
-npm run npm-build &&
-cp -R build/client/* .gh-pages-tmp &&
+npm run application-build &&
+cp -R dist/application/client/* .gh-pages-tmp &&
 rm -rf .gh-pages-tmp/resources/less &&
 sed -i -e "s/url('../url('resources/g" .gh-pages-tmp/main.css &&
 sed -i -e "s/src=\"..\//src=\"resources\//g" .gh-pages-tmp/*.html &&
