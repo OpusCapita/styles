@@ -18,7 +18,7 @@ git ls-files | grep -v -e "\(^\.gitignore$\|^\.gitattributes$\|^\.gh-pages-tmp$\
 rm -rf demo resources &&
 mv .gh-pages-tmp/* . &&
 rm -rf .gh-pages-tmp &&
-git add . &&
+git add -u . &&
 git add -A ./demo ./resources &&
 git commit -m "Update gh-pages" &&
 # git push --force origin gh-pages &&
