@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0",
     "lint": "eslint src",
-    "application-build": "rimraf dist/application && babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir dist/application/server && cp -R src/client dist/application/",
+    "application-build": "rimraf dist/application && babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir dist/application/server && cp -R src/client dist/application",
     "npm-client-build": "rimraf dist && lessc --relative-urls src/client/resources/less/main.less src/client/main.css && cp -R src/client dist && sh demo-resources-path.sh",
     "publish-release": "npm run npm-client-build && npm-publish --release",
     "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css",
