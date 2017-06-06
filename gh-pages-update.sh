@@ -15,9 +15,11 @@ git checkout gh-pages &&
 git reset --hard &&
 git pull &&
 git ls-files | grep -v -e "\(^\.gitignore$\|^\.gitattributes$\|^\.gh-pages-tmp$\)" | xargs rm -rf &&
+rm -rf demo resources &&
 mv .gh-pages-tmp/* . &&
 rm -rf .gh-pages-tmp &&
-git add -A . &&
+git add . &&
+git add -A ./demo ./resources &&
 git commit -m "Update gh-pages" &&
 # git push --force origin gh-pages &&
 git checkout master
