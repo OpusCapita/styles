@@ -6,10 +6,10 @@
     "start": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0",
     "lint": "eslint src",
     "application-build": "rimraf dist/application && babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir dist/application/server && cp -R src/client dist/application",
-    "npm-client-build": "rimraf dist && lessc --relative-urls src/client/resources/less/main.less src/client/main.css && cp -R src/client dist && sh demo-resources-path.sh",
+    "npm-client-build": "rimraf dist && mkdir dist && lessc --relative-urls src/client/resources/less/main.less src/client/main.css && cp -R src/client dist/npm && sh demo-resources-path.sh",
     "publish-release": "npm run npm-client-build && npm-publish --release",
     "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css",
-    "grails-plugin-build": "rimraf dist && lessc --relative-urls src/client/resources/less/main.less src/client/main.css && cp -R src/client dist && sh grails-resources-path.sh",
+    "grails-plugin-build": "rimraf dist/grails && lessc --relative-urls src/client/resources/less/main.less src/client/main.css && cp -R src/client dist/grails && sh grails-resources-path.sh",
     "grails-plugin-package": "npm run grails-plugin-build && grails-plugin-package",
     "grails-plugin-install": "npm run grails-plugin-package && grails-plugin-install",
     "grails-plugin-deploy": "npm run grails-plugin-package && grails-plugin-deploy",
@@ -20,7 +20,7 @@
     "email": "sergey.tamkov@jcatalog.com"
   },
   "files": [
-    "dist"
+    "dist/npm"
   ],
   "main": "dist/main.css",
   "repository": "OpusCapita/opuscapita-ui",
@@ -50,7 +50,7 @@
   },
   "grails": {
     "groupId": "com.jcatalog.grailsplugins",
-    "buildDir": "dist",
+    "buildDir": "dist/grails",
     "resources": {
       "opuscapita-ui": {
         "files": {
