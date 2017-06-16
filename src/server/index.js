@@ -5,7 +5,6 @@ const express = require('express');
 const cors = require('cors');
 const chokidar = require('chokidar');
 const fs = require('fs-extra');
-/* const exec = require('child_process').exec;*/
 const rimraf = require('rimraf');
 
 let config = {};
