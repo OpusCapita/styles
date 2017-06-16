@@ -1,4 +1,9 @@
 
+Release 1.0.2-beta.2 Fri Jun 16 2017 16:54:38 GMT+0300 (Belarus Standard Time)
+=======================================================
+
+ - Lint fix. (Sergey Tamkov <tamkov@scand.com>, Fri Jun 16 15:49:48 2017 +0300)
+
 Release 1.0.2-beta.2 Fri Jun 16 2017 15:44:59 GMT+0300 (Belarus Standard Time)
 =======================================================
 
