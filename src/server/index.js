@@ -2,7 +2,6 @@ const path = require('path');
 const process = require('process');
 const os = require('os');
 const express = require('express');
-const cors = require('cors');
 const chokidar = require('chokidar');
 const fs = require('fs-extra');
 const rimraf = require('rimraf');
@@ -27,8 +26,6 @@ const pathToLess = path.join(tmpDir, mainLessFile);
 
 try {
   // create main.less file
-  // fs.outputFileSync(pathToLess, '@import "resources/less/main.less"; ' +
-  //   '@import (optional) "customization/less/main.less";');
   fs.outputFileSync(pathToLess, `
 @import "${tmpDir}/resources/less/main.less";
 @import (optional) "${tmpDir}/customization/less/main.less";`);
@@ -39,8 +36,6 @@ try {
 
 const lessRecompile = function() {
   console.log(`start less file '${pathToLess}' recompiling into \n'${pathToCss}' file...`);
-
-  // let lesscExec = exec(`lessc --relative-urls ${pathToLess} ${pathToCss}`);
 
   // eslint-disable-next-line consistent-return
   fs.readFile(pathToLess, 'utf8', function(err, lessText) {
@@ -62,18 +57,6 @@ const lessRecompile = function() {
       // });console.log(output.css);
     });
   });
-
-  // lesscExec.stdout.on('data', (data) => {
-  //   console.log(`stdout\n'${data}'`);
-  // });
-  //
-  // lesscExec.stderr.on('data', (data) => {
-  //   console.log(`stderr\n'${data}'`);
-  // });
-  //
-  // lesscExec.on('close', (code) => {
-  //   console.log(`'${pathToCss}' is recompiled`);
-  // });
 };
 
 const directoryWatcher = (directory, callback) => {
@@ -118,17 +101,6 @@ const originalResourcesDirectoryWatcher = directoryWatcher(originalResourcesDire
   direrctoryWatchHandler(event, path, path.replace(originalResourcesDirectory, temporaryResourcesDirectory));
 });
 
-// let recompileLessTimer;
-// Watcher for standard less files. Run less recompiling.???
-// eslint-disable-next-line no-unused-vars
-// const temporaryResourcesDirectoryWatcher = directoryWatcher(temporaryResourcesDirectory, (event, path) => {
-//   if (path.match(/\.less$/)) {
-//     // run less recompiling if less file was changed.
-//     clearTimeout(recompileLessTimer);
-//     recompileLessTimer = setTimeout(lessRecompile, 1000);
-//   }
-// });
-
 if (config.pathToCustomization) {
   console.log(`path to customization '${config.pathToCustomization}'`);
 
@@ -141,15 +113,6 @@ if (config.pathToCustomization) {
     direrctoryWatchHandler(event, path, path.replace(customDir, tmpCustomDir));
   });
 
-  // Watcher for tmp directory with customization. Run less recompiling.
-  // eslint-disable-next-line no-unused-vars
-  // const tmpCustomDirWatcher = directoryWatcher(tmpCustomDir, (event, path) => {
-  //   if (path.match(/\.less$/)) {
-  //     // run less recompiling if less file was changed.
-  //     clearTimeout(recompileLessTimer);
-  //     recompileLessTimer = setTimeout(lessRecompile, 1000);
-  //   }
-  // });
 }
 
 let recompileLessTimer;
@@ -163,7 +126,8 @@ const temporaryResourcesDirectoryWatcher = directoryWatcher(path.join(tmpDir, '*
 });
 
 const app = express();
-app.use(cors());
+app.use(require('cors')());
+app.use(require('compression')());
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/index.html'));

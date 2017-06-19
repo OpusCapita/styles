@@ -28,6 +28,7 @@
   "readme": "README.md",
   "dependencies": {
     "chokidar": "1.6.1",
+    "compression": "1.6.2",
     "cors": "2.8.1",
     "express": "4.14.0",
     "fs-extra": "1.0.0",
