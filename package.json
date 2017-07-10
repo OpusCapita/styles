@@ -15,15 +15,15 @@
     "grails-plugin-deploy": "npm run grails-plugin-package && grails-plugin-deploy",
     "grails-plugin-deploy-release": "npm run grails-plugin-package -- --release && grails-plugin-deploy --release"
   },
-  "author": {
-    "name": "Sergey Tamkov",
-    "email": "sergey.tamkov@jcatalog.com"
-  },
   "files": [
     "dist/npm"
   ],
   "main": "dist/main.css",
   "repository": "OpusCapita/opuscapita-ui",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "license": "Apache-2.0",
   "readme": "README.md",
   "dependencies": {
