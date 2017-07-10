@@ -1,4 +1,10 @@
 
+Release 1.0.2-beta.4 Mon Jul 10 2017 12:05:03 GMT+0300 (+03)
+=======================================================
+
+ - Fix "main" field in package.json (Kirill Volkovich <volkovich@scand.com>, Mon Jul 10 12:04:46 2017 +0300)
+ - Updating to a version to  1.0.2-beta.4 (Kirill Volkovich <volkovich@scand.com>, Mon Jul 10 11:55:41 2017 +0300)
+
 Release 1.0.2-beta.3 Mon Jul 10 2017 11:55:27 GMT+0300 (+03)
 =======================================================
 
