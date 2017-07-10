@@ -18,7 +18,7 @@
   "files": [
     "dist/npm"
   ],
-  "main": "dist/main.css",
+  "main": "dist/npm/main.css",
   "repository": "OpusCapita/opuscapita-ui",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
