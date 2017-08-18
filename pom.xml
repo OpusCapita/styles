@@ -7,12 +7,12 @@
   <parent>
     <artifactId>jcatalog-parent</artifactId>
     <groupId>com.jcatalog</groupId>
-    <version>7.16.GA</version>
+    <version>7.16.GA.1</version>
   </parent>
 
   <groupId>com.jcatalog.node</groupId>
   <artifactId>opuscapita-ui</artifactId>
-  <version>1.0.2-beta.2-SNAPSHOT</version>
+  <version>1.0.2-beta.5</version>
 
   <name>node-oc-ui</name>
 
