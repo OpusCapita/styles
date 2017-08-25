@@ -9,9 +9,9 @@
     "application-build": "rimraf dist/application && mkdirp dist/application && babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir dist/application/src/server && cpx 'src/client/**' dist/application/src/client",
     "application-package": "npm run application-build && mvn clean package",
     "application-deploy": "npm run application-build && mvn clean deploy",
-    "npm-build": "npm run compile-css && rimraf dist/npm && mkdirp dist/npm && cpx dist/css/index.css dist/npm && cpx 'src/client/**' dist/npm && sh ./scripts/npm-resources-fix-path.sh",
+    "npm-build": "npm run compile-css && rimraf dist/npm && mkdirp dist/npm && cpx dist/css/index.css dist/npm && cpx 'src/client/demo/**' dist/npm/demo && cpx 'src/client/resources/**' dist/npm && cpx 'src/client/index.html' dist/npm",
     "npm-publish": "npm run npm-build && npm-publish --release",
-    "grails-plugin-package": "npm run compile-css && rimraf dist/grails && mkdirp dist/npm && cpx dist/css/index.css dist/grails && cpx 'src/client/**' dist/grails && sh ./scripts/grails-plugin-resources-fix-path.sh && grails-plugin-package --release",
+    "grails-plugin-package": "npm run compile-css && rimraf dist/grails && mkdirp dist/npm && cpx dist/css/index.css dist/grails && cpx 'src/client/**' dist/grails && grails-plugin-package --release",
     "grails-plugin-deploy": "npm run grails-plugin-package && grails-plugin-deploy --release",
     "build-release": "npm run application-package && npm run grails-plugin-package && npm run npm-build",
     "publish-release": "npm run application-deploy && npm run grails-plugin-deploy && npm run npm-publish",
@@ -58,7 +58,7 @@
     "resources": {
       "opuscapita-ui": {
         "files": {
-          "index.css": "css/index.css"
+          "index.css": "index.css"
         }
       }
     },
