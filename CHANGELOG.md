@@ -1,3 +1,10 @@
+## [v1.0.3-beta.1](Fri, 25 Aug 2017 08:41:39 GMT)
+ - Using 'OpusCapita' instead of 'jCatalog' (Alexey Sergeev <sab@scand.com>, 5fc213f)
+ - Adding page with extensions (Alexey Sergeev <sab@scand.com>, 9281618)
+ - Restructuring and cleanuping soruces, refactoring build process. (Alexey Sergeev <sab@scand.com>, 15c82a2)
+ - Synchronizing module version in pom.xml with package.json (Alexey Sergeev <sab@scand.com>, a709226)
+ - Adding executabe attribute to all sh files (Alexey Sergeev <sab@scand.com>, 6a5c9c1)
+
 ## [v1.0.2-beta.4](Mon, 10 Jul 2017 09:05:03 GMT)
  - Fix "main" field in package.json (Kirill Volkovich <volkovich@scand.com>, e237b1f)
 
