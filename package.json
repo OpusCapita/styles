@@ -1,6 +1,6 @@
 {
   "name": "@opuscapita/opuscapita-ui",
-  "version": "1.0.3",
+  "version": "1.0.3-beta.1",
   "description": "OpusCapita UI resources",
   "scripts": {
     "start": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0",
@@ -53,7 +53,7 @@
     "nodemon": "1.11.0"
   },
   "grails": {
-    "groupId": "com.jcatalog.grailsplugins",
+    "groupId": "com.opuscapita.grailsplugins",
     "buildDir": "dist/grails",
     "resources": {
       "opuscapita-ui": {

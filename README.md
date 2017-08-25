@@ -85,7 +85,7 @@ if (<development/demo mode>) {
 ### Using as grails plugin
 add dependency in BuildConfig.groovy
 ```
-runtime('com.jcatalog.grailsplugins:opuscapita-ui:1.0.2-beta.1')
+runtime('com.opuscapita.grailsplugins:opuscapita-ui:1.0.3-beta.1')
 ```
 add dependency for existing resources
 ```
