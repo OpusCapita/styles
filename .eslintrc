@@ -1,3 +1,6 @@
 {
-  "extends": "opuscapita"
+  "extends": "opuscapita",
+  "env": {
+    "node": true
+  }
 }

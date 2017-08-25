@@ -12,7 +12,7 @@
 
   <groupId>com.jcatalog.node</groupId>
   <artifactId>opuscapita-ui</artifactId>
-  <version>1.0.2-beta.5</version>
+  <version>1.0.3</version>
 
   <name>node-oc-ui</name>
 

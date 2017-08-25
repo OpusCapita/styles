@@ -1,11 +1,10 @@
 .idea
+*.iml
 node_modules/
 build/
 dist/
 target/
-src/client/main.css
-*.iml
-config.json
+configuration.json
 
 # Logs
 logs

@@ -1,139 +1,96 @@
 const path = require('path');
 const process = require('process');
-const os = require('os');
 const express = require('express');
-const chokidar = require('chokidar');
-const fs = require('fs-extra');
+const os = require('os');
+const fs = require('fs');
 const rimraf = require('rimraf');
+import {
+  directoryWatcher,
+  direrctoryWatchHandler
+} from './util/directoryWatching';
 
 let config = {};
 try {
-  config = require('../../config.json');
+  config = require('../../configuration.json');
 } catch (e) {
-  console.log('config file "config.json" is not found');
+  console.log('config file "configuration.json" is not found');
 }
 
-const watchInterval = 1000;
+const tmpDirectory = fs.mkdtempSync(path.join(os.tmpdir(), 'oc-ui'));
+console.log(`temporary working directory '${tmpDirectory}' is created`);
 
-const mainCssFile = 'main.css';
-const mainLessFile = 'main.less';
+const pathToCss = path.join(tmpDirectory, 'index.css');
 
-const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'oc-ui'));
-console.log(`temporary working directory '${tmpDir}' is created`);
+const tmpResourcesDirectory = path.join(tmpDirectory, 'resources');
+const tmpCustomizationAreaDirectory = path.join(tmpDirectory, 'customization');
 
-const pathToCss = path.join(tmpDir, mainCssFile);
-const pathToLess = path.join(tmpDir, mainLessFile);
-
-try {
-  // create main.less file
-  fs.outputFileSync(pathToLess, `
-@import "${tmpDir}/resources/less/main.less";
-@import (optional) "${tmpDir}/customization/less/main.less";`);
-  console.log("The main.less was saved!");
-} catch (err) {
-  console.log(err);
-}
+const lessRecompilationContent = `
+@import "${tmpResourcesDirectory}/less/index.less";
+@import (optional) "${tmpCustomizationAreaDirectory}/less/index.less";
+`;
 
 const lessRecompile = function() {
-  console.log(`start less file '${pathToLess}' recompiling into \n'${pathToCss}' file...`);
+  console.log(`recompiling less files into \n'${pathToCss}' file...`);
 
   // eslint-disable-next-line consistent-return
-  fs.readFile(pathToLess, 'utf8', function(err, lessText) {
-    if (err) {
-      return console.log(err);
-    }
-    console.log(`\n---\n${lessText}\n----\n`);
-    // eslint-disable-next-line max-len, consistent-return
-    require('less').render(`@import "${tmpDir}/main.less";`, { relativeUrls: false, rootpath: 'fake' }, function(e, output) {
+  require('less').render(lessRecompilationContent,
+    {
+      relativeUrls: false,
+      rootpath: 'fake'
+    },
+    function(e, output) {
       if (e) {
-        return console.log(e);
+        console.log(e);
+        return;
       }
-      // eslint-disable-next-line consistent-return
       fs.writeFile(pathToCss, output.css, function(err) {
         if (err) {
-          return console.log("Error writing file: " + err);
+          console.log(`Error writing file '${err}'`);
+          return;
         }
       });
-      // });console.log(output.css);
-    });
-  });
-};
-
-const directoryWatcher = (directory, callback) => {
-  chokidar.watch(directory, {
-    usePolling: true,
-    interval: watchInterval,
-    binaryInterval: watchInterval,
-    alwaysStat: true,
-    awaitWriteFinish: true
-  }).on('all', callback);
-};
-
-const direrctoryWatchHandler = function(event, path, tmpPath) {
-  if (event === 'change' || event === 'add') {
-    fs.copy(path, tmpPath, function(err) {
-      if (err) {
-        console.error(err);
-      }
-    });
-  }
-
-  if (event === 'unlink' || event === 'unlinkDir') {
-    fs.remove(tmpPath, function(err) {
-      if (err) {
-        console.error(err);
-      }
-    });
-  }
-
-  if ('ready') {
-    // console.log('READY');
-  }
+    }
+  );
 };
 
 const originalResourcesDirectory = path.join(__dirname, '../client/resources');
-console.log("RESOURCES:", originalResourcesDirectory);
-const temporaryResourcesDirectory = path.join(tmpDir, 'resources');
-
-// Watcher for custom directory, ignores .dotfiles???
+// Watcher for original sources directory, ignores .dotfiles???
 // eslint-disable-next-line no-unused-vars
 const originalResourcesDirectoryWatcher = directoryWatcher(originalResourcesDirectory, (event, path) => {
-  direrctoryWatchHandler(event, path, path.replace(originalResourcesDirectory, temporaryResourcesDirectory));
+  direrctoryWatchHandler(event, path, path.replace(originalResourcesDirectory, tmpResourcesDirectory));
 });
 
-if (config.pathToCustomization) {
-  console.log(`path to customization '${config.pathToCustomization}'`);
+// Watcher for custom directory, ignores .dotfiles???
+let customizationAreaDirectoryWatcher = null;
+if (config.customizationAreaPath) {
+  console.log(`path to customization '${config.customizationAreaPath}'`);
 
-  const tmpCustomDir = path.join(tmpDir, 'customization');
-  const customDir = path.join(config.pathToCustomization);
-
-  // Watcher for custom directory, ignores .dotfiles
   // eslint-disable-next-line no-unused-vars
-  const customDirWatcher = directoryWatcher(config.pathToCustomization, (event, path) => {
-    direrctoryWatchHandler(event, path, path.replace(customDir, tmpCustomDir));
+  customizationAreaDirectoryWatcher = directoryWatcher(config.customizationAreaPath, (event, path) => {
+    direrctoryWatchHandler(event, path, path.replace(config.customizationAreaPath, tmpCustomizationAreaDirectory));
   });
-
 }
 
 let recompileLessTimer;
 // Watcher for standard less files. Run less recompiling.???
 // eslint-disable-next-line no-unused-vars
-const temporaryResourcesDirectoryWatcher = directoryWatcher(path.join(tmpDir, '**/*.less'), (event, path) => {
+const tmpDirectoryWatcher = directoryWatcher(path.join(tmpDirectory, '**/*.less'), (event, path) => {
   // console.log(`(event:${event}): ${path} is changed, recompiling less files`);
   // run less recompiling if less file was changed.
   clearTimeout(recompileLessTimer);
   recompileLessTimer = setTimeout(lessRecompile, 1000);
 });
 
+// configure application
 const app = express();
+// middlewares
 app.use(require('cors')());
 app.use(require('compression')());
-
+// routes
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/index.html'));
 });
-
-app.get(`/${mainCssFile}`, (req, res) => {
+app.get(`/index.css`, (req, res) => {
   res.sendFile(pathToCss, function(err) {
     if (err) {
       console.log(err);
@@ -141,42 +98,52 @@ app.get(`/${mainCssFile}`, (req, res) => {
     }
   });
 });
-
-if (config.pathToCustomization) {
-  app.use('/', express.static(path.join(tmpDir, 'customization')));
+// if customization is available then we would add possibility to expose its content
+if (config.customizationAreaPath) {
+  app.use('/', express.static(tmpCustomizationAreaDirectory));
 }
-app.use('/', express.static(temporaryResourcesDirectory));
+app.use('/', express.static(tmpResourcesDirectory));
 app.use('/demo', express.static(path.join(__dirname, '../client/demo')));
 
+// run application (web server)
 const port = process.env.PORT || 3042;
-const host = 'localhost';
+const host = process.env.HOST || 'localhost';
 app.listen(port, host, (err) => {
   if (err) {
     console.log(err);
     return;
   }
-
   console.log(`Listening at http://${host}:${port}`);
 });
 
-const exitHandler = (options = { exit: false }) => {
+// configure process exit
+const exitHandler = (options = { exit: false, cleanup: false }) => {
   return (code) => {
-    console.log(`about to exit with code '${code}'`);
-    console.log(`... deleting temporary working directory '${tmpDir}'`);
-    rimraf.sync(tmpDir);
+    if (code) {
+      console.log(`about to exit with code '${code}'`);
+    }
+    if (options.cleanup) {
+      if (originalResourcesDirectoryWatcher) {
+        originalResourcesDirectoryWatcher.stop();
+      }
+      if (customizationAreaDirectoryWatcher) {
+        customizationAreaDirectoryWatcher.stop();
+      }
+      if (tmpDirectoryWatcher) {
+        tmpDirectoryWatcher.close();
+      }
+      rimraf.sync(tmpDirectory);
+    }
     if (options.exit) {
       process.exit();
     }
   }
 };
-
 // the program will not close instantly
 process.stdin.resume();
 // do something when app is closing
-process.on('exit', exitHandler());
-
+process.on('exit', exitHandler({ cleanup: true }));
 // catches ctrl+c event
 process.on('SIGINT', exitHandler({ exit: true }));
-
 // catches uncaught exceptions
 process.on('uncaughtException', exitHandler({ exit: true }));
