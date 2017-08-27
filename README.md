@@ -17,6 +17,10 @@ Install dependencies
 ```
 npm i
 ```
+or using **yarn**
+```
+yarn
+```
 
 Start server
 ```
@@ -40,12 +44,12 @@ npm start
 
 Lint sources
 ```bash
-npm run lint
+npm star lint
 ```
 
 or run lint with fixing possible problems
 ```
-npm run lint -- --fix
+npm start lint.fix
 ```
 
 ### Using as npm package
