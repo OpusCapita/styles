@@ -1,5 +1,10 @@
 ## OpusCapita UI
 
+[![CircleCI Status](https://circleci.com/gh/OpusCapita/opuscapita-ui/tree/master.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/OpusCapita/opuscapita-ui)
+![badge-npm-version](https://img.shields.io/npm/v/@opuscapita/opuscapita-ui.svg) 
+![badge-license](https://img.shields.io/github/license/OpusCapita/opuscapita-ui.svg)
+![NPM Downloads](https://img.shields.io/npm/dm/@opuscapita/opuscapita-ui.svg)
+
 Idea behind this application creation is to have one service which:
 - provides common look and feel for OpusCapita applications
 - gives a consistent way of continuous development of this application (extending styles, adding new UIs)
