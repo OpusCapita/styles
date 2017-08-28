@@ -28,13 +28,13 @@ jobs:
           name: lint
           command: npm start lint
 
-     - run:
-         name: build-gh-pages
-         command: ./scripts/gh-pages/build.sh
+      - run:
+          name: build-gh-pages
+          command: ./scripts/gh-pages/build.sh
 
-     - run:
-         name: deploy-gh-pages
-         command: ./scripts/gh-pages/deplouy.sh .gh-pages-tmp
+      - run:
+          name: deploy-gh-pages
+          command: ./scripts/gh-pages/deplouy.sh .gh-pages-tmp
 #
 #      - run:
 #          name: upload-coverage
