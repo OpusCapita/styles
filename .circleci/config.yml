@@ -30,11 +30,11 @@ jobs:
 
      - run:
          name: build-gh-pages
-         command: sh ./scripts/gh-pages/build.sh
+         command: ./scripts/gh-pages/build.sh
 
      - run:
          name: deploy-gh-pages
-         command: sh ./scripts/gh-pages/deplouy.sh .gh-pages-tmp
+         command: ./scripts/gh-pages/deplouy.sh .gh-pages-tmp
 #
 #      - run:
 #          name: upload-coverage
