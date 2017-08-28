@@ -1,24 +1,14 @@
 {
   "name": "@opuscapita/opuscapita-ui",
-  "version": "1.0.2-beta.5",
+  "version": "1.0.3-beta.2",
   "description": "OpusCapita UI resources",
   "scripts": {
-    "start": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0",
-    "lint": "eslint src",
-    "application-build": "rimraf dist/application && babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir dist/application/server && cp -R src/client dist/application",
-    "npm-client-build": "rimraf dist && mkdir dist && lessc --relative-urls src/client/resources/less/main.less src/client/main.css && cp -R src/client dist/npm && sh demo-resources-path.sh",
-    "publish-release": "npm run npm-client-build && npm-publish --release",
-    "build-less": "lessc --relative-urls src/client/resources/less/main.less src/client/main.css",
-    "grails-plugin-build": "rimraf dist/grails && lessc --relative-urls src/client/resources/less/main.less src/client/main.css && cp -R src/client dist/grails && sh grails-resources-path.sh",
-    "grails-plugin-package": "npm run grails-plugin-build && grails-plugin-package",
-    "grails-plugin-install": "npm run grails-plugin-package && grails-plugin-install",
-    "grails-plugin-deploy": "npm run grails-plugin-package && grails-plugin-deploy",
-    "grails-plugin-deploy-release": "npm run grails-plugin-package -- --release && grails-plugin-deploy --release"
+    "start": "nps"
   },
   "files": [
     "dist/npm"
   ],
-  "main": "dist/npm/main.css",
+  "main": "dist/npm/index.css",
   "repository": "OpusCapita/opuscapita-ui",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -27,40 +17,42 @@
   "license": "Apache-2.0",
   "readme": "README.md",
   "dependencies": {
-    "chokidar": "1.6.1",
-    "compression": "1.6.2",
-    "cors": "2.8.1",
-    "express": "4.14.0",
-    "fs-extra": "1.0.0",
+    "chokidar": "1.7.0",
+    "compression": "1.7.0",
+    "cors": "2.8.4",
+    "express": "4.15.4",
     "less": "2.7.2",
-    "lodash": "4.17.4",
-    "rimraf": "2.5.4"
+    "rimraf": "2.6.1"
   },
   "devDependencies": {
-    "@opuscapita/npm-scripts": "1.0.8",
-    "babel-cli": "6.18.0",
-    "babel-core": "6.20.0",
-    "babel-eslint": "7.1.1",
+    "@opuscapita/npm-scripts": "2.0.0",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "7.2.3",
     "babel-plugin-lodash": "3.2.11",
-    "babel-preset-es2015": "6.18.0",
-    "babel-preset-stage-0": "6.16.0",
-    "eslint": "3.12.2",
-    "eslint-config-opuscapita": "1.0.7",
-    "eslint-plugin-react": "6.8.0",
-    "nodemon": "1.11.0"
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "cpx": "1.5.0",
+    "eslint": "3.19.0",
+    "eslint-config-opuscapita": "1.0.9",
+    "eslint-plugin-react": "6.10.3",
+    "nodemon": "1.11.0",
+    "nps": "5.7.1",
+    "nps-utils": "1.3.0"
   },
   "grails": {
-    "groupId": "com.jcatalog.grailsplugins",
+    "groupId": "com.opuscapita.grailsplugins",
     "buildDir": "dist/grails",
     "resources": {
       "opuscapita-ui": {
         "files": {
-          "main.css": "css/main.css"
+          "index.css": "index.css"
         }
       }
     },
     "standaloneFiles": {
-      "resources": "web-app"
+      "fonts": "web-app/fonts",
+      "img": "web-app/img"
     }
   }
 }
