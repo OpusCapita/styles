@@ -4,10 +4,7 @@ const express = require('express');
 const os = require('os');
 const fs = require('fs');
 const rimraf = require('rimraf');
-import {
-  directoryWatcher,
-  direrctoryWatchHandler
-} from './util/directoryWatching';
+import { directoryWatcher } from './util/directoryWatching';
 
 let config = {};
 try {
@@ -21,13 +18,12 @@ console.log(`temporary working directory '${tmpDirectory}' is created`);
 
 const pathToCss = path.join(tmpDirectory, 'index.css');
 
-const tmpResourcesDirectory = path.join(tmpDirectory, 'resources');
-const tmpCustomizationAreaDirectory = path.join(tmpDirectory, 'customization');
-
-const lessRecompilationContent = `
-@import "${tmpResourcesDirectory}/less/index.less";
-@import (optional) "${tmpCustomizationAreaDirectory}/less/index.less";
-`;
+let lessRecompilationContent = `@import "${path.join(__dirname, '../client/resources/less/index.less')}";`;
+if (config.customizationAreaPath) {
+  lessRecompilationContent += `
+@import (optional) "${path.join(config.customizationAreaPath, 'less/index.less')}";`;
+}
+// console.log(`final less:\n${lessRecompilationContent}`);
 
 const lessRecompile = function() {
   console.log(`recompiling less files into \n'${pathToCss}' file...`);
@@ -53,28 +49,16 @@ const lessRecompile = function() {
   );
 };
 
-const originalResourcesDirectory = path.join(__dirname, '../client/resources');
-// Watcher for original sources directory, ignores .dotfiles???
-// eslint-disable-next-line no-unused-vars
-const originalResourcesDirectoryWatcher = directoryWatcher(originalResourcesDirectory, (event, path) => {
-  direrctoryWatchHandler(event, path, path.replace(originalResourcesDirectory, tmpResourcesDirectory));
-});
-
-// Watcher for custom directory, ignores .dotfiles???
-let customizationAreaDirectoryWatcher = null;
-if (config.customizationAreaPath) {
-  console.log(`path to customization '${config.customizationAreaPath}'`);
-
-  // eslint-disable-next-line no-unused-vars
-  customizationAreaDirectoryWatcher = directoryWatcher(config.customizationAreaPath, (event, path) => {
-    direrctoryWatchHandler(event, path, path.replace(config.customizationAreaPath, tmpCustomizationAreaDirectory));
-  });
-}
-
 let recompileLessTimer;
 // Watcher for standard less files. Run less recompiling.???
 // eslint-disable-next-line no-unused-vars
-const tmpDirectoryWatcher = directoryWatcher(path.join(tmpDirectory, '**/*.less'), (event, path) => {
+const lessDirectories = [
+  path.join(__dirname, '../client/resources/less/**/*.less')
+];
+if (config.customizationAreaPath) {
+  lessDirectories.push(path.join(config.customizationAreaPath, '**/*.less'));
+}
+const lessDirectoriesWatcher = directoryWatcher(lessDirectories, (event, path) => {
   // console.log(`(event:${event}): ${path} is changed, recompiling less files`);
   // run less recompiling if less file was changed.
   clearTimeout(recompileLessTimer);
@@ -90,6 +74,7 @@ app.use(require('compression')());
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/index.html'));
 });
+app.use('/demo', express.static(path.join(__dirname, '../client/demo')));
 app.get(`/index.css`, (req, res) => {
   res.sendFile(pathToCss, function(err) {
     if (err) {
@@ -100,10 +85,11 @@ app.get(`/index.css`, (req, res) => {
 });
 // if customization is available then we would add possibility to expose its content
 if (config.customizationAreaPath) {
-  app.use('/', express.static(tmpCustomizationAreaDirectory));
+  // todo ignore less files
+  app.use('/', express.static(config.customizationAreaPath));
 }
-app.use('/', express.static(tmpResourcesDirectory));
-app.use('/demo', express.static(path.join(__dirname, '../client/demo')));
+app.use('/fonts', express.static(path.join(__dirname, '../client/resources/fonts')));
+app.use('/img', express.static(path.join(__dirname, '../client/resources/img')));
 
 // run application (web server)
 const port = process.env.PORT || 3042;
@@ -123,15 +109,13 @@ const exitHandler = (options = { exit: false, cleanup: false }) => {
       console.log(`about to exit with code '${code}'`);
     }
     if (options.cleanup) {
-      if (originalResourcesDirectoryWatcher) {
-        originalResourcesDirectoryWatcher.stop();
+      // stop watching less files
+      if (lessDirectoriesWatcher) {
+        lessDirectoriesWatcher.close();
       }
-      if (customizationAreaDirectoryWatcher) {
-        customizationAreaDirectoryWatcher.stop();
-      }
-      if (tmpDirectoryWatcher) {
-        tmpDirectoryWatcher.close();
-      }
+      // stop calling less recompiler
+      clearTimeout(recompileLessTimer);
+      // removing temporaty directory where compiled index.css is located
       rimraf.sync(tmpDirectory);
     }
     if (options.exit) {
