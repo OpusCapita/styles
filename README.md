@@ -1,9 +1,13 @@
-## Node app that serves resources
+## OpusCapita UI
 
-Provides less, css, fonts, images.
+Idea behind this application creation is to have one service which:
+- provides common look and feel for OpusCapita applications
+- gives a consistent way of continuous development of this application (extending styles, adding new UIs)
+- be able to set up different styles (customization) for specific installation
 
-## Demo
-Online demo available here: https://opuscapita.github.io/opuscapita-ui
+Technically speaking application works as CDN that serves static (non JS) resources like css, fonts, images.
+
+Static application version is available online [here](https://opuscapita.github.io/opuscapita-ui)
 
 ### Development
 
@@ -11,7 +15,7 @@ Online demo available here: https://opuscapita.github.io/opuscapita-ui
 Download and install Node.js from the [Node.js download page](https://nodejs.org/en/download/)
 Read the [Getting started page](https://docs.npmjs.com/getting-started/installing-node) for information about installing Node.js more.
 
-#### Goals
+#### Development HowTo
 
 Install dependencies
 ```
@@ -65,17 +69,17 @@ yarn add @opuscapita/opuscapita-ui
 npm install @opuscapita/opuscapita-ui --save
 ```
 
-Let's say you have _index.html_ as entry point of your application then you add link to css file like this:
+Let's say you have ```index.html``` as entry point of your application then you add link to css file like this:
 ```html
 <link rel="stylesheet" type="text/css" href="opuscapita-ui/index.css">
 ```
 
-Then on server side, depending on mode that you use e.g. production (application) or demo start (app or module development mode) you can use OpusCapita UI differently (we use _express_ server as an example):
+Then on server side, depending on mode that you use e.g. production (application) or demo start (app or module development mode) you can use OpusCapita UI differently (we use **express** server as an example):
 ```javascript
 if (<development/demo mode>) {
   // demo or development mode where locally installed library '@opuscapita/opuscapita-ui' files are used
   // '@opuscapita/opuscapita-ui' library holds all required the files in 'dist' folder
-  app.use('/opuscapita-ui', express.static('node_modules/@opuscapita/opuscapita-ui/dist'));
+  app.use('/opuscapita-ui', express.static(path.join(__dirname, 'node_modules/@opuscapita/opuscapita-ui/dist')));
 } else {
   // production mode, here we redirect to externally started oc-ui service and its css exposed via http
   app.get('/opuscapita-ui/index.css', function(req, res) {
@@ -84,7 +88,7 @@ if (<development/demo mode>) {
 }
 ```
 
-*Note:* In this case your you map local module resources (~= development mode) you will be able to access style guide also by url _http://[your app host and port]/opuscapita-ui/index.html_
+*Note:* In this case your you map local module resources (~= development mode) you will be able to access style guide also by url ```http://[your app host and port]/opuscapita-ui/index.html```
 
 ### Using as grails plugin
 add dependency in BuildConfig.groovy
@@ -102,7 +106,7 @@ or include module in *.gsp files
 
 ### Source code info
 
-#### Applucation folder/file structure
+#### Application folder/file structure
 
  ```
  ├── configuration.json.sample          application configuration file sample
@@ -147,7 +151,9 @@ where:
 
 ### How to customize
 
- For customization please do following steps:
+ Configure customization area location (local FS directory):
  * Create `configuration.json` in root app directory, use file `configuration.json.sample` as an example
  * Set path to customization area as value for `customizationAreaPath` key in `configuration.json`
- * if you would like to customize CSS you need to create ```less/index.less``` file at least and start add/override styles there. Additional less files should be imported via `index.less`.
+
+ If you would like to customize CSS you need to create ```less/index.less``` file at least and start add/override styles there. Additional less files should be imported via `index.less`.
+ If you need to override standard file like image or font, you need place them in customization area folder by the same path as it is placed inside the sources folder ```src/client```. For example, you need to replace logo file (sources location ```src/client/img/opuscapita-logo.svg```), then you could place own logo file in customization area folder by path ```img/opuscapita-logo.svg```
