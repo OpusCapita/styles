@@ -84,11 +84,11 @@ Then on server side, depending on mode that you use e.g. production (application
 if (<development/demo mode>) {
   // demo or development mode where locally installed library '@opuscapita/opuscapita-ui' files are used
   // '@opuscapita/opuscapita-ui' library holds all required the files in 'dist' folder
-  app.use('/opuscapita-ui', express.static(path.join(__dirname, 'node_modules/@opuscapita/opuscapita-ui/dist')));
+  app.use('/opuscapita-ui', express.static(path.join(__dirname, '<relative path to node_modules>/@opuscapita/opuscapita-ui/dist/npm')));
 } else {
   // production mode, here we redirect to externally started oc-ui service and its css exposed via http
   app.get('/opuscapita-ui/index.css', function(req, res) {
-    res.redirect('http://[opuscapita-ui server url]/index.css');
+    res.redirect('http://<opuscapita-ui server url>/index.css');
   });
 }
 ```
