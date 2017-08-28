@@ -1,3 +1,25 @@
+## [v1.0.3-beta.2](Mon, 28 Aug 2017 09:56:01 GMT)
+ - Reconfiguring release process (Alexey Sergeev <sab@scand.com>, 766774f)
+ - Reconfiguring release process (Alexey Sergeev <sab@scand.com>, 741d526)
+ - Removing unusd Jenkins build process config file. Removing goal publish-gh-pages as gh-pages deployment now configured via CircleCI build config [skip ci] (Alexey Sergeev <sab@scand.com>, b4676f9)
+ - Redeveloping build process using CircleCI workflow (Alexey Sergeev <sab@scand.com>, 11992c3)
+ - Merging changes from 'change-build-process' branch (0fd0aab 882a8f6, e0c4529)
+ - Adjustung build process (Alexey Sergeev <sab@scand.com>, 0fd0aab)
+ - Adjustung build process [skip ci] (Alexey Sergeev <sab@scand.com>, e84644f)
+ - Adjustung build process (Alexey Sergeev <sab@scand.com>, e6fa7af)
+ - Adjustung build process (Alexey Sergeev <sab@scand.com>, b452179)
+ - Closing #1
+    
+    * Restructuring and cleaning up sources, refactoring build process.
+    * Configuring CircleCI build process that builds static site and deploysit using gh-pages (Alexey Sergeev <asergeev-sc@users.noreply.github.com>, 882a8f6)
+ - Configuring CircleCI build process that builds static site and deploysit using gh-pages (Alexey Sergeev <sab@scand.com>, fee77c2)
+ - Sync version in pom.xml with package.json (Alexey Sergeev <sab@scand.com>, c48c7ee)
+ - Renaming logo file to opuscapita-logo.svg. Updating README (Alexey Sergeev <sab@scand.com>, f0526c2)
+ - Restructuring files. Removing 'resources' folder. Making it possible to override standard files (fonts and images) via customization area (Alexey Sergeev <sab@scand.com>, 504dccc)
+ - There is no need to copy source files to compile final css from less files. Skipping this logic. (Alexey Sergeev <sab@scand.com>, 1748894)
+ - Redeveloping build proces using 'nps' and 'npm-utils' (Alexey Sergeev <sab@scand.com>, 45846bf)
+ - Fixing static resources relative paths. Removing additional css/html processing via shell scripts (Alexey Sergeev <sab@scand.com>, 924e58a)
+
 ## [v1.0.3-beta.1](Fri, 25 Aug 2017 08:41:39 GMT)
  - Using 'OpusCapita' instead of 'jCatalog' (Alexey Sergeev <sab@scand.com>, 5fc213f)
  - Adding page with extensions (Alexey Sergeev <sab@scand.com>, 9281618)
