@@ -10,9 +10,9 @@
     <version>7.16.GA.1</version>
   </parent>
 
-  <groupId>com.jcatalog.node</groupId>
+  <groupId>com.opuscapita.node</groupId>
   <artifactId>opuscapita-ui</artifactId>
-  <version>1.0.2-beta.5</version>
+  <version>1.0.3-beta.2</version>
 
   <name>node-oc-ui</name>
 

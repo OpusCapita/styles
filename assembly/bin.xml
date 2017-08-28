@@ -11,7 +11,7 @@
   <fileSets>
     <fileSet>
       <directory>dist/application</directory>
-      <outputDirectory>./application</outputDirectory>
+      <outputDirectory>.</outputDirectory>
     </fileSet>
     <fileSet>
       <directory>node_modules</directory>
@@ -21,7 +21,7 @@
 
   <files>
     <file>
-      <source>config.json.sample</source>
+      <source>configuration.json.sample</source>
       <outputDirectory>.</outputDirectory>
       <filtered>false</filtered>
     </file>
