@@ -12,7 +12,7 @@
 
   <groupId>com.opuscapita.node</groupId>
   <artifactId>opuscapita-ui</artifactId>
-  <version>1.0.3-beta.1</version>
+  <version>1.0.3-beta.2</version>
 
   <name>node-oc-ui</name>
 
