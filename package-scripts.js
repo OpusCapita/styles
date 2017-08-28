@@ -15,7 +15,7 @@ module.exports = {
       default: series(
         rimraf('dist/css'),
         mkdirp('dist/css'),
-        'lessc --relative-urls src/client/resources/less/index.less dist/css/index.css'
+        'lessc --relative-urls src/client/less/index.less dist/css/index.css'
       )
     },
     "application-build": {
@@ -43,11 +43,9 @@ module.exports = {
         'nps compile-css',
         rimraf('rimraf dist/npm'),
         mkdirp('dist/npm'),
-        copy("src/client/index.html dist/npm"),
-        copy("dist/css/index.css dist/npm"),
         // copy function does not really works for folders at the moment 2017.08.27
-        "cpx 'src/client/demo/**' dist/npm/demo",
-        "cpx 'src/client/resources/**' dist/npm"
+        "cpx 'src/client/**' dist/npm",
+        copy("dist/css/index.css dist/npm")
       )
     },
     "npm-publish": {

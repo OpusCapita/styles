@@ -51,7 +51,8 @@
       }
     },
     "standaloneFiles": {
-      "resources": "web-app"
+      "fonts": "web-app/fonts",
+      "img": "web-app/img"
     }
   }
 }

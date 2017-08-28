@@ -12,18 +12,22 @@ try {
 } catch (e) {
   console.log('config file "configuration.json" is not found');
 }
+if (config.customizationAreaPath) {
+  console.log(`Configuration area is located by path '${config.customizationAreaPath}'`);
+} else {
+  console.log(`Configuration area is not configured`);
+}
 
 const tmpDirectory = fs.mkdtempSync(path.join(os.tmpdir(), 'oc-ui'));
 console.log(`temporary working directory '${tmpDirectory}' is created`);
-
 const pathToCss = path.join(tmpDirectory, 'index.css');
 
-let lessRecompilationContent = `@import "${path.join(__dirname, '../client/resources/less/index.less')}";`;
+let lessRecompilationContent = `@import "${path.join(__dirname, '../client/less/index.less')}";`;
 if (config.customizationAreaPath) {
+  console.log(`Configuration area is located by path '${config.customizationAreaPath}'`);
   lessRecompilationContent += `
 @import (optional) "${path.join(config.customizationAreaPath, 'less/index.less')}";`;
 }
-// console.log(`final less:\n${lessRecompilationContent}`);
 
 const lessRecompile = function() {
   console.log(`recompiling less files into \n'${pathToCss}' file...`);
@@ -53,7 +57,7 @@ let recompileLessTimer;
 // Watcher for standard less files. Run less recompiling.???
 // eslint-disable-next-line no-unused-vars
 const lessDirectories = [
-  path.join(__dirname, '../client/resources/less/**/*.less')
+  path.join(__dirname, '../client/less/**/*.less')
 ];
 if (config.customizationAreaPath) {
   lessDirectories.push(path.join(config.customizationAreaPath, '**/*.less'));
@@ -71,10 +75,6 @@ const app = express();
 app.use(require('cors')());
 app.use(require('compression')());
 // routes
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/index.html'));
-});
-app.use('/demo', express.static(path.join(__dirname, '../client/demo')));
 app.get(`/index.css`, (req, res) => {
   res.sendFile(pathToCss, function(err) {
     if (err) {
@@ -88,8 +88,8 @@ if (config.customizationAreaPath) {
   // todo ignore less files
   app.use('/', express.static(config.customizationAreaPath));
 }
-app.use('/fonts', express.static(path.join(__dirname, '../client/resources/fonts')));
-app.use('/img', express.static(path.join(__dirname, '../client/resources/img')));
+// todo: ignore less files
+app.use('/', express.static(path.join(__dirname, '../client')));
 
 // run application (web server)
 const port = process.env.PORT || 3042;

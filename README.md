@@ -113,12 +113,10 @@ or include module in *.gsp files
      │   │   ├── favicon.ico
      │   │   ├── html
      │   │   └── js
-     │   ├── index.html                 index page, with links to documentation (for developers)
-     │   └── resources                  static resources that are used in productions (forts and images,
-     │       │                          all less files are compiled into single css that is available via /index.css)
-     │       ├── fonts
-     │       ├── img
-     │       └── less
+     │   ├── fonts                      fonts
+     │   ├── img                        images
+     │   ├── less                       less files (are compiled into single css that is available via /index.css)
+     │   └── index.html                 index page, with links to documentation (for developers)
      └── server
          └── index.js                   is used run web server (service)
  ```
@@ -150,7 +148,6 @@ where:
 ### How to customize
 
  For customization please do following steps:
- * Rename file `configuration.json.sample` to `configuration.json` in root app directory;
- * Set path to customization area as value for `customizationAreaPath` key in `configuration.json`;
- * Customization area must contain `less` directory and `index.less` file in it;
- * Other resources should be imported in `index.less` file.
+ * Create `configuration.json` in root app directory, use file `configuration.json.sample` as an example
+ * Set path to customization area as value for `customizationAreaPath` key in `configuration.json`
+ * if you would like to customize CSS you need to create ```less/index.less``` file at least and start add/override styles there. Additional less files should be imported via `index.less`.
