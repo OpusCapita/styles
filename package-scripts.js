@@ -69,8 +69,7 @@ module.exports = {
       default: npsUtils.concurrent.nps('application-package', 'grails-plugin-package', 'npm-build')
     },
     "publish-release": {
-      default: npsUtils.concurrent.nps('application-deploy', 'grails-plugin-deploy', 'npm-publish')
-    },
-    "publish-gh-pages": "sh ./scripts/gh-pages-update.sh"
+      default: series('nps application-deploy', 'nps grails-plugin-deploy', 'nps npm-publish')
+    }
   }
 }
