@@ -1,18 +1,18 @@
-## OpusCapita UI
+## OpusCapita Styles service
 
 [![CircleCI Status](https://circleci.com/gh/OpusCapita/styles/tree/master.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/OpusCapita/styles)
 ![badge-npm-version](https://img.shields.io/npm/v/@opuscapita/styles.svg) 
 ![badge-license](https://img.shields.io/github/license/OpusCapita/styles.svg)
 ![NPM Downloads](https://img.shields.io/npm/dm/@opuscapita/styles.svg)
 
-Idea behind this application creation is to have one service which:
+Idea behind such application creation is to have one service which:
 - provides common look and feel for OpusCapita applications
 - gives a consistent way of continuous development of this application (extending styles, adding new UIs)
 - be able to set up different styles (customization) for specific installation
 
-Technically speaking application works as CDN that serves static (non JS) resources like css, fonts, images.
+Technically speaking service works as CDN that serves static (non JS) resources like css, fonts, images.
 
-Static application version is available online [here](https://opuscapita.github.io/styles)
+Static version of this service is available online [here](https://opuscapita.github.io/styles)
 
 ### Development
 
