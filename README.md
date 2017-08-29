@@ -1,9 +1,9 @@
 ## OpusCapita UI
 
-[![CircleCI Status](https://circleci.com/gh/OpusCapita/opuscapita-ui/tree/master.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/OpusCapita/opuscapita-ui)
-![badge-npm-version](https://img.shields.io/npm/v/@opuscapita/opuscapita-ui.svg) 
-![badge-license](https://img.shields.io/github/license/OpusCapita/opuscapita-ui.svg)
-![NPM Downloads](https://img.shields.io/npm/dm/@opuscapita/opuscapita-ui.svg)
+[![CircleCI Status](https://circleci.com/gh/OpusCapita/styles/tree/master.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/OpusCapita/styles)
+![badge-npm-version](https://img.shields.io/npm/v/@opuscapita/styles.svg) 
+![badge-license](https://img.shields.io/github/license/OpusCapita/styles.svg)
+![NPM Downloads](https://img.shields.io/npm/dm/@opuscapita/styles.svg)
 
 Idea behind this application creation is to have one service which:
 - provides common look and feel for OpusCapita applications
@@ -12,7 +12,7 @@ Idea behind this application creation is to have one service which:
 
 Technically speaking application works as CDN that serves static (non JS) resources like css, fonts, images.
 
-Static application version is available online [here](https://opuscapita.github.io/opuscapita-ui)
+Static application version is available online [here](https://opuscapita.github.io/styles)
 
 ### Development
 
@@ -68,45 +68,45 @@ The easiest way to use compiled css+images+fonts+guide(html) is to install it fr
 
 ```bash
 # using yarn
-yarn add @opuscapita/opuscapita-ui
+yarn add @opuscapita/styles
 
 # or with npm
-npm install @opuscapita/opuscapita-ui --save
+npm install @opuscapita/styles --save
 ```
 
 Let's say you have ```index.html``` as entry point of your application then you add link to css file like this:
 ```html
-<link rel="stylesheet" type="text/css" href="opuscapita-ui/index.css">
+<link rel="stylesheet" type="text/css" href="styles/index.css">
 ```
 
 Then on server side, depending on mode that you use e.g. production (application) or demo start (app or module development mode) you can use OpusCapita UI differently (we use **express** server as an example):
 ```javascript
 if (<development/demo mode>) {
-  // demo or development mode where locally installed library '@opuscapita/opuscapita-ui' files are used
-  // '@opuscapita/opuscapita-ui' library holds all required the files in 'dist' folder
-  app.use('/opuscapita-ui', express.static(path.join(__dirname, '<relative path to node_modules>/@opuscapita/opuscapita-ui/dist/npm')));
+  // demo or development mode where locally installed library '@opuscapita/styles' files are used
+  // '@opuscapita/styles' library holds all required the files in 'dist' folder
+  app.use('/styles', express.static(path.join(__dirname, '<relative path to node_modules>/@opuscapita/styles/dist/npm')));
 } else {
   // production mode, here we redirect to externally started oc-ui service and its css exposed via http
-  app.get('/opuscapita-ui/index.css', function(req, res) {
-    res.redirect('http://<opuscapita-ui server url>/index.css');
+  app.get('/styles/index.css', function(req, res) {
+    res.redirect('http://<styles server url>/index.css');
   });
 }
 ```
 
-*Note:* In this case your you map local module resources (~= development mode) you will be able to access style guide also by url ```http://[your app host and port]/opuscapita-ui/index.html```
+*Note:* In this case your you map local module resources (~= development mode) you will be able to access style guide also by url ```http://[your app host and port]/styles/index.html```
 
 ### Using as grails plugin
 add dependency in BuildConfig.groovy
 ```
-runtime('com.opuscapita.grailsplugins:opuscapita-ui:1.0.3-beta.1')
+runtime('com.opuscapita.grailsplugins:styles:1.0.3-beta.1')
 ```
 add dependency for existing resources
 ```
-dependsOn ('opuscapita-ui')
+dependsOn ('styles')
 ```
 or include module in *.gsp files
 ```
-<r:require modules="opuscapita-ui"/>
+<r:require modules="styles"/>
 ```
 
 ### Source code info

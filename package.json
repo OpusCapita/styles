@@ -1,5 +1,5 @@
 {
-  "name": "@opuscapita/opuscapita-ui",
+  "name": "@opuscapita/styles",
   "version": "1.0.3-beta.3",
   "description": "OpusCapita UI resources",
   "scripts": {
@@ -9,7 +9,7 @@
     "dist/npm"
   ],
   "main": "dist/npm/index.css",
-  "repository": "OpusCapita/opuscapita-ui",
+  "repository": "OpusCapita/styles",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
@@ -44,7 +44,7 @@
     "groupId": "com.opuscapita.grailsplugins",
     "buildDir": "dist/grails",
     "resources": {
-      "opuscapita-ui": {
+      "styles": {
         "files": {
           "index.css": "index.css"
         }
