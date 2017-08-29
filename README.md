@@ -86,7 +86,7 @@ if (<development/demo mode>) {
   // '@opuscapita/styles' library holds all required the files in 'dist' folder
   app.use('/styles', express.static(path.join(__dirname, '<relative path to node_modules>/@opuscapita/styles/dist/npm')));
 } else {
-  // production mode, here we redirect to externally started oc-ui service and its css exposed via http
+  // production mode, here we redirect to externally started styles service and its css exposed via http
   app.get('/styles/index.css', function(req, res) {
     res.redirect('http://<styles server url>/index.css');
   });
