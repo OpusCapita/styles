@@ -1,3 +1,10 @@
+## [v1.0.3-beta.3](Tue, 29 Aug 2017 07:32:50 GMT)
+ - Updating html pages' titles (Alexey Sergeev <sab@scand.com>, a1a6c85)
+ - Renaming module from 'opuscapita-ui' to 'styles' (Alexey Sergeev <sab@scand.com>, 657a76c)
+ - Update README.md (Alexey Sergeev <asergeev-sc@users.noreply.github.com>, b294c77)
+ - Update README.md (Alexey Sergeev <asergeev-sc@users.noreply.github.com>, c616afc)
+ - Incrementing version after release [skip ci] (Alexey Sergeev <sab@scand.com>, e8e267b)
+
 ## [v1.0.3-beta.2](Mon, 28 Aug 2017 09:56:01 GMT)
  - Reconfiguring release process (Alexey Sergeev <sab@scand.com>, 766774f)
  - Reconfiguring release process (Alexey Sergeev <sab@scand.com>, 741d526)
