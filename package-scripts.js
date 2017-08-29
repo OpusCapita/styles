@@ -6,7 +6,7 @@ const copy = npsUtils.copy;
 
 module.exports = {
   scripts: {
-    "default": "nodemon --watch src/server src/server --exec babel-node --presets es2015,stage-0",
+    "default": "nodemon --watch src/server src/server",
     "lint": {
       default: "eslint src",
       fix: "eslint src --fix"
@@ -21,8 +21,8 @@ module.exports = {
     "application-build": {
       default: series(
         rimraf('rimraf dist/application'),
-        mkdirp('dist/application'),
-        'babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir dist/application/src/server',
+        mkdirp('dist/application/src'),
+        'ncp src/server dist/application/src/server',
         "ncp src/client dist/application/src/client"
       )
     },

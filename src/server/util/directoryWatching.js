@@ -1,6 +1,6 @@
 const chokidar = require('chokidar');
 
-const directoryWatcher = (directory, callback, watchInterval = 2000) => {
+exports.directoryWatcher = (directory, callback, watchInterval = 2000) => {
   chokidar.watch(directory, {
     usePolling: true,
     interval: watchInterval,
@@ -9,7 +9,3 @@ const directoryWatcher = (directory, callback, watchInterval = 2000) => {
     awaitWriteFinish: true
   }).on('all', callback);
 };
-
-export {
-  directoryWatcher
-}

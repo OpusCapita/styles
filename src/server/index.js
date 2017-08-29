@@ -4,7 +4,7 @@ const express = require('express');
 const os = require('os');
 const fs = require('fs');
 const rimraf = require('rimraf');
-import { directoryWatcher } from './util/directoryWatching';
+const directoryWatcher = require('./util/directoryWatching').directoryWatcher;
 
 let config = {};
 try {
