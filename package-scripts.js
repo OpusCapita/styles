@@ -23,7 +23,7 @@ module.exports = {
         rimraf('rimraf dist/application'),
         mkdirp('dist/application'),
         'babel --copy-files --no-babelrc --presets es2015,stage-0 --plugins lodash --ignore *.spec.js src/server --out-dir dist/application/src/server',
-        "cpx 'src/client/**' dist/application/src/client"
+        "ncp src/client dist/application/src/client"
       )
     },
     "application-package": {
@@ -43,8 +43,7 @@ module.exports = {
         'nps compile-css',
         rimraf('rimraf dist/npm'),
         mkdirp('dist/npm'),
-        // copy function does not really works for folders at the moment 2017.08.27
-        "cpx 'src/client/**' dist/npm",
+        "ncp src/client dist/npm",
         copy("dist/css/index.css dist/npm")
       )
     },
@@ -54,13 +53,18 @@ module.exports = {
         'npm-publish --release'
       )
     },
-    "grails-plugin-package": {
+    "grails-plugin-build": {
       default: series(
         'nps compile-css',
-        rimraf('rimraf dist/npm'),
-        mkdirp('dist/npm'),
+        rimraf('rimraf dist/grails'),
+        mkdirp('dist/grails'),
         copy("dist/css/index.css dist/grails"),
-        "cpx 'src/client/**' dist/grails",
+        "ncp src/client dist/grails"
+      )
+    },
+    "grails-plugin-package": {
+      default: series(
+        "nps grails-plugin-build",
         "grails-plugin-package --release"
       )
     },
