@@ -1,4 +1,4 @@
-## OpusCapita Styles service
+## OpusCapita Styles Service
 
 [![CircleCI Status](https://circleci.com/gh/OpusCapita/styles/tree/master.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/OpusCapita/styles)
 ![badge-npm-version](https://img.shields.io/npm/v/@opuscapita/styles.svg) 
