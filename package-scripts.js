@@ -34,13 +34,13 @@ module.exports = {
     "application-package": {
       default: series(
         'nps application-build',
-        'mvn clean package'
+        'mvn -Dversion=${npm_package_version} clean package'
       )
     },
     "application-deploy": {
       default: series(
         'nps application-build',
-        'mvn clean deploy'
+        'mvn -Dversion=${npm_package_version} clean deploy'
       )
     },
     "npm-build": {
