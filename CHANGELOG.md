@@ -1,3 +1,7 @@
+## [v1.0.3](Thu, 31 Aug 2017 08:06:47 GMT)
+ - Fixing application build (Alexey Sergeev <sab@scand.com>, c1ab22e)
+ - Packing only production dependencies into application distributive (Alexey Sergeev <sab@scand.com>, 4fa0f6e)
+
 ## [v1.0.2](Wed, 30 Aug 2017 08:16:11 GMT)
  - Removing assemblyId from application maven zip file name (Alexey Sergeev <sab@scand.com>, 0be2160)
  - Advancing versino after release [skip ci] (Alexey Sergeev <sab@scand.com>, d612e31)
