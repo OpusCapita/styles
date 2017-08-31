@@ -13,17 +13,6 @@
       <directory>dist/application</directory>
       <outputDirectory>.</outputDirectory>
     </fileSet>
-    <fileSet>
-      <directory>node_modules</directory>
-      <outputDirectory>./node_modules</outputDirectory>
-    </fileSet>
   </fileSets>
 
-  <files>
-    <file>
-      <source>configuration.json.sample</source>
-      <outputDirectory>.</outputDirectory>
-      <filtered>false</filtered>
-    </file>
-  </files>
 </assembly>

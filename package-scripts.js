@@ -23,7 +23,12 @@ module.exports = {
         rimraf('rimraf dist/application'),
         mkdirp('dist/application/src'),
         'ncp src/server dist/application/src/server',
-        "ncp src/client dist/application/src/client"
+        'ncp src/client dist/application/src/client',
+        copy('configuration.json.sample dist/application'),
+        // install prod dependencies only in speficific folder
+        copy('package.json dist/application'),
+        'npm install --prefix dist/application --only=production --no-bin-links --no-optional',
+        rimraf('rimraf package.json')
       )
     },
     "application-package": {
