@@ -28,7 +28,7 @@ module.exports = {
         // install prod dependencies only in speficific folder
         copy('package.json dist/application'),
         'npm install --prefix dist/application --only=production --no-bin-links --no-optional',
-        rimraf('rimraf package.json')
+        rimraf('rimraf dist/application/package.json')
       )
     },
     "application-package": {
