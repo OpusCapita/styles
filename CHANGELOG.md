@@ -1,3 +1,6 @@
+## [v1.0.4](Thu, 31 Aug 2017 08:44:36 GMT)
+ - Set up Maven pom version dinamically during build using version from package.json [skip ci] (Alexey Sergeev <sab@scand.com>, 08e7df4)
+
 ## [v1.0.3](Thu, 31 Aug 2017 08:06:47 GMT)
  - Fixing application build (Alexey Sergeev <sab@scand.com>, c1ab22e)
  - Packing only production dependencies into application distributive (Alexey Sergeev <sab@scand.com>, 4fa0f6e)
