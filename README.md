@@ -73,7 +73,7 @@ Application will be available by URL `http://localhost:3042`, so you can get ind
 
 If you would like to use different `host` and `port` set up different values using corresponding enviroment variables `HOST` and `PORT` correspondingly.
 
-If styles need to use customized styles (images and fonts) refer to section [Customization](#-Customization)
+If styles need to use customized styles (images and fonts) refer to section [Customization](#customization)
 
 ### Using as grails plugin
 
