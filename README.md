@@ -14,52 +14,7 @@ Technically speaking service works as CDN that serves static (non JS) resources 
 
 Static version of this service is available online [here](https://opuscapita.github.io/styles)
 
-### Development
-
-#### Getting started
-Download and install Node.js from the [Node.js download page](https://nodejs.org/en/download/)
-Read the [Getting started page](https://docs.npmjs.com/getting-started/installing-node) for information about installing Node.js more.
-
-#### Development HowTo
-
-Install dependencies
-```
-npm i
-```
-or using **yarn**
-```
-yarn
-```
-
-Start server
-```
-npm start
-```
-
-Server will be available by the following url http://localhost:3042/. It is automatically reloaded when you make changes in sources.
-Compiled styles can be found in [index.css](http://localhost:3042/index.css)
-
-If you want to change port run the following command(s) in console
-- on Windows
-```
-set PORT=1234
-npm start
-```
-- on Linux
-```
-export PORT=1234
-npm start
-```
-
-Lint sources
-```bash
-npm star lint
-```
-
-or run lint with fixing possible problems
-```
-npm start lint.fix
-```
+## Usage
 
 ### Using as npm package
 The easiest way to use compiled css+images+fonts+guide(html) is to install it from NPM and include it in your own React build process.
@@ -95,23 +50,93 @@ if (<development/demo mode>) {
 
 *Note:* In this case your you map local module resources (~= development mode) you will be able to access style guide also by url ```http://[your app host and port]/styles/index.html```
 
+### Using as Node service
+Download Maven arterfact (zip archive) from  repository using the following coordinates:
+```
+groupId: com.opuscapita.node
+artifactId: styles
+version: <use version that you need>
+```
+Upzip it. Zip folder structure:
+```
+styles
+├── configuration.json.sample
+└── src
+   ├── client
+   └── server
+```
+Now you can run it using Node v.6.x from `styles` folder:
+```
+node src/server
+```
+Application will be available by URL `http://localhost:3042`, so you can get index.css by URL `http://localhost:3042/index.css`.
+
+If you would like to use different `host` and `port` set up different values using corresponding enviroment variables `HOST` and `PORT` correspondingly.
+
+If styles need to use customized styles (images and fonts) refer to section [Customization](#-Customization)
+
 ### Using as grails plugin
-add dependency in BuildConfig.groovy
+
+Add dependency in BuildConfig.groovy
 ```
 runtime('com.opuscapita.grailsplugins:styles:1.0.3-beta.1')
 ```
-add dependency for existing resources
+Add dependency for existing resources (via Resource plugin)
 ```
 dependsOn ('styles')
 ```
-or include module in *.gsp files
+Or include module into *.gsp file firectly
 ```
 <r:require modules="styles"/>
 ```
 
-### Source code info
+## Development
 
-#### Application folder/file structure
+### Getting started
+Download and install Node.js v6.x from the [Node.js download page](https://nodejs.org/en/download/)
+Read the [Getting started page](https://docs.npmjs.com/getting-started/installing-node) for information about installing Node.js more.#### Development HowTo
+
+### Install dependencies
+```
+npm i
+```
+or using **yarn**
+```
+yarn
+```
+
+### Start server
+```
+npm start
+```
+
+Server will be available by the following url http://localhost:3042/. It is automatically reloaded when you make changes in sources.
+Compiled styles can be found in [index.css](http://localhost:3042/index.css)
+
+If you want to change port run the following command(s) in console
+- on Windows
+```
+set PORT=1234
+npm start
+```
+- on Linux
+```
+export PORT=1234
+npm start
+```
+
+### Lint sources
+```bash
+npm start lint
+```
+or run lint with fixing possible problems
+```
+npm start lint.fix
+```
+
+## Source code info
+
+### Application folder/file structure
 
  ```
  ├── configuration.json.sample          application configuration file sample
@@ -130,11 +155,11 @@ or include module in *.gsp files
          └── index.js                   is used run web server (service)
  ```
 
-#### What is the less
+### What is the less
 Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themeable and extendable.
 Read more information about less on [the official documentation](http://lesscss.org/features/#features-overview-feature).
 
-#### About less structure inside less folder
+### Files structure inside less folder
 
 ```
 ├── bootstrap
@@ -154,7 +179,7 @@ where:
 * `variables.less` - The main file with variables that are used inside other less files.  
 * `mixins.less` - The main file with mixins that are used inside other less files.  
 
-### How to customize
+## Customization
 
  Configure customization area location (local FS directory):
  * Create `configuration.json` in root app directory, use file `configuration.json.sample` as an example
