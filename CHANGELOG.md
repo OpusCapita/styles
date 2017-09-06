@@ -1,3 +1,8 @@
+## [v1.0.5](Wed, 06 Sep 2017 10:55:09 GMT)
+ - Adding missed styles for 'select2' component. Restructising Grails plugin to use not static css but less files(will be compiled and customized in Grails app) (Alexey Sergeev <sab@scand.com>, a85b68d)
+ - Updating README.md [skip ci] (Alexey Sergeev <asergeev-sc@users.noreply.github.com>, 1f19871)
+ - Updating README.md [skip ci] (Alexey Sergeev <asergeev-sc@users.noreply.github.com>, 011bad4)
+
 ## [v1.0.4](Thu, 31 Aug 2017 08:44:36 GMT)
  - Set up Maven pom version dinamically during build using version from package.json [skip ci] (Alexey Sergeev <sab@scand.com>, 08e7df4)
 
