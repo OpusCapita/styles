@@ -60,10 +60,10 @@ module.exports = {
     },
     "grails-plugin-build": {
       default: series(
-        'nps compile-css',
         rimraf('rimraf dist/grails'),
         mkdirp('dist/grails'),
-        copy("dist/css/index.css dist/grails"),
+        // 'nps compile-css',
+        // copy("dist/css/index.css dist/grails"),
         "ncp src/client dist/grails"
       )
     },

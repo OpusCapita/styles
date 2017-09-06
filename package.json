@@ -25,7 +25,7 @@
     "rimraf": "2.6.1"
   },
   "devDependencies": {
-    "@opuscapita/npm-scripts": "2.0.0",
+    "@opuscapita/npm-scripts": "2.0.1-beta.1",
     "babel-eslint": "7.2.3",
     "eslint": "3.19.0",
     "eslint-config-opuscapita": "1.0.9",
@@ -40,14 +40,22 @@
     "buildDir": "dist/grails",
     "resources": {
       "styles": {
-        "files": {
-          "index.css": "index.css"
-        }
+        "files": [{
+          "source": "less/index.less",
+          "target": "less/index.less",
+          "attrs": {
+            "rel": "stylesheet/less",
+            "type": "css",
+            "media": "screen, projection, print"
+          },
+          "exclude": "bundle,cssrewriter,csspreprocessor,minify"
+        }]
       }
     },
     "standaloneFiles": {
       "fonts": "web-app/fonts",
-      "img": "web-app/img"
+      "img": "web-app/img",
+      "less": "web-app/less"
     }
   }
 }
