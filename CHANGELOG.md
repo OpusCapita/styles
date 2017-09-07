@@ -1,3 +1,8 @@
+## [v1.0.6-beta.0](https://github.com/OpusCapita/styles/compare/v1.0.5...v1.0.6-beta.0) (Thu, 07 Sep 2017 14:21:30 GMT)
+ - Add "img/svg-icons" from "@opuscapita/svg-icons" npm package
+    
+    Add "@opuscapita/react-naviagation" styles to "extensions/navigation" (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 43b2ca2)
+
 ## [v1.0.5](Wed, 06 Sep 2017 10:55:09 GMT)
  - Adding missed styles for 'select2' component. Restructising Grails plugin to use not static css but less files(will be compiled and customized in Grails app) (Alexey Sergeev <sab@scand.com>, a85b68d)
  - Updating README.md [skip ci] (Alexey Sergeev <asergeev-sc@users.noreply.github.com>, 1f19871)
