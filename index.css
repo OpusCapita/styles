@@ -7373,6 +7373,8 @@ div.paginate .pull-left {
   color: #006677;
 }
 .oc-menu-account-icon {
+  width: 96px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7391,22 +7393,25 @@ div.paginate .pull-left {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 96px 0 24px;
+  align-items: flex-start;
+  padding: 0 12px 0 24px;
+  min-width: 200px;
 }
-.oc-menu-account__first-name,
-.oc-menu-account__last-name {
+.oc-menu-account__full-name {
+  font-weight: bold;
   font-size: 18px;
 }
 .oc-menu-account__user-name {
   font-size: 14px;
 }
 .oc-menu-account__top-buttons-container {
+  fill: #333;
   margin-left: auto;
 }
 .oc-menu-account__actions-container {
   display: flex;
   flex-direction: column;
-  padding: 12px 0;
+  padding: 8px 0;
   margin-left: -4px;
 }
 .oc-menu-account__middle-row {
@@ -7440,8 +7445,8 @@ div.paginate .pull-left {
   background-color: rgba(0, 0, 0, 0.04);
 }
 .oc-menu-account__bottom-row {
-  border-top: 1px solid #e5e5e5;
-  padding: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 8px 12px 12px;
 }
 .oc-menu-account__select-item {
   display: flex;
@@ -7449,13 +7454,14 @@ div.paginate .pull-left {
   align-items: center;
   margin-bottom: 8px;
   font-size: 14px;
-  min-height: 24px;
+  min-height: 28px;
 }
 .oc-menu-account__select-item:last-child {
   margin-bottom: 0;
 }
 .oc-menu-account__select-item-label {
   margin-right: 8px;
+  font-weight: bold;
 }
 .oc-menu-account__select-item-select {
   margin-left: auto;
@@ -7621,8 +7627,10 @@ div.paginate .pull-left {
 .oc-menu-icon button:focus:after {
   display: none;
 }
-.oc-menu-icon__button {
-  text-transform: none !important;
+.oc-menu-icon__button .oc-button {
+  background-color: transparent;
+  fill: #fff;
+  color: #fff;
 }
 .oc-menu-icon__button--with-dropdown {
   padding-left: 6px !important;
@@ -7862,9 +7870,9 @@ div.paginate .pull-left {
 .oc-navigation-bar__top-level-item {
   display: inline-flex;
   padding: 0;
-  border-bottom: 4px solid #e5e5e5;
+  border-bottom: 4px solid transparent;
   position: relative;
-  font-weight: bold;
+  font-weight: normal;
 }
 .oc-navigation-bar__top-level-item:hover {
   cursor: pointer;
@@ -7878,6 +7886,12 @@ div.paginate .pull-left {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.04);
   z-index: -1;
+}
+.oc-navigation-bar__top-level-clickable-item {
+  opacity: 0.78;
+}
+.oc-navigation-bar__top-level-clickable-item--active {
+  opacity: 1;
 }
 .oc-navigation-bar__top-level-item--dark-overlay:hover:after {
   background-color: rgba(0, 0, 0, 0.04);

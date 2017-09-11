@@ -11,11 +11,14 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 96px 0 24px;
+  align-items: flex-start;
+  padding: 0 12px 0 24px;
+  min-width: 200px;
 }
 
-.oc-menu-account__first-name,
-.oc-menu-account__last-name {
+.oc-menu-account__full-name {
+
+  font-weight: bold;
   font-size: 18px;
 }
 
@@ -24,13 +27,14 @@
 }
 
 .oc-menu-account__top-buttons-container {
+  fill: #333;
   margin-left: auto;
 }
 
 .oc-menu-account__actions-container {
   display: flex;
   flex-direction: column;
-  padding: 12px 0;
+  padding: 8px 0;
   margin-left: -4px;
 }
 
@@ -72,8 +76,8 @@
 }
 
 .oc-menu-account__bottom-row {
-  border-top: 1px solid #e5e5e5;
-  padding: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 8px 12px 12px;
 }
 
 .oc-menu-account__select-item {
@@ -82,7 +86,7 @@
   align-items: center;
   margin-bottom: 8px;
   font-size: 14px;
-  min-height: 24px;
+  min-height: 28px;
 
   &:last-child {
     margin-bottom: 0;
@@ -91,6 +95,7 @@
 
 .oc-menu-account__select-item-label {
   margin-right: 8px;
+  font-weight: bold;
 }
 
 .oc-menu-account__select-item-select {
