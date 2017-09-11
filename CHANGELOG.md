@@ -1,3 +1,7 @@
+## [v1.0.6-beta.1](https://github.com/OpusCapita/styles/compare/v1.0.6-beta.0...v1.0.6-beta.1) (Mon, 11 Sep 2017 15:49:42 GMT)
+ - Sync "@opuscapita/react-navigation" styles (Kirill Volkovich <kirill.volkovich@jcatalog.com>, f432b2f)
+ - Add "@opuscapita/react-naviagation" styles for logo to "extensions/navigation" (Sergey Tamkov <tamkov@scand.com>, e666f01)
+
 ## [v1.0.6-beta.0](https://github.com/OpusCapita/styles/compare/v1.0.5...v1.0.6-beta.0) (Thu, 07 Sep 2017 14:21:30 GMT)
  - Add "img/svg-icons" from "@opuscapita/svg-icons" npm package
     
