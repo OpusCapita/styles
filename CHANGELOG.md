@@ -1,3 +1,6 @@
+## [v1.0.6-beta.2](https://github.com/OpusCapita/styles/compare/v1.0.6-beta.1...v1.0.6-beta.2) (Tue, 12 Sep 2017 08:23:27 GMT)
+ - Add missing "naviagtion" imports (Kirill Volkovich <kirill.volkovich@jcatalog.com>, bd6720e)
+
 ## [v1.0.6-beta.1](https://github.com/OpusCapita/styles/compare/v1.0.6-beta.0...v1.0.6-beta.1) (Mon, 11 Sep 2017 15:49:42 GMT)
  - Sync "@opuscapita/react-navigation" styles (Kirill Volkovich <kirill.volkovich@jcatalog.com>, f432b2f)
  - Add "@opuscapita/react-naviagation" styles for logo to "extensions/navigation" (Sergey Tamkov <tamkov@scand.com>, e666f01)
