@@ -7993,6 +7993,61 @@ div.paginate .pull-left {
   background-color: rgba(0, 0, 0, 0.04);
   z-index: -1;
 }
+.oc-notification {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+.oc-notification__icon,
+.oc-notification__date-time,
+.oc-notification__message {
+  padding: 0 12px;
+}
+.oc-notification__icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: auto;
+}
+.oc-notification__date-time {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+.oc-notification__message {
+  display: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+.oc-notifications {
+  width: 480px;
+  padding: 12px 0;
+}
+.oc-notifications__items-container {
+  max-height: 240px;
+  overflow: auto;
+}
+.oc-menu--opuscapita-dark-theme {
+  background-color: #3b4a56;
+  color: #fff;
+}
+.oc-menu--opuscapita-dark-theme .oc-navigation-bar__dropdown-icon {
+  fill: #fff;
+}
+.oc-menu--opuscapita-dark-theme .oc-navigation-bar__top-level-item--active {
+  border-bottom-color: #ec6608;
+}
+.oc-menu--opuscapita-dark-theme .oc-menu-search__search-icon,
+.oc-menu--opuscapita-dark-theme .oc-svg oc-svg-icon__svg {
+  fill: #fff;
+}
+.oc-menu--opuscapita-dark-theme .oc-menu-icon__sup-title {
+  background-color: #ec6608;
+  fill: #fff;
+}
 .oc-menu-logo {
   display: inline-flex;
   flex-direction: column;
