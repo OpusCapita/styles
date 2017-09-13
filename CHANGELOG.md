@@ -1,3 +1,6 @@
+## [v1.0.6-beta.3](https://github.com/OpusCapita/styles/compare/v1.0.6-beta.2...v1.0.6-beta.3) (Wed, 13 Sep 2017 12:20:14 GMT)
+ - Add "oc-buttons", "oc-svg" (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 1b9324a)
+
 ## [v1.0.6-beta.2](https://github.com/OpusCapita/styles/compare/v1.0.6-beta.1...v1.0.6-beta.2) (Tue, 12 Sep 2017 08:23:27 GMT)
  - Add missing "naviagtion" imports (Kirill Volkovich <kirill.volkovich@jcatalog.com>, bd6720e)
 
