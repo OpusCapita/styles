@@ -5,6 +5,8 @@ const os = require('os');
 const fs = require('fs');
 const rimraf = require('rimraf');
 const directoryWatcher = require('./util/directoryWatching').directoryWatcher;
+const postcss = require('postcss');
+const autoprefixer = require('autoprefixer');
 
 let config = {};
 try {
@@ -43,11 +45,14 @@ const lessRecompile = function() {
         console.log(e);
         return;
       }
-      fs.writeFile(pathToCss, output.css, function(err) {
-        if (err) {
-          console.log(`Error writing file '${err}'`);
-          return;
-        }
+
+      postcss([autoprefixer]).process(output.css).then(result => {
+        fs.writeFile(pathToCss, result, function(err) {
+          if (err) {
+            console.log(`Error writing file '${err}'`);
+            return;
+          }
+        });
       });
     }
   );

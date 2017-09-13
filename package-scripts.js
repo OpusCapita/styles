@@ -1,8 +1,12 @@
 const npsUtils = require('nps-utils');
+const path = require('path');
 const series = npsUtils.series;
 const rimraf = npsUtils.rimraf;
 const mkdirp = npsUtils.mkdirp;
 const copy = npsUtils.copy;
+
+const stylesSrc = path.resolve(__dirname, './src/client/less/index.less');
+const stylesDest = path.resolve(__dirname, './dist/css/index.css');
 
 module.exports = {
   scripts: {
@@ -15,7 +19,8 @@ module.exports = {
       default: series(
         rimraf('dist/css'),
         mkdirp('dist/css'),
-        'lessc --relative-urls src/client/less/index.less dist/css/index.css'
+        `lessc --relative-urls ${stylesSrc} ${stylesDest}`,
+        `postcss --use autoprefixer -o ${stylesDest} ${stylesDest}`
       )
     },
     "application-build": {
