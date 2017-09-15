@@ -1,3 +1,17 @@
+## [v1.1.1](https://github.com/OpusCapita/styles/compare/v1.0.6-beta.3...v1.1.1) (Fri, 15 Sep 2017 13:32:14 GMT)
+ - Merge branch 'master' of github.com:OpusCapita/styles
+    
+    Conflicts:
+    	src/client/less/extensions/navigation/opuscapita-dark.less (f638459 e35351d, c10c7f2)
+ - Add missing styles. (Sergey Tamkov <tamkov@scand.com>, f638459)
+ - Add missing navigation styles (Kirill Volkovich <kirill.volkovich@jcatalog.com>, e35351d)
+ - Add missing navigation styles (Kirill Volkovich <kirill.volkovich@jcatalog.com>, ae13991)
+ - Fixed select elements for all browsers without using autoprefixer. (Sergey Tamkov <tamkov@scand.com>, 24594ea)
+ - Set up new development version 1.1.0 (Alexey Sergeev <asergeev-sc@users.noreply.github.com>, fb76cd4)
+ - Fixed buttons as link, improved not fixed menu. (Sergey Tamkov <tamkov@scand.com>, c69fc86)
+ - Fix links within MenuDropdownGrid (Kirill Volkovich <kirill.volkovich@jcatalog.com>, a8c71c8)
+ - Add "PostCSS" and "Autoprefixer" (#8) (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, d5cd69e)
+
 ## [v1.0.6-beta.3](https://github.com/OpusCapita/styles/compare/v1.0.6-beta.2...v1.0.6-beta.3) (Wed, 13 Sep 2017 12:20:14 GMT)
  - Add "oc-buttons", "oc-svg" (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 1b9324a)
 
