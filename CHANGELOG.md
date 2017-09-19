@@ -1,3 +1,6 @@
+## [v1.1.2](https://github.com/OpusCapita/styles/compare/v1.1.1...v1.1.2) (Tue, 19 Sep 2017 13:03:16 GMT)
+ - Fixed horizontal menu styles. (Sergey Tamkov <tamkov@scand.com>, d45e89b)
+
 ## [v1.1.1](https://github.com/OpusCapita/styles/compare/v1.0.6-beta.3...v1.1.1) (Fri, 15 Sep 2017 13:32:14 GMT)
  - Merge branch 'master' of github.com:OpusCapita/styles
     
