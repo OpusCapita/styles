@@ -1,3 +1,6 @@
+## [v1.1.3](https://github.com/OpusCapita/styles/compare/v1.1.2...v1.1.3) (Wed, 20 Sep 2017 10:16:28 GMT)
+ - Improve MenuDropdownGrid.less (Applications dropdown) (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 25a9004)
+
 ## [v1.1.2](https://github.com/OpusCapita/styles/compare/v1.1.1...v1.1.2) (Tue, 19 Sep 2017 13:03:16 GMT)
  - Fixed horizontal menu styles. (Sergey Tamkov <tamkov@scand.com>, d45e89b)
 
