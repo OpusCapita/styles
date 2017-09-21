@@ -1,3 +1,6 @@
+## [v1.1.6](https://github.com/OpusCapita/styles/compare/v1.1.5...v1.1.6) (Thu, 21 Sep 2017 15:00:11 GMT)
+ - Update "navigation extension" styles (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 975866a)
+
 ## [v1.1.5](https://github.com/OpusCapita/styles/compare/v1.1.4...v1.1.5) (Thu, 21 Sep 2017 14:55:41 GMT)
  - Update "navigation extension" styles (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 13edbba)
 
