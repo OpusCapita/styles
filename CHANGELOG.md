@@ -1,3 +1,7 @@
+## [v1.1.4](https://github.com/OpusCapita/styles/compare/v1.1.3...v1.1.4) (Thu, 21 Sep 2017 13:14:11 GMT)
+ - Sync "navigation" styles (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 3f5744e)
+ - Update README.md (Alexey Sergeev <asergeev-sc@users.noreply.github.com>, 6b8484a)
+
 ## [v1.1.3](https://github.com/OpusCapita/styles/compare/v1.1.2...v1.1.3) (Wed, 20 Sep 2017 10:16:28 GMT)
  - Improve MenuDropdownGrid.less (Applications dropdown) (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 25a9004)
 
