@@ -1,3 +1,6 @@
+## [v1.1.5](https://github.com/OpusCapita/styles/compare/v1.1.4...v1.1.5) (Thu, 21 Sep 2017 14:55:41 GMT)
+ - Update "navigation extension" styles (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 13edbba)
+
 ## [v1.1.4](https://github.com/OpusCapita/styles/compare/v1.1.3...v1.1.4) (Thu, 21 Sep 2017 13:14:11 GMT)
  - Sync "navigation" styles (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 3f5744e)
  - Update README.md (Alexey Sergeev <asergeev-sc@users.noreply.github.com>, 6b8484a)
