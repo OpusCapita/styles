@@ -12,7 +12,7 @@ Idea behind such application creation is to have one service which:
 
 Technically speaking service works as CDN that serves static (non JS) resources like css, fonts, images.
 
-Static version of this service is available online [here](https://opuscapita.github.io/styles)
+Static version of this service is available online [here](https://opuscapita.github.io/styles).
 
 ## Usage
 
