@@ -1,6 +1,6 @@
 {
   "name": "@opuscapita/styles",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "OpusCapita UI resources",
   "scripts": {
     "start": "nps"
