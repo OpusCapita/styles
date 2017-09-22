@@ -1,3 +1,6 @@
+## [v1.1.8](https://github.com/OpusCapita/styles/compare/v1.1.7...v1.1.8) (Fri, 22 Sep 2017 12:43:03 GMT)
+ - Fix <a> tags inside applications grid (Kirill Volkovich <kirill.volkovich@jcatalog.com>, f4c85bd)
+
 ## [v1.1.7](https://github.com/OpusCapita/styles/compare/v1.1.6...v1.1.7) (Fri, 22 Sep 2017 12:37:47 GMT)
  - Fix <a> tags inside MenuAccount action buttons (Kirill Volkovich <kirill.volkovich@jcatalog.com>, b8c3481)
 
