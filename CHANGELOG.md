@@ -1,3 +1,6 @@
+## [v1.1.9](https://github.com/OpusCapita/styles/compare/v1.1.8...v1.1.9) (Mon, 25 Sep 2017 08:43:26 GMT)
+ - Fixed clickable element width in main menu of "navigation" (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 047509b)
+
 ## [v1.1.8](https://github.com/OpusCapita/styles/compare/v1.1.7...v1.1.8) (Fri, 22 Sep 2017 12:43:03 GMT)
  - Fix <a> tags inside applications grid (Kirill Volkovich <kirill.volkovich@jcatalog.com>, f4c85bd)
 
