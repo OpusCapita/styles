@@ -1,3 +1,7 @@
+## [v1.1.10](https://github.com/OpusCapita/styles/compare/v1.1.9...v1.1.10) (Wed, 04 Oct 2017 08:34:43 GMT)
+ - Fix "MenuDropdownGrid" icons size (Kirill Volkovich <kirill.volkovich@jcatalog.com>, a57b4ab)
+ - Fix "navigation/MenuDropdownGrid" height (Kirill Volkovich <kirill.volkovich@jcatalog.com>, d68114c)
+
 ## [v1.1.9](https://github.com/OpusCapita/styles/compare/v1.1.8...v1.1.9) (Mon, 25 Sep 2017 08:43:26 GMT)
  - Fixed clickable element width in main menu of "navigation" (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 047509b)
 
