@@ -1,3 +1,8 @@
+## [v1.1.11](https://github.com/OpusCapita/styles/compare/v1.1.10...v1.1.11) (Mon, 30 Oct 2017 16:54:31 GMT)
+ - (OPC-13014) Added styles for approvement chain. (Sergey Tamkov <tamkov@scand.com>, d4f6b35)
+ - Increase account initials font size. Align app name with navbar items (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 15c8729)
+ - Remove scrollbar in navigation applications menu (Kirill Volkovich <kirill.volkovich@jcatalog.com>, b0ae7c9)
+
 ## [v1.1.10](https://github.com/OpusCapita/styles/compare/v1.1.9...v1.1.10) (Wed, 04 Oct 2017 08:34:43 GMT)
  - Fix "MenuDropdownGrid" icons size (Kirill Volkovich <kirill.volkovich@jcatalog.com>, a57b4ab)
  - Fix "navigation/MenuDropdownGrid" height (Kirill Volkovich <kirill.volkovich@jcatalog.com>, d68114c)
