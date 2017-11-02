@@ -1,3 +1,6 @@
+## [v1.1.12](https://github.com/OpusCapita/styles/compare/v1.1.11...v1.1.12) (Thu, 02 Nov 2017 08:58:50 GMT)
+ - Fix logo overflow in IE11 (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 3947cd2)
+
 ## [v1.1.11](https://github.com/OpusCapita/styles/compare/v1.1.10...v1.1.11) (Mon, 30 Oct 2017 16:54:31 GMT)
  - (OPC-13014) Added styles for approvement chain. (Sergey Tamkov <tamkov@scand.com>, d4f6b35)
  - Increase account initials font size. Align app name with navbar items (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 15c8729)
