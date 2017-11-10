@@ -1,3 +1,8 @@
+## [v1.1.13](https://github.com/OpusCapita/styles/compare/v1.1.12...v1.1.13) (Fri, 10 Nov 2017 10:11:10 GMT)
+ - Merge branch 'master' of opuscapita.github.com:OpusCapita/styles (8f41f2a a215d92, 7774f8c)
+ - Fix "navigation" styles bugs for IE11 (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 8f41f2a)
+ - Fixed logo for small screens. (Sergey Tamkov <tamkov@scand.com>, a215d92)
+
 ## [v1.1.12](https://github.com/OpusCapita/styles/compare/v1.1.11...v1.1.12) (Thu, 02 Nov 2017 08:58:50 GMT)
  - Fix logo overflow in IE11 (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 3947cd2)
 
