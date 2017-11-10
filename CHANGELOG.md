@@ -1,3 +1,6 @@
+## [v1.1.14](https://github.com/OpusCapita/styles/compare/v1.1.13...v1.1.14) (Fri, 10 Nov 2017 11:04:35 GMT)
+ - Fixed hover styles for links with class .oc-button. (Sergey Tamkov <tamkov@scand.com>, 824e249)
+
 ## [v1.1.13](https://github.com/OpusCapita/styles/compare/v1.1.12...v1.1.13) (Fri, 10 Nov 2017 10:11:10 GMT)
  - Merge branch 'master' of opuscapita.github.com:OpusCapita/styles (8f41f2a a215d92, 7774f8c)
  - Fix "navigation" styles bugs for IE11 (Kirill Volkovich <kirill.volkovich@jcatalog.com>, 8f41f2a)
