@@ -1,3 +1,7 @@
+## [v1.1.15](https://github.com/OpusCapita/styles/compare/v1.1.14...v1.1.15) (Tue, 14 Nov 2017 08:56:03 GMT)
+ - Added specific styles for badges in menu. (Sergey Tamkov <tamkov@scand.com>, bc98ee7)
+ - Added class for primary background color. (Sergey Tamkov <tamkov@scand.com>, 142c30c)
+
 ## [v1.1.14](https://github.com/OpusCapita/styles/compare/v1.1.13...v1.1.14) (Fri, 10 Nov 2017 11:04:35 GMT)
  - Fixed hover styles for links with class .oc-button. (Sergey Tamkov <tamkov@scand.com>, 824e249)
 
