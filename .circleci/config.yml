@@ -6,6 +6,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - setup_remote_docker
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -24,6 +25,16 @@ jobs:
       - run:
           name: lint
           command: npm start lint
+
+      - run:
+          name: Build docker image
+          command: docker build -t opuscapita/styles-demo .
+
+      - run:
+          name: Push docker image
+          command: |
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            docker push opuscapita/styles-demo:latest
 
   update-gh-pages:
     docker:
