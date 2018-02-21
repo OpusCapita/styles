@@ -60,7 +60,7 @@ module.exports = {
     "npm-publish": {
       default: series(
         'nps npm-build',
-        'npm-publish --release'
+        'npm publish'
       )
     },
     "grails-plugin-build": {
