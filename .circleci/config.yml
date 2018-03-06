@@ -2,7 +2,6 @@ defaults: &defaults
   docker:
     - image: opuscapita/minsk-core-ci:grails-2.4.4-jdk-8u131-nodejs-8.9.4-maven-3.3.9
   working_directory: ~/build
-
 version: 2
 jobs:
   build:
@@ -11,111 +10,88 @@ jobs:
       - run:
           name: Environment inject.
           command: env_inject.sh
-
       - checkout
-
       - restore_cache:
           keys:
             - styles-{{ .Branch }}-{{ checksum "package.json" }}
             - styles-{{ .Branch }}
             - styles
-
       - run:
           name: "Installing dependencies."
           command: yarn install
-
       - save_cache:
           key: styles-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
               - ./node_modules
               - ./yarn.lock
-
       - run:
           name: "Running lint."
           command: npm start lint
-
   update-gh-pages:
     <<: *defaults
     steps:
       - run:
           name: Environment inject
           command: /bin/env_inject.sh
-
       - checkout
-
       - restore_cache:
           keys:
             - styles-{{ .Branch }}-{{ checksum "package.json" }}
             - styles-{{ .Branch }}
             - styles
-
       - run:
           name: "Installing dependencies."
           command: yarn install
-
       - save_cache:
           key: styles-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
               - ./node_modules
               - ./yarn.lock
-
       - run:
           name: build-gh-pages
           command: ./scripts/gh-pages/build.sh
-
       - run:
           name: deploy-gh-pages
           command: ./scripts/gh-pages/deploy.sh .gh-pages-tmp
-
   build_release:
     <<: *defaults
     steps:
       - run:
           name: Environment inject
           command: /bin/env_inject.sh
-
       - checkout
-
       - restore_cache:
           keys:
-            - styles-{{ .Branch }}-{{ checksum "package.json" }}
-            - styles-{{ .Branch }}
+            - 'styles-{{ .Branch }}-{{ checksum "package.json" }}'
+            - 'styles-{{ .Branch }}'
             - styles
-
       - run:
-          name: "Installing dependencies."
+          name: Installing dependencies.
           command: yarn install
-
       - save_cache:
-          key: styles-{{ .Branch }}-{{ checksum "package.json" }}
+          key: 'styles-{{ .Branch }}-{{ checksum "package.json" }}'
           paths:
-              - ./node_modules
-              - ./yarn.lock
-              - /root/.grails/.m2
-              - /root/.m2
-
+            - ./node_modules
+            - ./yarn.lock
+            - ~/.m2/repository
       - run:
-          name: "Running lint."
+          name: Running lint.
           command: npm start lint
-
       - run:
-          name: "Deploy."
+          name: Deploy.
           command: npm start publish-release
-
+      
   release:
     <<: *defaults
     steps:
-
       - run:
           name: Environment inject
           command: env_inject.sh
-
       - checkout
-
       - run:
           name: Executing release scrtipt.
           command: .circleci/release.sh
-
+      
 workflows:
   version: 2
   release-and-build:
