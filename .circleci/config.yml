@@ -62,14 +62,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - 'styles-{{ .Branch }}-{{ checksum "package.json" }}'
-            - 'styles-{{ .Branch }}'
-            - styles
+            - 'v1-styles-{{ .Branch }}-{{ checksum "package.json" }}'
+            - 'v1-styles-{{ .Branch }}'
+            - v1-styles
       - run:
           name: Installing dependencies.
           command: yarn install
       - save_cache:
-          key: 'styles-{{ .Branch }}-{{ checksum "package.json" }}'
+          key: 'v1-styles-{{ .Branch }}-{{ checksum "package.json" }}'
           paths:
             - ./node_modules
             - ./yarn.lock
