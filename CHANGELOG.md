@@ -1,3 +1,15 @@
+
+Release 1.1.16 Mon Mar 12 2018 09:20:14 GMT+0000 (UTC)
+=======================================================
+
+- [#10](https://github.com/OpusCapita/styles/issues/10) Removed jquery-ui styles from global scope. (Sergey Tamkov tamkov@scand.com, 2018-03-07 16:25:58 +0300)
+- Fixing cache keys in circleci config [ci skip] (Egor Stambakio egor.stambakio@opuscapita.com, 2018-03-07 09:32:10 +0300)
+- Fixing save_cache path in circleci config (Egor Stambakio egor.stambakio@opuscapita.com, 2018-03-06 14:05:56 +0300)
+- Updated .gitattributes (Dmitry Shienok dshienok@scand.com, 2018-02-21 16:56:13 +0300)
+- Updated gh-pages script. (Dmitry Shienok dshienok@scand.com, 2018-02-21 16:47:15 +0300)
+- Updated build config. (Dmitry Shienok dshienok@scand.com, 2018-02-21 16:43:59 +0300)
+- (OPC-13240) Removed underlining from product-rating (AlexandrShestak ashestak@scand.com, 2018-02-01 13:07:24 +0300)
+- Updating to a version to  1.1.16 (Kirill Volkovich kirill.volkovich@jcatalog.com, 2017-11-14 11:56:17 +0300)
 ## [v1.1.15](https://github.com/OpusCapita/styles/compare/v1.1.14...v1.1.15) (Tue, 14 Nov 2017 08:56:03 GMT)
  - Added specific styles for badges in menu. (Sergey Tamkov <tamkov@scand.com>, bc98ee7)
  - Added class for primary background color. (Sergey Tamkov <tamkov@scand.com>, 142c30c)
