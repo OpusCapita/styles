@@ -90,7 +90,6 @@
 }
 
 .oc-menu-icon__button .oc-button {
-  pointer-events: none;
   background-color: transparent;
   fill: #fff;
   color: #fff;
@@ -98,6 +97,11 @@
 
 .oc-menu-icon__button--with-dropdown .oc-button {
   padding-right: 32px;
+}
+
+.oc-menu-icon__button .oc-button:hover:before {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 .oc-menu-icon__button > div > div {
