@@ -1,4 +1,9 @@
 
+Release 1.1.19 Fri Mar 16 2018 09:10:57 GMT+0000 (UTC)
+=======================================================
+
+- Fix OpusCapita/minsk-core-externals[#57](https://github.com/OpusCapita/styles/issues/57) (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-16 12:09:22 +0300)
+
 Release 1.1.18 Fri Mar 16 2018 06:35:18 GMT+0000 (UTC)
 =======================================================
 
