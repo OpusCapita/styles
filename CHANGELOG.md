@@ -1,4 +1,11 @@
 
+Release 1.1.18 Fri Mar 16 2018 06:35:18 GMT+0000 (UTC)
+=======================================================
+
+- Hide MenuIcon badge if it's empty (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-16 09:34:02 +0300)
+- Merge branch 'master' of github.com:OpusCapita/styles (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-16 09:33:33 +0300)
+- [release:master:1.1.17:1.1.18] (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-15 14:00:58 +0300)
+
 Release 1.1.17 Thu Mar 15 2018 11:02:50 GMT+0000 (UTC)
 =======================================================
 
