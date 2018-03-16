@@ -1,4 +1,9 @@
 
+Release 1.1.17 Thu Mar 15 2018 11:02:50 GMT+0000 (UTC)
+=======================================================
+
+- Fix https://github.com/OpusCapita/minsk-core-externals/issues/57 (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-15 13:58:59 +0300)
+
 Release 1.1.16 Mon Mar 12 2018 09:20:14 GMT+0000 (UTC)
 =======================================================
 
