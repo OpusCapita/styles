@@ -1,4 +1,10 @@
 
+Release 1.1.20 Fri Mar 16 2018 09:59:48 GMT+0000 (UTC)
+=======================================================
+
+- Merge branch 'master' of github.com:OpusCapita/styles (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-16 12:58:06 +0300)
+- Fix OpusCapita/minsk-core-externals[#57](https://github.com/OpusCapita/styles/issues/57) (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-16 12:57:46 +0300)
+
 Release 1.1.19 Fri Mar 16 2018 09:10:57 GMT+0000 (UTC)
 =======================================================
 
