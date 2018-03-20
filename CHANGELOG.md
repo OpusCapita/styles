@@ -1,4 +1,10 @@
 
+Release 1.1.21 Tue Mar 20 2018 12:04:14 GMT+0000 (UTC)
+=======================================================
+
+- Merge branch 'master' of github.com:OpusCapita/styles (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-20 15:02:52 +0300)
+- Remove underline for MenuIcon is <a> tag (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-20 15:01:52 +0300)
+
 Release 1.1.20 Fri Mar 16 2018 09:59:48 GMT+0000 (UTC)
 =======================================================
 
