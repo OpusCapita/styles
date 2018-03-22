@@ -1,4 +1,10 @@
 
+Release 1.1.22 Thu Mar 22 2018 09:54:44 GMT+0000 (UTC)
+=======================================================
+
+- Merge branch 'master' of github.com:OpusCapita/styles (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-22 12:41:21 +0300)
+- Fix MenuIcon artifact on :focus (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-22 12:39:41 +0300)
+
 Release 1.1.21 Tue Mar 20 2018 12:04:14 GMT+0000 (UTC)
 =======================================================
 
