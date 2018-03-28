@@ -103,18 +103,21 @@
   color: #000;
 }
 
-.shopping-list-menu-dropdown > div {
+.shopping-list-menu-dropdown {
   border-bottom: 1px solid #eee;
-  width: 220px;
+  width: ~"calc(100% + 8px)";
+  margin: 0 -4px -16px -4px;
 }
 
-.shopping-list-menu-dropdown div:hover {
+.shopping-list-menu-dropdown :hover {
   background-color: #f8f8f8;
 }
 
-.shopping-list-menu-dropdown div.see-all {
+.shopping-list-menu-dropdown.see-all {
   text-align: center;
   border: none;
+  margin-bottom: 0;
+  margin-top: 4px;
 }
 
 .shopping-list-menu-dropdown a {
