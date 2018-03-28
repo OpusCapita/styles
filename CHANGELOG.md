@@ -1,4 +1,9 @@
 
+Release 1.1.23 Wed Mar 28 2018 14:05:18 GMT+0000 (UTC)
+=======================================================
+
+- (OPC-13311) Fixed styles for shopping list menu. (Sergey Tamkov tamkov@scand.com, 2018-03-28 17:00:45 +0300)
+
 Release 1.1.22 Thu Mar 22 2018 09:54:44 GMT+0000 (UTC)
 =======================================================
 
