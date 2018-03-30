@@ -1,6 +1,33 @@
 .oc-menu-icon {
+
+}
+
+.oc-menu-icon__container {
   display: inline-flex;
   position: relative;
+  height: 32px;
+}
+
+.oc-menu-icon__overlay {
+    height: 100vh;
+    background: rgba(0,0,0,0.28);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.oc-menu-icon__children-arrow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  bottom: -26px;
+  right: 10px;
+  transform: translate(0, -50%) rotate(45deg);
+  z-index: 100;
 }
 
 .oc-menu-icon__sup-title {
@@ -10,7 +37,7 @@
   font-weight: bold;
   border-radius: 10px;
   position: absolute;
-  top: -4px;
+  top: 0;
   right: -6px;
   white-space: nowrap;
   padding: 1px 4px;
@@ -38,7 +65,6 @@
 
 .oc-menu-icon__sub-items-container {
   border-radius: 2px;
-  color: #333;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -51,17 +77,42 @@
   transform: translate(0, 100%);
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.15);
   z-index: 10;
-  &:after {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    top: 0;
-    right: 10px;
-    transform: translate(0, -50%) rotate(45deg);
-    z-index: -10;
-  }
+}
+
+.oc-menu-icon__sub-items-container--tablet-overlay-mode {
+  position: fixed;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  transform: none;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+
+.oc-menu-icon__sub-items-container--tablet-overlay-mode-left {
+  left: 0;
+  right: auto;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.oc-menu-icon__sub-items-container--tablet-overlay-mode-right {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.oc-menu-icon__sub-items-container--tablet-overlay-mode-right .oc-menu-icon__sub-items-container--tablet-overlay-header svg {
+  fill: #333;
+}
+
+.oc-menu-icon__sub-items-container--tablet-overlay-header {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .oc-menu-icon__sub-items-container--with-dropdown {
@@ -74,17 +125,6 @@
   z-index: 10;
 }
 
-// XXX Remove it if @opuscapita/react-buttons will be replaced or modified
-.oc-menu-icon__button--dark-overlay:hover:before,
-.oc-menu-icon_-button--dark-overlay:focus:before {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-
-.oc-menu-icon__button--light-overlay:hover:before,
-.oc-menu-icon__button--ligth-overlay:focus:before {
-  background-color: rgba(255, 255, 255, 0.04);
-}
-
 .oc-menu-icon .oc-button:focus:after {
   display: none;
 }
@@ -95,18 +135,13 @@
   color: #fff;
 }
 
-.oc-menu-icon__button--with-dropdown .oc-button {
-  padding-right: 32px;
-}
-
 .oc-menu-icon__button .oc-button:hover:before {
   pointer-events: none;
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(192, 192, 192, 0.18);
 }
 
-.oc-menu-icon__button .oc-button:hover,
-.oc-menu-icon__button .oc-button:focus {
-  text-decoration: none;
+.oc-menu-icon__button--with-dropdown .oc-button {
+  padding-right: 32px;
 }
 
 .oc-menu-icon__button > div > div {
