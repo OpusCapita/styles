@@ -1,4 +1,9 @@
 
+Release 1.1.24 Thu Apr 12 2018 12:59:53 GMT+0000 (UTC)
+=======================================================
+
+- Sync react navigation ([#11](https://github.com/OpusCapita/styles/issues/11)) (Sergey Tamkov asergeev-sc@users.noreply.github.com, 2018-04-12 15:41:41 +0300)
+
 Release 1.1.23 Wed Mar 28 2018 14:05:18 GMT+0000 (UTC)
 =======================================================
 
