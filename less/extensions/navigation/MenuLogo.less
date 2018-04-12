@@ -6,10 +6,7 @@
   align-items: center;
   justify-content: center;
   width: 180px;
-}
-
-.oc-menu-logo__image-container {
-   width: 100%;
+  padding-top: 2px;
 }
 
 .oc-menu-logo__image {
@@ -17,7 +14,7 @@
   height: 28px;
 }
 
-.oc-menu-logo__image-link {
+.oc-menu-logo__link {
   display: block;
   width: 100%;
   z-index: 1;
@@ -28,7 +25,12 @@
   position: relative;
   top: 3px;
   text-align: right;
-  padding-top: 2px;
+  white-space: nowrap;
+  margin-right: auto;
+}
+
+.oc-menu-logo__label--hidden {
+  display: none;
 }
 
 .oc-menu-logo__label-link {
@@ -43,15 +45,4 @@
 
 .oc-menu-logo__label-text {
   opacity: 0.78;
-}
-
-@media (max-width: 990px) {
-  .oc-menu-logo__image {
-    width: 120px;
-    height: auto;
-  }
-
-  .oc-menu-logo__label {
-    display: none;
-  }
 }
