@@ -1,10 +1,12 @@
 
-Release 1.1.24-beta.1 Tue Apr 10 2018 15:09:48 GMT+0000 (UTC)
+Release 1.1.23 Wed Mar 28 2018 14:05:18 GMT+0000 (UTC)
 =======================================================
 
-- Added @media for tablet or mobile view. (Sergey Tamkov tamkov@scand.com, 2018-04-10 18:03:16 +0300)
-- Add missing "extensions/navigation/MenuIcon" hover/focus fix (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-30 10:23:56 +0300)
-- Sync "extensions/navigation" styles with: (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-30 10:21:17 +0300)
+- (OPC-13311) Fixed styles for shopping list menu. (Sergey Tamkov tamkov@scand.com, 2018-03-28 17:00:45 +0300)
+
+Release 1.1.22 Thu Mar 22 2018 09:54:44 GMT+0000 (UTC)
+=======================================================
+
 - Merge branch 'master' of github.com:OpusCapita/styles (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-22 12:41:21 +0300)
 - Fix MenuIcon artifact on :focus (Kirill Volkovich kirill.volkovich@opuscapita.com, 2018-03-22 12:39:41 +0300)
 
