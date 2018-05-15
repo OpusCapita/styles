@@ -1,4 +1,9 @@
 
+Release 2.0.1 Tue May 15 2018 10:44:57 GMT+0300 (MSK)
+=======================================================
+
+- Changed colors for buttons and dropdowns. (Sergey Tamkov tamkov@scand.com, 2018-05-15 10:43:05 +0300)
+
 Release 2.0.0 Tue May 08 2018 17:25:50 GMT+0300 (MSK)
 =======================================================
 
