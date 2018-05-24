@@ -13,6 +13,12 @@ Release 2.0.0-beta.1 Mon May 07 2018 18:01:53 GMT+0300 (MSK)
 
 - Added UI Improvements: fonts and colors. (Sergey Tamkov tamkov@scand.com, 2018-04-27 19:55:24 +0300)
 
+Release 1.1.25 Wed May 23 2018 18:07:45 GMT+0300 (MSK)
+=======================================================
+
+- Added styles for collapsing menu to single row on page scroll. (Sergey Tamkov tamkov@scand.com, 2018-05-23 18:03:36 +0300)
+- Adding an issue template file [ci skip] (Egor Stambakio egor.stambakio@opuscapita.com, 2018-05-02 12:26:21 +0300)
+
 Release 1.1.24 Thu Apr 12 2018 12:59:53 GMT+0000 (UTC)
 =======================================================
 
