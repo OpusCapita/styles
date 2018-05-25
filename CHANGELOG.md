@@ -1,4 +1,12 @@
 
+Release 2.0.2 Fri May 25 2018 11:36:09 GMT+0300 (MSK)
+=======================================================
+
+- Rollback font-family changes: remove 'Noto Sans',  retrieve 'Lato' and 'Roboto' [#12](https://github.com/OpusCapita/styles/issues/12) (Sergey Tamkov tamkov@scand.com, 2018-05-24 19:04:09 +0300)
+- Merge branch 'master' into issues-12/general-changes (Sergey Tamkov tamkov@scand.com, 2018-05-24 18:53:16 +0300)
+- Added styles for collapsing menu to single row on page scroll. (Sergey Tamkov tamkov@scand.com, 2018-05-23 18:03:36 +0300)
+- Adding an issue template file [ci skip] (Egor Stambakio egor.stambakio@opuscapita.com, 2018-05-02 12:26:21 +0300)
+
 Release 2.0.1 Tue May 15 2018 10:44:57 GMT+0300 (MSK)
 =======================================================
 
