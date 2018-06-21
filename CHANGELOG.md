@@ -1,4 +1,9 @@
 
+[Release 2.0.3](https://github.com/OpusCapita/styles/releases/tag/v2.0.3) Thu Jun 21 2018 17:09:57 GMT+0300 (MSK)
+=======================================================
+
+- Rollback font color changes. [#12](https://github.com/OpusCapita/styles/issues/12) (Sergey Tamkov tamkov@scand.com, 2018-06-21 12:04:45 +0300)
+
 Release 2.0.2 Fri May 25 2018 11:36:09 GMT+0300 (MSK)
 =======================================================
 
