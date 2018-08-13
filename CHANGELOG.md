@@ -1,4 +1,10 @@
 
+[Release 2.0.4](https://github.com/OpusCapita/styles/releases/tag/v2.0.4) Mon Aug 13 2018 12:10:24 GMT+0300 (MSK)
+=======================================================
+
+- Fix progress bar style according to bootstrap source (GitHub 31243790+estambakio-sc@users.noreply.github.com, 2018-08-13 12:06:28 +0300)
+- Fix progress bar style (Egor Stambakio stambakio@scand.com, 2018-08-13 11:57:32 +0300)
+
 [Release 2.0.3](https://github.com/OpusCapita/styles/releases/tag/v2.0.3) Thu Jun 21 2018 17:09:57 GMT+0300 (MSK)
 =======================================================
 
