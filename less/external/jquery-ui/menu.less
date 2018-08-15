@@ -21,23 +21,6 @@
 	}
 }
 
-/*
-* Bug inline with IE sub menu
-*/
-/* IE9, IE10 */
-@media screen and (min-width:~"0\0") {
-	.ui-menu li {
-	  list-style-type: none;
-	  display: inline;
-	  line-height: 0;
-	}
-
-	li.ui-menu-item { 
-	  /* This fixes the IE10 issue (jQuery UI Issue #8844)*/
-	  list-style-type: none;
-	}
-}
-
 .ui-menu{
 	.ui-menu-item {
 		margin: 0;
@@ -65,11 +48,11 @@
 		background-color: @ui-menu-item-a-bg;
 		border-color: @ui-menu-item-a-border;
 		color: @ui-menu-item-a-color;
-		
+
 		&.ui-corner-all{
 			border-radius: 0px;
 		}
-		
+
 		&.ui-state-focus, &.ui-state-active, &.ui-widget-content{
 			font-weight: bold;
 			margin: 0;
@@ -88,7 +71,7 @@
 			border-color: @ui-menu-item-a-focus-border;
 			color: @ui-menu-item-a-focus-color;
 		}
-		
+
 		/* Fix problem with border in ui-state-active */
 		.ui-state-active {
 			padding: 1px .4em;
