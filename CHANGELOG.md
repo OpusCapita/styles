@@ -1,4 +1,9 @@
 
+[Release 2.0.5](https://github.com/OpusCapita/styles/releases/tag/v2.0.5) Fri Aug 17 2018 19:09:31 GMT+0300 (MSK)
+=======================================================
+
+- Fixed invalid css in index.css [#15](https://github.com/OpusCapita/styles/issues/15) (Sergey Tamkov tamkov@scand.com, 2018-08-15 15:55:31 +0300)
+
 [Release 2.0.4](https://github.com/OpusCapita/styles/releases/tag/v2.0.4) Mon Aug 13 2018 12:10:24 GMT+0300 (MSK)
 =======================================================
 
