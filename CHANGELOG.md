@@ -1,4 +1,10 @@
 
+[Release 2.0.6](https://github.com/OpusCapita/styles/releases/tag/v2.0.6) Fri Aug 24 2018 13:14:23 GMT+0300 (MSK)
+=======================================================
+
+- Rollback changes for progress bar. (Sergey Tamkov tamkov@scand.com, 2018-08-24 13:11:38 +0300)
+- Changed look of Form Submit. [#16](https://github.com/OpusCapita/styles/issues/16) (Sergey Tamkov tamkov@scand.com, 2018-08-24 12:58:20 +0300)
+
 [Release 2.0.5](https://github.com/OpusCapita/styles/releases/tag/v2.0.5) Fri Aug 17 2018 19:09:31 GMT+0300 (MSK)
 =======================================================
 
