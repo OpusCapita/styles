@@ -15,3 +15,35 @@ div.paginate .pull-left {
 	margin-right: 1em;
 }
 
+.paginate-flex {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  .paginate-flex-item {
+    display: flex;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    .pagination {
+      margin: 0;
+    }
+  }
+
+  .paginate-info {
+    align-items: center;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+
+  .to-page-block {
+    display: flex;
+
+    .btn,
+    .form-control {
+      margin-left: 10px;
+    }
+  }
+}
