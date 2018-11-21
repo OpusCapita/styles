@@ -1,4 +1,10 @@
 
+[Release 2.0.7](https://github.com/OpusCapita/styles/releases/tag/v2.0.7) Wed Nov 21 2018 17:15:32 GMT+0300 (MSK)
+=======================================================
+
+- Fixed styles for jquery-ui dialogs. (Sergey Tamkov tamkov@scand.com, 2018-11-21 17:11:20 +0300)
+- Using docker image opuscapita/minsk-core-ci tag grails-2.4.4-jdk-8u131-nodejs-6.9.4-maven-3.3.9 [ci skip] (Alexey Sergeev alexey.sergeev@opuscapita.com, 2018-09-07 09:08:32 +0300)
+
 [Release 2.0.6](https://github.com/OpusCapita/styles/releases/tag/v2.0.6) Fri Aug 24 2018 13:14:23 GMT+0300 (MSK)
 =======================================================
 
