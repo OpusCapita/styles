@@ -1,4 +1,9 @@
 
+[Release 2.0.8](https://github.com/OpusCapita/styles/releases/tag/v2.0.8) Tue Jan 22 2019 12:26:50 GMT+0300 (MSK)
+=======================================================
+
+- [#18](https://github.com/OpusCapita/styles/issues/18) Set -ms-overflow-style: scrollbar; (GitHub kvolkovich-sc@users.noreply.github.com, 2019-01-22 12:04:40 +0300)
+
 [Release 2.0.7](https://github.com/OpusCapita/styles/releases/tag/v2.0.7) Wed Nov 21 2018 17:15:32 GMT+0300 (MSK)
 =======================================================
 
