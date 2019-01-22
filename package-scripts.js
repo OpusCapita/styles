@@ -20,7 +20,7 @@ module.exports = {
         rimraf('dist/css'),
         mkdirp('dist/css'),
         `lessc --relative-urls ${stylesSrc} ${stylesDest}`,
-        `postcss --use autoprefixer -o ${stylesDest} ${stylesDest}`
+        `postcss --use autoprefixer --use cssnano --no-map -o ${stylesDest} ${stylesDest}`
       )
     },
     "application-build": {
