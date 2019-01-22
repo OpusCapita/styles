@@ -1,4 +1,9 @@
 
+[Release 2.0.9](https://github.com/OpusCapita/styles/releases/tag/v2.0.9) Tue Jan 22 2019 15:47:40 GMT+0300 (MSK)
+=======================================================
+
+- Remove source map, minify css ([#19](https://github.com/OpusCapita/styles/issues/19)) (GitHub 31243790+estambakio-sc@users.noreply.github.com, 2019-01-22 15:44:05 +0300)
+
 [Release 2.0.8](https://github.com/OpusCapita/styles/releases/tag/v2.0.8) Tue Jan 22 2019 12:26:50 GMT+0300 (MSK)
 =======================================================
 
