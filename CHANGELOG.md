@@ -1,4 +1,9 @@
 
+[Release 2.0.10](https://github.com/OpusCapita/styles/releases/tag/v2.0.10) Mon Jun 10 2019 17:08:30 GMT+0300 (MSK)
+=======================================================
+
+- Update MenuIcon.less (GitHub kvolkovich-sc@users.noreply.github.com, 2019-06-10 17:06:39 +0300)
+
 [Release 2.0.9](https://github.com/OpusCapita/styles/releases/tag/v2.0.9) Tue Jan 22 2019 15:47:40 GMT+0300 (MSK)
 =======================================================
 
