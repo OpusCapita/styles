@@ -84,6 +84,12 @@ module.exports = {
         "grails-plugin-deploy --release"
       )
     },
+    "grails-plugin-deploy-snapshot": {
+      default: series(
+        "nps grails-plugin-package",
+        "grails-plugin-deploy"
+      )
+    },
     "build-release": {
       default: npsUtils.concurrent.nps('application-package', 'grails-plugin-package', 'npm-build')
     },
