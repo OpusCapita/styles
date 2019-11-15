@@ -12,7 +12,7 @@
 
   <groupId>com.opuscapita.node</groupId>
   <artifactId>styles</artifactId>
-  <version>${version}</version>
+  <version>${version}-issue-20-SNAPSHOT</version>
 
   <name>node-oc-ui</name>
 
