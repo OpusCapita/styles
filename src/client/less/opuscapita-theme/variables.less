@@ -9,7 +9,8 @@
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 @light-gray:             #D3DADE;
 
-@brand-primary:         #006677;
+@brand-primary:         #434C52;
+@brand-secondary:       #E61B41;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -27,6 +28,7 @@
 
 //** Global textual link color.
 @link-color:            @brand-primary;
+@link-hover-color:      @brand-secondary;
 
 
 
@@ -152,8 +154,8 @@
 
 
 @btn-default-color:              @text-color;
-@btn-primary-bg:                 #EC6608;
-@btn-primary-border:             #EC6608;
+@btn-primary-bg:                 @brand-primary;
+@btn-primary-border:             @brand-primary;
 @btn-default-border:             @light-gray;
 
 //== Forms
