@@ -27,6 +27,9 @@ jobs:
       - run:
           name: "Running lint."
           command: npm start lint
+      - run:
+          name: Deploy snapshot.
+          command: npm start grails-plugin-deploy-snapshot
   update-gh-pages:
     <<: *defaults
     steps:
