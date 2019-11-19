@@ -1,4 +1,9 @@
 
+[Release 2.0.11](https://github.com/OpusCapita/styles/releases/tag/v2.0.11) Tue Nov 19 2019 15:25:22 GMT+0300 (MSK)
+=======================================================
+
+- ([#20](https://github.com/OpusCapita/styles/issues/20)) Extract navigation variables into customization variables [skip ci] (Dmitry Divin divin@scand.com, 2019-11-19 15:24:13 +0300)
+
 [Release 2.0.10](https://github.com/OpusCapita/styles/releases/tag/v2.0.10) Mon Jun 10 2019 17:08:30 GMT+0300 (MSK)
 =======================================================
 
