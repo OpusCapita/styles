@@ -78,10 +78,22 @@ module.exports = {
         "grails-plugin-package --release"
       )
     },
+    "grails-plugin-package-snapshot": {
+      default: series(
+        "nps grails-plugin-build",
+        "grails-plugin-package"
+      )
+    },
     "grails-plugin-deploy": {
       default: series(
         "nps grails-plugin-package",
         "grails-plugin-deploy --release"
+      )
+    },
+    "grails-plugin-deploy-snapshot": {
+      default: series(
+        "nps grails-plugin-package-snapshot",
+        "grails-plugin-deploy"
       )
     },
     "build-release": {
