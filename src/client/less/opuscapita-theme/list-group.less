@@ -4,11 +4,14 @@
   border-radius: 3px;
 }
 
-.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
-	background: @list-group-active-bg;
-	color: @list-group-active-color;
-	text-shadow: 0 1px 0 #fff;
-  border-color: @list-group-active-border;
+.list-group-item {
+  &.active,
+  &.active:hover,
+  &.active:focus {
+    background: @list-group-active-bg;
+    color: @list-group-active-color;
+    border-color: @list-group-active-border;
+  }
 }
 
 .list-group .list-group-item.btn-group {
