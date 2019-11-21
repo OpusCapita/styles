@@ -5,10 +5,15 @@
 }
 
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
-	background: @gray-lighter; //#2e6b99;
-	color: @gray;
-	text-shadow: 0px 1px 0px #fff;
-	border-color: @list-group-border;
+  background: @list-group-active-bg;
+  color: @list-group-active-color;
+  border-color: @list-group-active-border;
+	text-shadow: none;
+
+  .label.label-default {
+    color: @white;
+    border-color: @white;
+  }
 }
 
 .list-group .list-group-item.btn-group {
