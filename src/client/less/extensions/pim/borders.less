@@ -1,0 +1,75 @@
+/**
+ * Standard Bootstrap 4 styles.
+ *
+ * Now: used as extension for Bootstrap 3.
+ * Future: after migration to Bootstrap 4 or later should be moved to standard theme.
+ */
+.border {
+  border: 1px solid @light-gray;
+
+  &-top {
+    border-top: 1px solid @light-gray;
+  }
+
+  &-right {
+    border-right: 1px solid @light-gray;
+  }
+
+  &-bottom {
+    border-bottom: 1px solid @light-gray;
+  }
+
+  &-left {
+    border-left: 1px solid @light-gray;
+  }
+
+  &-primary {
+    border: 1px solid @brand-primary;
+  }
+
+  &-secondary {
+    border: 1px solid @brand-secondary;
+  }
+}
+
+
+/**
+ * Extended styles of Bootstrap 3/4 (not a standard part).
+ */
+.border {
+  &-top {
+    &-primary {
+      border-top: 1px solid @brand-primary;
+    }
+    &-secondary {
+      border-top: 1px solid @brand-secondary;
+    }
+  }
+
+  &-right {
+    &-primary {
+      border-right: 1px solid @brand-primary;
+    }
+    &-secondary {
+      border-right: 1px solid @brand-secondary;
+    }
+  }
+
+  &-bottom {
+    &-primary {
+      border-bottom: 1px solid @brand-primary;
+    }
+    &-secondary {
+      border-bottom: 1px solid @brand-secondary;
+    }
+  }
+
+  &-left {
+    &-primary {
+      border-left: 1px solid @brand-primary;
+    }
+    &-secondary {
+      border-left: 1px solid @brand-secondary;
+    }
+  }
+}
