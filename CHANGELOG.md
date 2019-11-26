@@ -1,4 +1,9 @@
 
+[Release 2.0.12](https://github.com/OpusCapita/styles/releases/tag/v2.0.12) Tue Nov 26 2019 13:40:45 GMT+0300 (MSK)
+=======================================================
+
+- [#22](https://github.com/OpusCapita/styles/issues/22) Updating Roboto font (Alexey Sergeev alexey.sergeev@opuscapita.com, 2019-11-26 13:36:11 +0300)
+
 [Release 2.0.11](https://github.com/OpusCapita/styles/releases/tag/v2.0.11) Tue Nov 19 2019 15:25:22 GMT+0300 (MSK)
 =======================================================
 
