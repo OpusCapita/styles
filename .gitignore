@@ -13,3 +13,6 @@ logs
 # Locks
 yarn.lock
 package-lock.json
+
+# MacOS files
+.DS_Store
