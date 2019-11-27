@@ -1,0 +1,165 @@
+div.opuscapita_react-select--2-0-0 {
+    .opuscapita_react-select__value-container {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    .opuscapita_react-select__placeholder {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      overflow: hidden;
+    }
+  
+    .opuscapita_react-select {
+      &__control {
+        border-radius: 0;
+        /*height: 34px;*/
+        min-height: 34px;
+        border: 1px solid @input-border;
+        background-color: @input-bg;
+  
+        &:hover {
+          border: 1px solid #d3dade;
+        }
+  
+        .has-error & {
+            border-color: #a94442;
+            box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.075), 0 0 0 #ce8483;
+            transition: box-shadow 180ms ease-in-out;
+        }
+  
+        &--is-focused,
+        &--is-focused:hover {
+          border-color: @input-border-focus;
+          outline: 0;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(red(@input-border-focus), green(@input-border-focus), blue(@input-border-focus), .6);
+          z-index: 10;
+  
+          .opuscapita_react-select {
+            &__dropdown-indicator {
+              &::after {
+                border-top-color: #666;
+              }
+            }
+          }
+        }
+  
+        &--is-disabled {
+          background-color: @input-bg-disabled;
+        }
+      }
+  
+      &__multi-value {
+        background-color: @input-bg;
+        border: 1px solid @input-border;
+        cursor: pointer;
+  
+        &__label {
+          padding-right: 6px;
+        }
+  
+        &__remove {
+          border-left: 1px solid #d3dade;
+  
+          &:hover,
+          &:focus {
+            background-color: #ccc;
+            color: #555;
+          }
+  
+        }
+      }
+  
+      &__indicator {
+        padding: 8px 4px;
+      }
+  
+      &__indicator-separator {
+        display: none;
+      }
+  
+      &__clear-indicator {
+        &::after {
+          content:'×';
+          display: inline-block;
+          font-size: 18px;
+          line-height: 1;
+          color: #999;
+          cursor: pointer;
+          margin-top: -2px;
+        }
+        &:hover{
+          &::after {
+            color:#D0021B;
+          }
+        }
+  
+        svg {
+          display: none;
+        }
+      }
+  
+      &__dropdown-indicator {
+        &::after {
+          content: '';
+          border-color: #999 transparent transparent;
+          border-style: solid;
+          border-width: 5px 5px 2.5px;
+          display: inline-block;
+          height: 0;
+          width: 0;
+          position: relative;
+          margin: 6px 7px 2px 0;;
+        }
+  
+        &:hover {
+          cursor: pointer;
+          &::after {
+            border-top-color: #666;
+          }
+        }
+  
+        svg {
+          display: none;
+        }
+      }
+  
+      &__menu {
+        margin-top: -1px;
+        border: 1px solid @input-border;
+        border-radius: 0;
+        box-shadow: none;
+        z-index: 3;
+  
+        .opuscapita_react-select {
+          &__menu-list {
+            padding-top: 0;
+            padding-bottom: 0;
+            max-height: 198px;
+            overflow-y: auto;
+          }
+  
+          &__option {
+            color: #666666;
+            cursor: pointer;
+            padding: 8px 10px;
+            &--is-selected {
+              background-color: @gray-light;
+              color: @white;
+
+              &:hover,
+              &:focus,
+              &.opuscapita_react-select__option--is-focused {
+                background-color: @gray-light;
+                color: @white;
+              }
+            }
+            &--is-focused {
+              background-color: @gray-lighter;
+            }
+          }
+        }
+      }
+    }
+  }
