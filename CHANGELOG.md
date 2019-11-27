@@ -1,4 +1,9 @@
 
+[Release 2.0.13](https://github.com/OpusCapita/styles/releases/tag/v2.0.13) Wed Nov 27 2019 14:28:17 GMT+0300 (MSK)
+=======================================================
+
+- [#23](https://github.com/OpusCapita/styles/issues/23) Improve styles for OPC shopping cart. (Sergey Tamkov tamkov@scand.com, 2019-11-27 14:22:39 +0300)
+
 [Release 2.0.12](https://github.com/OpusCapita/styles/releases/tag/v2.0.12) Tue Nov 26 2019 13:40:45 GMT+0300 (MSK)
 =======================================================
 
