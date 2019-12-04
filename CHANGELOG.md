@@ -1,4 +1,11 @@
 
+[Release 2.0.11-prodexa](https://github.com/OpusCapita/styles/releases/tag/v2.0.11-prodexa) Wed Dec 04 2019 08:26:40 GMT+0300 (MSK)
+=======================================================
+
+- Prodexa Branding ([#24](https://github.com/OpusCapita/styles/issues/24)) (GitHub shchitlyak@scand.com, 2019-12-04 08:23:09 +0300)
+- fixed snapshot artefacts building (Andrey Shchitlyak shchitlyak@scand.com, 2019-11-19 12:45:38 +0300)
+- Created development branch for prodexa brand (Andrey Shchitlyak shchitlyak@scand.com, 2019-11-18 14:31:42 +0300)
+
 [Release 2.0.10](https://github.com/OpusCapita/styles/releases/tag/v2.0.10) Mon Jun 10 2019 17:08:30 GMT+0300 (MSK)
 =======================================================
 
