@@ -8,8 +8,10 @@
 @gray-light:             lighten(#000, 60%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 @light-gray:             #D3DADE;
+@white:                  #FFFFFF;
 
-@brand-primary:         #006677;
+@brand-major:           #E61B41;
+@brand-primary:         #434C52;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -26,7 +28,8 @@
 @img-path: "./img";
 
 //** Global textual link color.
-@link-color:            @brand-primary;
+@link-color:            #637382;
+@link-hover-color:      @brand-major;
 
 
 
@@ -151,10 +154,16 @@
 @navbar-inverse-toggle-border-color:        #333;
 
 
-@btn-default-color:              @text-color;
-@btn-primary-bg:                 #EC6608;
-@btn-primary-border:             #EC6608;
-@btn-default-border:             @light-gray;
+@btn-primary-color:            @white;
+@btn-primary-bg:               @brand-primary;
+@btn-primary-border:           @brand-primary;
+
+@btn-major-color:              @white;
+@btn-major-bg:                 @brand-major;
+@btn-major-border:             @brand-major;
+
+@btn-default-color:            @text-color;
+@btn-default-border:           @light-gray;
 
 //== Forms
 //
@@ -274,3 +283,10 @@
 @grid-float-breakpoint:     @screen-md-min;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+@list-group-active-color: @white;
+@list-group-active-bg: @brand-major;
+@list-group-active-border: @gray-lighter;
+
+@progress-bar-color: @white;
+@progress-bar-bg: @brand-primary;
