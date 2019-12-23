@@ -1,4 +1,9 @@
 
+[Release 2.0.12-prodexa](https://github.com/OpusCapita/styles/releases/tag/v2.0.12-prodexa) Mon Dec 23 2019 14:11:08 GMT+0300 (MSK)
+=======================================================
+
+- (OpusCapita/minsk-core-externals[#511](https://github.com/OpusCapita/styles/issues/511)) Making table active row darker (#f5f5f5 -> #eeeeee) (Alexey Sergeev alexey.sergeev@opuscapita.com, 2019-12-23 14:07:28 +0300)
+
 [Release 2.0.11-prodexa](https://github.com/OpusCapita/styles/releases/tag/v2.0.11-prodexa) Wed Dec 04 2019 08:26:40 GMT+0300 (MSK)
 =======================================================
 
