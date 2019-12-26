@@ -1,4 +1,9 @@
 
+[Release 2.0.13-prodexa](https://github.com/OpusCapita/styles/releases/tag/v2.0.13-prodexa) Thu Dec 26 2019 18:44:40 GMT+0300 (MSK)
+=======================================================
+
+- (OpusCapita/pimline[#1015](https://github.com/OpusCapita/styles/issues/1015)) Override style for button link ([#25](https://github.com/OpusCapita/styles/issues/25)) (GitHub ksafin-sc@users.noreply.github.com, 2019-12-26 18:41:54 +0300)
+
 [Release 2.0.12-prodexa](https://github.com/OpusCapita/styles/releases/tag/v2.0.12-prodexa) Mon Dec 23 2019 14:11:08 GMT+0300 (MSK)
 =======================================================
 
