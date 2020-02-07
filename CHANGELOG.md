@@ -1,4 +1,9 @@
 
+[Release 2.0.14](https://github.com/OpusCapita/styles/releases/tag/v2.0.14) Fri Feb 07 2020 17:20:55 GMT+0300 (MSK)
+=======================================================
+
+- Updating favicon (Alexey Sergeev alexey.sergeev@opuscapita.com, 2019-12-13 15:53:00 +0300)
+
 [Release 2.0.13](https://github.com/OpusCapita/styles/releases/tag/v2.0.13) Wed Nov 27 2019 14:28:17 GMT+0300 (MSK)
 =======================================================
 
