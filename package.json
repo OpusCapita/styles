@@ -1,6 +1,6 @@
 {
   "name": "@opuscapita/styles",
-  "version": "2.0.14-prodexa",
+  "version": "2.0.15-prodexa",
   "description": "OpusCapita UI resources",
   "scripts": {
     "start": "nps"
