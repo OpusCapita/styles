@@ -1,4 +1,9 @@
 
+[Release 2.0.14-prodexa](https://github.com/OpusCapita/styles/releases/tag/v2.0.14-prodexa) Fri Feb 07 2020 17:25:13 GMT+0300 (MSK)
+=======================================================
+
+- (OpusCapita/pimline[#1076](https://github.com/OpusCapita/styles/issues/1076)) Making selected day square (Karen Safin ksafin@scand.com, 2020-02-07 17:16:43 +0300)
+
 [Release 2.0.13-prodexa](https://github.com/OpusCapita/styles/releases/tag/v2.0.13-prodexa) Thu Dec 26 2019 18:44:40 GMT+0300 (MSK)
 =======================================================
 
