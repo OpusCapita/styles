@@ -1,4 +1,10 @@
 
+[Release 2.0.15](https://github.com/OpusCapita/styles/releases/tag/v2.0.15) Fri Feb 21 2020 14:34:47 GMT+0300 (MSK)
+=======================================================
+
+- (OPC-14454) Added additional modifiers for labels. (Sergey Tamkov tamkov@scand.com, 2020-02-21 14:28:09 +0300)
+- [#551](https://github.com/OpusCapita/styles/issues/551) Fixed styles for OPC. (Sergey Tamkov tamkov@scand.com, 2020-02-18 14:06:59 +0300)
+
 [Release 2.0.14](https://github.com/OpusCapita/styles/releases/tag/v2.0.14) Fri Feb 07 2020 17:20:55 GMT+0300 (MSK)
 =======================================================
 
