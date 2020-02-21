@@ -1,3 +1,15 @@
-.label.label-multiline {
-  text-wrap: normal;
+.label {
+  &.label-multiline {
+    white-space: normal;
+    display: inline-block;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  &.label-ellipsis {
+    display: inline-block;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
