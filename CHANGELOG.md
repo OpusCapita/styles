@@ -1,4 +1,9 @@
 
+[Release 2.0.16](https://github.com/OpusCapita/styles/releases/tag/v2.0.16) Mon Feb 24 2020 11:54:12 GMT+0300 (MSK)
+=======================================================
+
+- (OPC-14454) Fixed empty multiline labels. (Sergey Tamkov tamkov@scand.com, 2020-02-24 11:40:53 +0300)
+
 [Release 2.0.15](https://github.com/OpusCapita/styles/releases/tag/v2.0.15) Fri Feb 21 2020 14:34:47 GMT+0300 (MSK)
 =======================================================
 
