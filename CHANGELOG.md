@@ -1,4 +1,10 @@
 
+[Release 2.0.18](https://github.com/OpusCapita/styles/releases/tag/v2.0.18) Wed Apr 07 2021 18:22:08 GMT+0300 (MSK)
+=======================================================
+
+- (EPROC-20383) Used jdk zulu (GitHub ashestak-sc@users.noreply.github.com, 2021-04-07 18:03:47 +0300)
+- (EPROC-20383) Used jdk zulu (GitHub ashestak-sc@users.noreply.github.com, 2021-04-07 17:59:40 +0300)
+
 [Release 2.0.17](https://github.com/OpusCapita/styles/releases/tag/v2.0.17) Wed Apr 07 2021 17:30:17 GMT+0300 (MSK)
 =======================================================
 
