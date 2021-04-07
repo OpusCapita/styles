@@ -1,4 +1,11 @@
 
+[Release 2.0.17](https://github.com/OpusCapita/styles/releases/tag/v2.0.17) Wed Apr 07 2021 17:30:17 GMT+0300 (MSK)
+=======================================================
+
+- [#26](https://github.com/OpusCapita/styles/issues/26) Increase width of applications in dropdown menu ([#27](https://github.com/OpusCapita/styles/issues/27)) (GitHub dsanko-sc@users.noreply.github.com, 2021-04-07 17:23:27 +0300)
+- Updating editor config (Alexey Sergeev alexey.sergeev@opuscapita.com, 2020-08-25 17:40:57 +0300)
+- Update CI image to opuscapita/minsk-core-ci:grails-2.4.4-jdk-8u192-nodejs-8.17.0-maven-3.3.9 [ci skip] (Egor Stambakio egor.stambakio@opuscapita.com, 2020-05-07 16:14:18 +0300)
+
 [Release 2.0.16](https://github.com/OpusCapita/styles/releases/tag/v2.0.16) Mon Feb 24 2020 11:54:12 GMT+0300 (MSK)
 =======================================================
 
