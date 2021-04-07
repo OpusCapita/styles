@@ -6,7 +6,8 @@ defaults: &defaults
 orbs:
   jira: circleci/jira@1.2.2
 
-version: 2
+version: 2.1
+
 jobs:
   init:
     docker:
