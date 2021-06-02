@@ -1,4 +1,9 @@
 
+[Release 2.0.19](https://github.com/OpusCapita/styles/releases/tag/v2.0.19) Wed Jun 02 2021 08:09:26 GMT+0300 (MSK)
+=======================================================
+
+- (EPROC-20509) Updating Loto font (Dmitry Divin divin@scand.com, 2021-06-02 08:08:02 +0300)
+
 [Release 2.0.18](https://github.com/OpusCapita/styles/releases/tag/v2.0.18) Wed Apr 07 2021 18:22:08 GMT+0300 (MSK)
 =======================================================
 
