@@ -1,4 +1,9 @@
 
+[Release 2.0.20](https://github.com/OpusCapita/styles/releases/tag/v2.0.20) Thu Sep 16 2021 11:15:07 GMT+0300 (MSK)
+=======================================================
+
+- (EPROC-20768) Updated swedish flag style name according ISO 639-1 codes ([#29](https://github.com/OpusCapita/styles/issues/29)) (GitHub 53556216+ishinkevich-sc@users.noreply.github.com, 2021-09-16 11:09:49 +0300)
+
 [Release 2.0.19](https://github.com/OpusCapita/styles/releases/tag/v2.0.19) Wed Jun 02 2021 08:09:26 GMT+0300 (MSK)
 =======================================================
 
