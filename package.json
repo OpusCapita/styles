@@ -1,6 +1,6 @@
 {
   "name": "@opuscapita/styles",
-  "version": "2.0.20-EPROC-20768",
+  "version": "2.0.20-SNAPSHOT",
   "description": "OpusCapita UI resources",
   "scripts": {
     "start": "nps"
