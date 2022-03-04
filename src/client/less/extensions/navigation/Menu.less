@@ -7,16 +7,7 @@
   margin-bottom: 20px;
   min-width: 320px;
   transition: all 180ms ease-in;
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: @header-bottom-line-height;
-    background-color: @header-bottom-line-color;
-  }
+  box-shadow: inset 0 -@header-bottom-line-height @header-bottom-line-color;
 }
 
 .oc-menu--no-margin,
@@ -95,6 +86,7 @@
 
 .oc-menu__navigation-bar {
   z-index: 1;
+  box-shadow: inset 0 -@header-bottom-line-height @header-bottom-line-color;
 }
 
 .oc-menu__middle-col {
