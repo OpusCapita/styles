@@ -1,4 +1,9 @@
 
+[Release 2.0.21](https://github.com/OpusCapita/styles/releases/tag/v2.0.21) Wed Mar 23 2022 12:20:04 GMT+0300 (MSK)
+=======================================================
+
+- (OPC-20956) Added ability to customize some styles ([#30](https://github.com/OpusCapita/styles/issues/30)) (GitHub 44696692+mkravchenya-sc@users.noreply.github.com, 2022-03-23 12:11:01 +0300)
+
 [Release 2.0.20](https://github.com/OpusCapita/styles/releases/tag/v2.0.20) Thu Sep 16 2021 11:15:07 GMT+0300 (MSK)
 =======================================================
 
