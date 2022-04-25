@@ -1,4 +1,9 @@
 
+[Release 2.0.22](https://github.com/OpusCapita/styles/releases/tag/v2.0.22) Mon Apr 25 2022 11:55:52 GMT+0300 (MSK)
+=======================================================
+
+- (OPC-20976) Fixed menu header UI issue ([#31](https://github.com/OpusCapita/styles/issues/31)) (GitHub 34854955+akaunatski-sc@users.noreply.github.com, 2022-04-22 17:24:46 +0300)
+
 [Release 2.0.21](https://github.com/OpusCapita/styles/releases/tag/v2.0.21) Wed Mar 23 2022 12:20:04 GMT+0300 (MSK)
 =======================================================
 
