@@ -1,4 +1,9 @@
 
+[Release 2.0.23](https://github.com/OpusCapita/styles/releases/tag/v2.0.23) Fri Sep 02 2022 16:44:25 GMT+0300 (MSK)
+=======================================================
+
+- (EPROC-21285) Fixed language select menu styles. (GitHub azinchenko-sc@users.noreply.github.com, 2022-09-02 16:38:17 +0300)
+
 [Release 2.0.22](https://github.com/OpusCapita/styles/releases/tag/v2.0.22) Mon Apr 25 2022 11:55:52 GMT+0300 (MSK)
 =======================================================
 
