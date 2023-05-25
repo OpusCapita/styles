@@ -128,7 +128,8 @@ workflows:
           requires:
             - init
           post-steps:
-            - jira/notify
+            - jira/notify:
+                token_name: "CIRCLE_CI_TOKEN"
       - build:
           <<: *default-context
           filters:
@@ -139,7 +140,8 @@ workflows:
           requires:
             - init
           post-steps:
-            - jira/notify
+            - jira/notify:
+                token_name: "CIRCLE_CI_TOKEN"
       - update-gh-pages:
           <<: *default-context
           requires:
@@ -158,4 +160,5 @@ workflows:
           requires:
             - init
           post-steps:
-            - jira/notify
+            - jira/notify:
+                token_name: "CIRCLE_CI_TOKEN"
