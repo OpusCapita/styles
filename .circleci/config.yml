@@ -1,10 +1,21 @@
+aliases:
+  - &docker_auth
+    auth:
+      username: ${DOCKER_USER}
+      password: ${DOCKER_PASS}
+
+  - &default-context
+    context:
+      - shared-creds
+      
 defaults: &defaults
   docker:
     - image: opuscapita/minsk-core-ci:4
+      <<: *docker_auth
   working_directory: ~/build
 
 orbs:
-  jira: circleci/jira@1.2.2
+  jira: circleci/jira@2.0
 
 version: 2.1
 
@@ -12,6 +23,7 @@ jobs:
   init:
     docker:
       - image: opuscapita/minsk-core-machineuser-env:2
+        <<: *docker_auth
     steps:
       - run: circle_ci_add_env.sh GH_NAME GH_MAIL
 
@@ -104,18 +116,23 @@ workflows:
   release-and-build:
     jobs:
       - init:
+          <<: *default-context
           filters:
             tags:
               only: /.*/
       - release:
+          <<: *default-context
           filters:
             branches:
               only: release
           requires:
             - init
           post-steps:
-            - jira/notify
+            - jira/notify:
+                pipeline_id: << pipeline.id >>
+                pipeline_number: << pipeline.number >>
       - build:
+          <<: *default-context
           filters:
             branches:
               ignore:
@@ -124,8 +141,11 @@ workflows:
           requires:
             - init
           post-steps:
-            - jira/notify
+            - jira/notify:
+                pipeline_id: << pipeline.id >>
+                pipeline_number: << pipeline.number >>
       - update-gh-pages:
+          <<: *default-context
           requires:
             - build
           filters:
@@ -133,6 +153,7 @@ workflows:
               only:
                 - master
       - build_release:
+          <<: *default-context
           filters:
             tags:
               only: /.*/
@@ -141,4 +162,6 @@ workflows:
           requires:
             - init
           post-steps:
-            - jira/notify
+            - jira/notify:
+                pipeline_id: << pipeline.id >>
+                pipeline_number: << pipeline.number >>
