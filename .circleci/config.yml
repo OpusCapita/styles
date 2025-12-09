@@ -51,17 +51,16 @@ jobs:
       - run: if [ -f /.dockerenv ]; then configure-maven.sh && configure-grails.sh && configure-npm.sh; fi
       - run:
           name: "Installing dependencies."
-          command: yarn install
+          command: npm ci
       - save_cache:
           key: styles-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
               - ./node_modules
-              - ./yarn.lock
       - run:
           name: "Running lint."
           command: npm start lint
       - run:
-          name: Deploy snapshot.
+          name: "Deploy snapshot."
           command: npm start grails-plugin-deploy-snapshot
 
   update-gh-pages:
@@ -76,12 +75,11 @@ jobs:
       - run: if [ -f /.dockerenv ]; then configure-maven.sh && configure-grails.sh && configure-npm.sh; fi
       - run:
           name: "Installing dependencies."
-          command: yarn install
+          command: npm ci
       - save_cache:
           key: styles-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
               - ./node_modules
-              - ./yarn.lock
       - run:
           name: build-gh-pages
           command: ./scripts/gh-pages/build.sh
@@ -100,19 +98,18 @@ jobs:
             - v1-styles
       - run: if [ -f /.dockerenv ]; then configure-maven.sh && configure-grails.sh && configure-npm.sh; fi
       - run:
-          name: Installing dependencies.
-          command: yarn install
+          name: "Installing dependencies."
+          command: npm ci
       - save_cache:
           key: 'v1-styles-{{ .Branch }}-{{ checksum "package.json" }}'
           paths:
             - ./node_modules
-            - ./yarn.lock
             - ~/.m2/repository
       - run:
-          name: Running lint.
+          name: "Running lint."
           command: npm start lint
       - run:
-          name: Deploy.
+          name: "Deploy."
           command: npm start publish-release
 
   release:
@@ -120,7 +117,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Executing release scrtipt.
+          name: "Executing release scrtipt."
           command: .circleci/release.sh
 
 workflows:
